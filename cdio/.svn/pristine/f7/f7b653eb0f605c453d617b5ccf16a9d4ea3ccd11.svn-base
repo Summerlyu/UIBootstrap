@@ -1,0 +1,1706 @@
+#wrap {
+	width: 75%;
+	height: auto;
+	display: block;
+	margin: 0px 0px 20px 5%;
+	padding: 0px 10px;
+	background-attachment: fixed;
+}
+
+.wrap2 {
+	background: rgb(228, 241, 230);
+	width: 100%;
+	height: auto;
+}
+
+.hot_txt {
+	background: url("../../image/test/ks_key.png") no-repeat -189px -918px;
+	margin: 5px auto;
+	width: 985px;
+	line-height: 40px;
+	padding-left: 15px;
+	font-family: 微软雅黑, 宋体;
+	font-size: 16px;
+}
+
+.clearfix::after {
+	height: 0px;
+	clear: both;
+	display: block;
+	visibility: hidden;
+	content: ".";
+}
+
+.clearfix {
+	-ms-zoom: 1;
+}
+
+.ksBody {
+	margin: 0px auto;
+	height: auto;
+}
+
+textarea {
+	resize: none;
+}
+
+.topcontain {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px 0px;
+	margin: 0px;
+	width: 999px;
+	height: 36px;
+	font-family: 微软雅黑;
+	border-right-color: rgb(174, 204, 226);
+	border-right-width: 1px;
+	border-right-style: solid;
+	float: left;
+	_overflow: hidden;
+}
+
+.topcontain .Ttime {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -39px;
+	width: 230px;
+	height: 39px;
+	color: rgb(255, 255, 255);
+	line-height: 39px;
+	font-size: 14px;
+	margin-top: -3px;
+	float: left;
+	display: inline;
+	position: relative;
+}
+
+.Ttime .tm1 {
+	background: url("../../image/test/ks_mk.png") no-repeat -180px -88px;
+	margin: 0px;
+	padding: 0px;
+	width: 2px;
+	height: 39px;
+	float: left;
+	display: inline;
+}
+
+.Ttime .tm2 {
+	background: url("../../image/test/ks_mk.png") no-repeat -180px -88px;
+	margin: 0px;
+	padding: 0px;
+	width: 2px;
+	height: 39px;
+	float: left;
+	display: inline;
+}
+
+.Ttime .tm2 {
+	background-position: -182px -88px;
+	width: 18px;
+	margin-left: 14px;
+	float: right;
+	display: inline;
+}
+
+.Ttime .Ttimex {
+	background: url("../../image/test/ks_mk.png") no-repeat 0px -87px;
+	line-height: 24px;
+	padding-bottom: 5px;
+	padding-left: 23px;
+	font-size: 12px;
+	margin-top: 9px;
+	margin-right: 0px;
+	margin-left: 7px;
+	float: left;
+	display: inline;
+}
+
+.Ttime .Complete {
+	margin: 8px -8px 0px 0px;
+	/*zyy/
+	/* width: 150px;*/
+	height: 30px;
+	text-align: nocenter;
+	color: rgb(82, 178, 12);
+	line-height: 30px;
+	padding-right: 0px;
+	font-size: 15px;
+	font-weight: normal;
+	float: left;
+	display: inline;
+}
+
+.Ttime .Complete b {
+	color: rgb(0, 68, 136);
+}
+
+.topcontain .Ttimex1 {
+	background: url("../../image/test/ks_mk.png") no-repeat -176px -140px;
+	width: auto;
+	line-height: 36px;
+	padding-left: 28px;
+	float: left;
+	display: inline;
+}
+
+.topcy {
+	width: auto;
+	height: auto;
+	font-family: 微软雅黑;
+	float: right;
+}
+
+.topcy li {
+	background: url("../../image/test/ks_mk.png") no-repeat 0px -117px;
+	width: auto;
+	margin-top: 4px;
+	margin-right: 4px;
+	float: left;
+	display: inline;
+}
+
+.topcy a {
+	padding: 0px 5px 0px 20px;
+	border: 1px solid rgb(179, 179, 179);
+	height: 26px;
+	line-height: 26px;
+	float: left;
+}
+
+.topcy a:hover {
+	border: 1px solid rgb(255, 102, 0);
+	color: rgb(255, 102, 0);
+	text-decoration: none;
+}
+
+.topcy a.install {
+	background: url("../../image/test/ks_mk.png") no-repeat -182px -229px;
+}
+
+.topcy a.install:hover {
+	background: url("../../image/test/ks_mk.png") no-repeat 4px -229px;
+}
+
+.topcy .carry {
+	background: url("../../image/test/ks_mk.png") no-repeat 0px -306px;
+	padding: 0px;
+	border: currentColor;
+	width: 79px;
+	height: 28px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	line-height: 28px;
+	float: left;
+}
+
+.topcy .carry:hover {
+	background: url("../../image/test/ks_mk.png") no-repeat -79px -306px;
+	border: currentColor;
+	color: rgb(255, 255, 255);
+}
+
+.testA {
+	background: rgb(255, 255, 255);
+	border-width: medium 1px;
+	border-style: none solid;
+	border-color: currentColor rgb(182, 211, 235);
+	padding: 20px 20px;
+	width: 958px;
+	float: left;
+}
+
+.testA .fx {
+	background: rgb(252, 252, 252);
+	left: 20px;
+	top: 60px;
+	width: 958px;
+	height: auto;
+	color: rgb(102, 102, 102);
+	line-height: normal;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 12px;
+	border-top-color: rgb(230, 230, 230);
+	border-bottom-color: rgb(230, 230, 230);
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	float: left;
+	position: absolute;
+}
+
+.testA .title {
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	color: rgb(238, 0, 0);
+	line-height: 35px;
+	font-family: 微软雅黑, 黑体;
+	font-size: 20px;
+	margin-top: 35px;
+	float: left;
+	display: block;
+}
+
+.testA .dafen span {
+	width: 70px;
+	height: 86px;
+	overflow: hidden;
+	float: right;
+	display: block;
+}
+
+.testA .dafen span.a0 {
+	background: url("../../image/test/fenshu.png") no-repeat 0px 0px;
+	width: 64px;
+}
+
+.testA .dafen span.a1 {
+	background: url("../../image/test/fenshu.png") no-repeat 0px -97px;
+	width: 38px;
+}
+
+.testA .dafen span.a2 {
+	background: url("../../image/test/fenshu.png") no-repeat -87px 0px;
+	width: 68px;
+}
+
+.testA .dafen span.a3 {
+	background: url("../../image/test/fenshu.png") no-repeat -77px -96px;
+	width: 68px;
+}
+
+.testA .dafen span.a4 {
+	background: url("../../image/test/fenshu.png") no-repeat -194px 0px;
+	width: 61px;
+}
+
+.testA .dafen span.a5 {
+	background: url("../../image/test/fenshu.png") no-repeat -169px -91px;
+	width: 77px;
+}
+
+.testA .dafen span.a6 {
+	background: url("../../image/test/fenshu.png") no-repeat -298px 0px;
+	width: 61px;
+}
+
+.testA .dafen span.a7 {
+	background: url("../../image/test/fenshu.png") no-repeat -402px 0px;
+	width: 57px;
+}
+
+.testA .dafen span.a8 {
+	background: url("../../image/test/fenshu.png") no-repeat -271px -92px;
+}
+
+.testA .dafen span.a9 {
+	background: url("../../image/test/fenshu.png") no-repeat -364px -89px;
+	width: 68px;
+}
+
+.input {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -340px
+		rgb(255, 255, 255);
+	margin: 12px 6px 0px 0px;
+	border: 1px solid rgb(178, 213, 233);
+	width: auto;
+	height: 28px;
+	color: rgb(51, 51, 51);
+	font-family: 微软雅黑;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.inputo {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -340px
+		rgb(255, 255, 255);
+	margin: 12px 6px 0px 0px;
+	border: 1px solid rgb(178, 213, 233);
+	width: auto;
+	height: 28px;
+	color: rgb(51, 51, 51);
+	font-family: 微软雅黑;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.inputo {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -380px;
+	border: currentColor;
+	color: rgb(255, 255, 255);
+}
+
+.input:hover {
+	border: 1px solid rgb(255, 102, 0);
+}
+
+.mmain {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+#RulesTab {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.RulesID {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.RulesTitle {
+	background: rgb(240, 248, 255);
+	padding: 5px 14px;
+	width: 97%;
+	text-align: left;
+	color: rgb(102, 102, 102);
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 10px;
+	border-top-color: rgb(11, 91, 152);
+	border-top-width: 3px;
+	border-top-style: solid;
+	float: left;
+}
+
+.xuxiankuang {
+	padding: 5px 13px 10px;
+	border: 1px dotted rgb(255, 255, 255);
+	width: 97%;
+	line-height: 28px;
+	font-size: 14px;
+	margin-top: 5px;
+	float: left;
+	display: block;
+	/*zyy改过
+	 position: relative;*/
+}
+
+.xuxiankuang:hover {
+	border: 1px solid rgb(47, 150, 217);
+}
+
+.xukb {
+	border: 1px dotted rgb(153, 153, 153);
+}
+
+.rubric_title {
+	width: 90%;
+	line-height: 28px;
+	padding-left: 20px;
+	float: left;
+	-ms-word-break: break-all;
+	-ms-word-wrap: break-word;
+	_overflow: hidden;
+}
+
+.rubric_title strong {
+	color: rgb(0, 85, 153);
+	font-size: 14px;
+	margin-left: -20px;
+	position: relative;
+}
+
+.rubric_title span.tixin {
+	background: rgb(11, 102, 176);
+	padding: 3px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+}
+
+.rubric_title span.tixined {
+	background: rgb(153, 153, 153);
+}
+
+.xuxiankuangselcet {
+	background: rgb(242, 242, 242);
+	padding: 3px 10px;
+	width: 98%;
+	text-align: left;
+	color: rgb(0, 0, 0);
+	margin-top: 4px;
+	vertical-align: bottom;
+	float: left;
+}
+
+.xuanti {
+	padding: 0px;
+	width: 75%;
+	float: left;
+	display: block;
+}
+
+.xuanti span {
+	color: rgb(102, 102, 102);
+	float: left;
+}
+
+.xuanti ul.xt {
+	margin: 0px;
+	padding: 0px;
+}
+
+.xuanti ul.xt li {
+	text-align: center;
+	margin-right: 8px;
+	float: left;
+	display: inline;
+}
+
+.xuanti ul.xt li a {
+	background: url("../../image/test/ks_mk.png") no-repeat 0px -423px;
+	font: 14px/28px "微软雅黑", "宋体";
+	width: 57px;
+	height: 26px;
+	text-align: center;
+	color: rgb(51, 51, 51);
+	padding-left: 10px;
+	text-decoration: none;
+	float: left;
+	display: block;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+
+.xuanti ul.xt li a.u_buttoned {
+	background: url("../../image/test/ks_mk.png") no-repeat -73px -423px;
+	color: rgb(255, 255, 255);
+}
+
+.xuanti ul.xt li a.u_buttoned:hover {
+	background: url("../../image/test/ks_mk.png") no-repeat -73px -423px;
+	color: rgb(255, 255, 255);
+}
+
+.xuanti ul.xt li a:hover {
+	background: url("../../image/test/ks_mk.png") no-repeat 0px -616px;
+	color: rgb(255, 102, 0);
+}
+
+.Correction {
+	background: url("../../image/test/ks_mk.png") no-repeat -185px -652px;
+	top: 10px;
+	right: 15px;
+	color: rgb(0, 85, 153);
+	padding-left: 16px;
+	clear: both;
+	font-size: 12px;
+	display: block;
+	position: absolute;
+}
+
+.textarea {
+	background: url("http://img.233.com/wx/img/uc/233bg.png") no-repeat
+		center 0px rgb(255, 255, 255);
+	padding: 8px;
+	width: 98%;
+	height: 80px;
+	float: left;
+}
+
+.x_da {
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	float: left;
+	/*zyy position: relative;*/
+}
+
+.x_da .dui {
+	background: url("../../image/test/ks_mk.png") no-repeat -120px -1128px;
+	width: 28px;
+	height: 27px;
+	margin-top: 10px;
+	float: left;
+}
+
+.x_da .cuo {
+	background: url("../../image/test/ks_mk.png") no-repeat -170px -1128px;
+	width: 28px;
+	height: 27px;
+	margin-top: 10px;
+	float: left;
+}
+
+.x_da .zhuguan {
+	background: url("../../image/test/ks_key.png") no-repeat -173px -680px;
+	width: 28px;
+	height: 27px;
+	margin-top: 10px;
+	float: left;
+}
+
+.x_da .defen {
+	width: 96%;
+	height: auto;
+	float: left;
+}
+
+.x_da .defen dl {
+	width: 100%;
+	height: auto;
+	line-height: 22px;
+	padding-bottom: 5px;
+	float: left;
+}
+
+.x_da .defen dt {
+	width: 110px;
+	height: auto;
+	font-size: 14px;
+	float: left;
+}
+
+.x_da .defen dd {
+	height: auto;
+	line-height: 20px;
+	padding-top: 3px;
+	padding-left: 3px;
+	font-size: 12px;
+	-ms-word-break: break-all;
+}
+
+.x_da .defen dd strong {
+	font-size: 14px;
+}
+
+.cRed {
+	color: rgb(221, 0, 0);
+}
+
+a.cRed:link {
+	color: rgb(221, 0, 0);
+}
+
+a.cRed:visited {
+	color: rgb(221, 0, 0);
+}
+
+.cBlue {
+	color: rgb(3, 116, 206);
+	text-decoration: none;
+}
+
+.cBlue:link {
+	color: rgb(3, 116, 206);
+	text-decoration: none;
+}
+
+.cBlue:visited {
+	color: rgb(3, 116, 206);
+	text-decoration: none;
+}
+
+.cBlue:hover {
+	text-decoration: none;
+}
+
+.score {
+	padding: 0px 10px;
+	border: 1px solid rgb(133, 186, 221);
+	width: auto;
+	height: auto;
+	font-size: 12px;
+	margin-top: 5px;
+	float: left;
+}
+
+.score .text {
+	border: 1px solid rgb(214, 214, 214);
+	width: 40px;
+	height: 18px;
+	text-align: center;
+	line-height: 18px;
+}
+
+.grey {
+	border: 1px solid rgb(255, 102, 0);
+}
+
+.grey .text {
+	color: rgb(255, 102, 0);
+	font-weight: bold;
+}
+
+.scores {
+	border: 1px solid rgb(201, 201, 201);
+	width: 80%;
+	height: auto;
+	margin-left: 95px;
+	float: left;
+	display: inline;
+	_overflow: hidden;
+}
+
+.scores .p_a {
+	background: rgb(255, 255, 255);
+	padding: 0px 5px;
+	font-weight: bold;
+	margin-top: -10px;
+	margin-left: 50px;
+	float: left;
+	display: inline;
+	/* position: relative;*/
+}
+
+.scores .bor_top {
+	padding: 10px 0px 20px;
+	width: 100%;
+	color: rgb(102, 102, 102);
+	margin-top: 10px;
+	float: left;
+}
+
+.scores .bor_top .bj_fen {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -81px;
+}
+
+.scores .bor_top .bj_fen .fen {
+	color: rgb(51, 51, 51);
+	font-size: 30px;
+}
+
+.scores .bor_top .bj_fen .red_18 {
+	color: rgb(204, 0, 0);
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.scores .bor_top a {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -190px;
+	width: 150px;
+	height: 23px;
+	text-indent: -9999px;
+	font-size: 0px;
+	float: left;
+}
+
+.scores .bor_top .View {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -220px;
+	margin-left: 6px;
+	display: inline;
+}
+
+.scores .dafen {
+	background: url("../../image/test/fenshu.png") no-repeat right bottom;
+	width: 210px;
+	padding-bottom: 20px;
+	margin-top: -80px;
+	float: right;
+	position: relative;
+	top: 0px;
+	right: 0px;
+	z-index: 3;
+}
+
+.scores .dafen span {
+	width: 70px;
+	height: 86px;
+	overflow: hidden;
+	float: right;
+	display: block;
+}
+
+.scores .dafen span.a0 {
+	background: url("../../image/test/fenshu.png") no-repeat 0px 0px;
+	width: 64px;
+}
+
+.scores .dafen span.a1 {
+	background: url("../../image/test/fenshu.png") no-repeat 0px -97px;
+	width: 38px;
+}
+
+.scores .dafen span.a2 {
+	background: url("../../image/test/fenshu.png") no-repeat -87px 0px;
+	width: 68px;
+}
+
+.scores .dafen span.a3 {
+	background: url("../../image/test/fenshu.png") no-repeat -77px -96px;
+	width: 68px;
+}
+
+.scores .dafen span.a4 {
+	background: url("../../image/test/fenshu.png") no-repeat -194px 0px;
+	width: 61px;
+}
+
+.scores .dafen span.a5 {
+	background: url("../../image/test/fenshu.png") no-repeat -169px -91px;
+	width: 77px;
+}
+
+.scores .dafen span.a6 {
+	background: url("../../image/test/fenshu.png") no-repeat -298px 0px;
+	width: 61px;
+}
+
+.scores .dafen span.a7 {
+	background: url("../../image/test/fenshu.png") no-repeat -402px 0px;
+	width: 57px;
+}
+
+.scores .dafen span.a8 {
+	background: url("../../image/test/fenshu.png") no-repeat -271px -92px;
+}
+
+.scores .dafen span.a9 {
+	background: url("../../image/test/fenshu.png") no-repeat -364px -89px;
+	width: 68px;
+}
+
+.rt_msg {
+	padding: 10px;
+	width: 97%;
+	height: auto;
+	float: left;
+}
+
+.rt_msg td {
+	width: 160px;
+	height: 22px;
+	text-align: left;
+	color: rgb(102, 102, 102);
+	line-height: 22px;
+}
+
+.rt_msg td strong {
+	color: rgb(0, 85, 153);
+}
+
+.rt_msg .xx {
+	background: url("../../image/test/ks_key.png") no-repeat -185px -567px;
+	width: 15px;
+	height: 14px;
+	overflow: hidden;
+	float: left;
+}
+
+.btm_B {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -1207px
+		rgb(255, 255, 255);
+	padding: 0px 16px 10px;
+	border: 1px solid rgb(197, 225, 244);
+	width: 96.3%;
+	height: auto;
+	line-height: normal;
+	margin-top: 5px;
+	float: left;
+}
+
+.chosez {
+	top: 0px;
+	/*width: 25%;*/
+	right: -15px;
+	font-size: 12px;
+	float: right;
+	/*position: absolute;*/
+}
+
+.chosez a {
+	background: url("../../image/test/ks_key.png") no-repeat -112px 0px;
+	width: 88px;
+	height: 27px;
+	text-align: center;
+	color: rgb(0, 85, 153);
+	line-height: 27px;
+	margin-left: 5px;
+	float: left;
+}
+
+.chosez a:hover {
+	background: url("../../image/test/ks_key.png") no-repeat -112px -27px;
+	color: rgb(255, 102, 0);
+	text-decoration: none;
+}
+
+.chosez a.on {
+	background: url("../../image/test/ks_key.png") no-repeat -112px -54px;
+	color: rgb(255, 255, 255);
+}
+
+.chosez span {
+	background: url("../../image/test/ks_key.png") no-repeat -188px -123px;
+	padding-left: 15px;
+}
+
+.chosez .Fav {
+	background: url("../../image/test/ks_key.png") no-repeat -188px -85px;
+	padding-left: 15px;
+}
+
+.key_line {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -1202px;
+	width: 100%;
+	height: 2px;
+	overflow: hidden;
+	margin-top: 5px;
+	float: left;
+}
+
+.btm_B .jxbox {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.btm_B .jxbox .jxaa {
+	width: 100%;
+	height: auto;
+	line-height: 16px;
+	margin-top: 10px;
+	float: left;
+}
+
+.btm_B .jxbox .jxaa strong {
+	font-size: 14px;
+	float: left;
+}
+
+.btm_B .jxbox .jxbb {
+	width: 91%;
+	height: auto;
+	font-size: 14px;
+	float: right;
+}
+
+.btm_B .jxbox .jxbb .less {
+	font-size: 14px;
+}
+
+.btm_B .jxnum {
+	width: 97%;
+	height: auto;
+	line-height: 22px;
+	padding-left: 15px;
+	margin-top: 10px;
+	float: left;
+}
+
+.btm_B .xtjx_t {
+	width: 98%;
+	height: auto;
+	color: rgb(102, 102, 102);
+	line-height: 22px;
+	padding-left: 5px;
+	margin-top: 10px;
+	float: left;
+}
+
+.btm_B .jiexixi {
+	width: 98%;
+	height: auto;
+	color: rgb(102, 102, 102);
+	line-height: 22px;
+	padding-left: 5px;
+	margin-top: 10px;
+	float: left;
+}
+
+.btm_B .xtjx_t span {
+	background: url("../../image/test/ks_key.png") no-repeat -114px -671px;
+	width: 22px;
+	height: 23px;
+	overflow: hidden;
+	margin-right: 8px;
+	float: left;
+	display: inline;
+}
+
+.btm_B .jiexixi .xiaolian {
+	background: url("../../image/test/ks_key.png") no-repeat -114px -671px;
+	width: 22px;
+	height: 23px;
+	overflow: hidden;
+	margin-right: 8px;
+	float: left;
+	display: inline;
+}
+
+.btm_B .xtjx_t #JieXi-233 span {
+	
+}
+
+.btm_B .rubric_title {
+	padding: 0px;
+	width: 100%;
+	line-height: 22px;
+}
+
+.btm_B .rubric_title .jiexi {
+	background: url("../../image/test/ks_key.png") no-repeat -128px -87px;
+	width: 42px;
+	height: 16px;
+	text-align: center;
+	color: rgb(255, 0, 0);
+	line-height: 16px;
+	padding-right: 3px;
+	font-size: 12px;
+	margin-right: 5px;
+	float: left;
+	display: inline;
+}
+
+.btm_B .rubric_title .jiexi2 {
+	background: url("../../image/test/ks_key.png") no-repeat -126px -167px;
+	color: rgb(255, 255, 255);
+}
+
+.btm_B .rubric_title p.jx_lt {
+	margin: 3px 0px 0px;
+	padding: 0px 0px 5px;
+	width: 100%;
+	height: auto;
+	text-indent: 0px;
+	border-bottom-color: rgb(204, 204, 204);
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	float: left;
+}
+
+.btm_B .rubric_title p.jx_lt span {
+	color: rgb(0, 85, 153);
+	font-weight: bold;
+}
+
+.btm_B .ptext {
+	color: rgb(153, 153, 153);
+	padding-top: 3px;
+	font-size: 12px;
+	float: left;
+}
+
+.btm_B .title_box {
+	width: 100%;
+	height: auto;
+	font-size: 12px;
+	margin-top: 6px;
+	float: left;
+}
+
+.btm_B .title_box ul {
+	float: left;
+}
+
+.btm_B .title_box li {
+	background: url("../../image/test/ks_key.png") no-repeat -97px -303px;
+	width: 92px;
+	height: 31px;
+	color: rgb(51, 51, 51);
+	margin-right: 10px;
+	float: left;
+	display: inline;
+}
+
+.btm_B .title_box li:hover {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -887px;
+}
+
+.btm_B .title_box li.on {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -303px;
+	height: 36px;
+	color: rgb(255, 255, 255);
+}
+
+.btm_B .title_box li.on:hover {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -303px;
+	height: 36px;
+	color: rgb(255, 255, 255);
+}
+
+.btm_B .title_box li.on a {
+	color: rgb(255, 255, 255);
+}
+
+.btm_B .title_box li.on2 {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -887px;
+	height: 36px;
+	color: rgb(255, 255, 255);
+}
+
+.btm_B .title_box li a {
+	width: 60px;
+	text-align: center;
+	line-height: 31px;
+	padding-left: 20px;
+	margin-left: 7px;
+	float: left;
+	display: inline;
+}
+
+.btm_B .title_box a.bjjl {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -855px;
+}
+
+.btm_B .lookover {
+	background: url("../../image/test/ks_key.png") no-repeat right -851px;
+	color: rgb(204, 0, 0);
+	line-height: 24px;
+	padding-right: 15px;
+	font-size: 12px;
+	margin-right: 10px;
+	float: right;
+	display: inline;
+}
+
+.btm_B .lookover:hover {
+	color: rgb(205, 1, 27);
+	text-decoration: none;
+}
+
+.btm_B .lookover2 {
+	background: url("../../image/test/ks_key.png") no-repeat right -875px;
+}
+
+.btm_B .doubt {
+	background: url("../../image/test/ks_key.png") no-repeat -85px -855px;
+}
+
+.btm_B .correct {
+	background: url("../../image/test/ks_key.png") no-repeat -96px -887px;
+}
+
+.btm_B .Demand {
+	background: url("../../image/test/ks_key.png") no-repeat -184px -200px;
+	color: rgb(204, 0, 0);
+}
+
+.btm_B .DemandX {
+	background: url("../../image/test/ks_key.png") no-repeat -184px -200px;
+}
+
+.Ask {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -434px;
+	width: 118px;
+	height: 31px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	line-height: 31px;
+	padding-left: 30px;
+	font-size: 14px;
+	float: right;
+}
+
+.Ask:hover {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -471px;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.md_add_gs {
+	background: rgb(248, 248, 248);
+	padding: 5px 10px 10px 15px;
+	border: 1px solid rgb(221, 221, 221);
+	width: 96.8%;
+	margin-top: 5px;
+	float: left;
+}
+
+.Tinfo {
+	width: 100%;
+	height: auto;
+	font-family: "微软雅黑";
+	float: left;
+}
+
+.Tinfo .Tywen {
+	height: auto;
+	text-align: center;
+	padding-bottom: 5px;
+	font-size: 16px;
+	float: left;
+}
+
+.Tinfo .Tcount {
+	color: rgb(153, 153, 153);
+	padding-right: 10px;
+	font-size: 12px;
+	margin-top: 5px;
+	float: right;
+}
+
+.Tinfo #Tnum {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.btn_tj {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -371px;
+	border: currentColor;
+	width: 110px;
+	height: 29px;
+	margin-right: 5px;
+	float: right;
+	display: inline;
+}
+
+.btn_tj:hover {
+	background: url("../../image/test/ks_key.png") no-repeat 0px -400px;
+}
+
+.main_line {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -1191px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+	margin-top: 10px;
+	float: left;
+}
+
+.test_btm {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -518px;
+	width: 1000px;
+	height: 3px;
+	float: left;
+	display: inline;
+}
+
+.test_btm .btm1 {
+	background: url("../../image/test/ks_mk.png") no-repeat -164px -308px;
+	width: 3px;
+	line-height: 3px;
+	font-size: 1px;
+	float: left;
+	display: inline;
+}
+
+.test_btm .btm2 {
+	background: url("../../image/test/ks_mk.png") no-repeat -164px -308px;
+	width: 3px;
+	line-height: 3px;
+	font-size: 1px;
+	float: left;
+	display: inline;
+}
+
+.test_btm .btm2 {
+	background: url("../../image/test/ks_mk.png") no-repeat -169px -308px;
+	float: right;
+}
+
+body {
+	background-attachment: fixed;
+	background: url("../../image/test/site_bg.jpg") repeat;
+}
+
+.point2 {
+	width: auto;
+	height: auto;
+	font-size: 12px;
+}
+
+.point2 .pt3_box {
+	width: 394px;
+	height: auto;
+	float: left;
+}
+
+.point2 .pt_title {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -747px;
+	width: 100%;
+	height: 39px;
+	color: rgb(68, 68, 68);
+	line-height: 39px;
+	font-size: 14px;
+	font-weight: bold;
+	float: left;
+}
+
+.point2 .pt_title span {
+	padding-left: 10px;
+	float: left;
+}
+
+.point2 .pt_title .p_left {
+	background: url("../../image/test/ks_mk.png") no-repeat -137px -657px;
+	padding: 0px;
+	width: 5px;
+	height: 39px;
+	overflow: hidden;
+}
+
+.point2 .pt_title .p_right {
+	background: url("../../image/test/ks_mk.png") no-repeat -145px -657px;
+	padding: 0px;
+	width: 5px;
+	height: 39px;
+	overflow: hidden;
+	float: right;
+}
+
+.point2 .pt_title .close {
+	background: url("../../image/test/ks_mk.png") no-repeat -160px -717px;
+	width: 19px;
+	height: 20px;
+	text-indent: -9999px;
+	overflow: hidden;
+	font-size: 0px;
+	margin-top: 10px;
+	margin-right: 5px;
+	float: right;
+	display: inline;
+}
+
+.point2 .pt_title .close:hover {
+	background: url("../../image/test/ks_mk.png") no-repeat -181px -717px;
+}
+
+.point2 .pt_txt {
+	width: 352px;
+	height: auto;
+	float: left;
+}
+
+.point2 .pt_txt dl.ln-config {
+	width: 100%;
+	height: auto;
+	line-height: 24px;
+	float: left;
+}
+
+.point2 .pt_txt dt {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.point2 .pt_txt dd {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.point2 .pt_txt dl.ln-config dt {
+	color: rgb(68, 68, 68);
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+.point2 .pt_txt dl dd .ln-config-tip {
+	width: 60%;
+	height: auto;
+	float: right;
+}
+
+.point2 .pt_txt .mode {
+	border: 1px solid rgb(255, 255, 255);
+	width: 20%;
+	height: auto;
+	text-align: center;
+	color: rgb(38, 137, 223);
+	font-size: 14px;
+	margin-left: 10px;
+	float: left;
+	display: inline;
+	cursor: pointer;
+}
+
+.point2 .pt_txt .on {
+	border: 1px solid rgb(255, 102, 0);
+	color: rgb(255, 102, 0);
+}
+
+.point2 .pt_txt dl dd ul {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.point2 .pt_txt dl dd ul li {
+	padding: 0px 5px;
+	text-align: center;
+	margin-left: 10px;
+	float: left;
+	display: inline;
+	cursor: pointer;
+}
+
+.point2 .r_btn {
+	background: url("../../image/test/ks_mk.png") no-repeat 0px -712px;
+	border: currentColor;
+	width: 75px;
+	height: 28px;
+	margin-top: 10px;
+	margin-left: 120px;
+	float: left;
+	display: inline;
+	cursor: pointer;
+}
+
+.point2 .r_btn2 {
+	background: url("../../image/test/ks_mk.png") no-repeat -80px -712px;
+	border: currentColor;
+	width: 76px;
+	height: 28px;
+	margin-top: 10px;
+	margin-left: 10px;
+	float: left;
+	display: inline;
+	cursor: pointer;
+}
+
+.share_out {
+	background: url("../../image/test/ks_mk.png") repeat-x 0px -944px;
+	border: 1px solid rgb(204, 204, 204);
+	width: 99%;
+	height: auto;
+	float: left;
+}
+
+.share_out .slf {
+	background: url("../../image/test/ks_mk.png") no-repeat 0px -1050px;
+	width: 4px;
+	height: 100px;
+	line-height: 92px;
+	font-size: 1px;
+	float: left;
+	display: inline;
+}
+
+.srg {
+	background: url("../../image/test/ks_mk.png") no-repeat 0px -1050px;
+	width: 4px;
+	height: 100px;
+	line-height: 92px;
+	font-size: 1px;
+	float: left;
+	display: inline;
+}
+
+.share_out .srg {
+	background: url("../../image/test/ks_mk.png") no-repeat -5px -1050px;
+	margin-left: -2px;
+	float: right;
+}
+
+.share_out textarea {
+	/*background: url("http://img.233.com/wx/img/uc/233bg.png") no-repeat
+		center 10px;*/
+	font: 12px/normal "微软雅黑";
+	padding: 5px;
+	border: 0px currentColor;
+	width: 97%;
+	height: 90px;
+	color: rgb(51, 51, 51);
+	overflow: auto;
+	float: left;
+	display: inline;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+
+.share_action {
+	width: 100%;
+	height: auto;
+	padding-top: 6px;
+	float: left;
+}
+
+.share_action span {
+	color: rgb(153, 153, 153);
+	line-height: 30px;
+	font-size: 14px;
+	float: left;
+}
+
+.share_action .num_ts {
+	background: url("../../image/test/ks_mk.png") no-repeat -20px -1056px;
+	border: currentColor;
+	width: 100px;
+	height: 33px;
+	text-indent: -9999px;
+	font-size: 0px;
+	margin-right: 3px;
+	float: right;
+	display: inline;
+	cursor: pointer;
+}
+
+.share_action .num_ts:hover {
+	background: url("../../image/test/ks_mk.png") no-repeat -20px -1091px;
+}
+
+.share_action .num_ts2 {
+	font-size: 12px;
+	margin-top: 2px;
+	margin-right: 10px;
+	float: left;
+}
+
+.xt_tbody {
+	padding: 0px 5px 10px 15px;
+	width: 98%;
+	height: auto;
+	float: left;
+}
+
+.btm_B .jxbox .jxbb {
+	width: 100%;
+	margin-top: 0px;
+}
+
+hr.line {
+	border-width: 1px medium medium;
+	border-style: dotted none none;
+	border-color: rgb(201, 214, 237) currentColor currentColor;
+	width: 100%;
+	height: 1px;
+	color: rgb(187, 187, 187);
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+.xt_list .zhugan {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.btm_A {
+	background: rgb(233, 245, 252);
+	padding: 10px 14px 10px 15px;
+	width: 97%;
+	height: auto;
+	color: rgb(102, 102, 102);
+	line-height: 24px;
+	border-bottom-color: rgb(216, 229, 240);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	float: left;
+}
+
+.pbtxt {
+	font: 12px/23px "微软雅黑";
+	margin: 0px;
+	padding: 8px 10px;
+	width: 362px;
+	clear: both;
+	float: left;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+
+.bd {
+	margin: 0px 0px -10px;
+	padding: 5px 0px 0px;
+	width: 100%;
+	line-height: 33px;
+	float: left;
+	display: block;
+	_margin-bottom: -5px;
+}
+
+.popBd {
+	overflow: hidden;
+	-ms-overflow-y: auto;
+}
+
+.fy {
+	padding: 10px 20px;
+	width: 94%;
+	height: auto;
+	float: left;
+}
+
+.checked {
+	background: url("http://img.233.com/wx/img/uc/201203/index-2012.png")
+		no-repeat -216px -556px;
+	top: 0px;
+	width: 28px;
+	height: 30px;
+	right: 0px;
+	display: none;
+	position: absolute;
+}
+
+span.all {
+	background: rgb(229, 229, 229);
+	border: 1px solid rgb(208, 208, 208);
+	text-indent: 0px;
+}
+
+div.tips {
+	background: rgb(242, 253, 241);
+	margin: 15px 5px 0px;
+	border: 1px solid rgb(182, 225, 132);
+	height: 30px;
+	color: rgb(85, 130, 33);
+	line-height: 30px;
+	text-indent: 1em;
+}
+
+.new {
+	background: url("tsk_bg.png") 0px -34px;
+	top: -14px;
+	width: 20px;
+	height: 14px;
+	right: 20px;
+	float: left;
+	position: absolute;
+}
+
+/* 自己的样式 */
+.grid-color-before {
+	border: 1px solid #dfdfdf;
+	background: #FFFFFF;
+}
+
+.grid-color-after {
+	border: 1px solid #addd96;
+	background: #dcf4d1;
+}
+
+.grid-color-err {
+	border: 1px solid #f7cda5;
+	background: #fef1e2;
+}
+
+.righthead {
+	padding: 7px 0 7px 10px;
+	border-bottom: 2px solid #6699FF;
+	margin-bottom: 10px;
+}
+
+.righthead dl {
+	margin: 0 10px;
+}
+
+.righthead dt {
+	line-height: 21px;
+	height: 21px;
+	float: left;
+}
+
+.righthead #err {
+	float: left;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #f7cda5;
+	background: #fef1e2;
+	margin: 0 20px 0 10px;
+}
+
+.righthead #done {
+	float: left;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #dfdfdf;
+	background: #FFFFFF;
+	margin: 0 20px 0 10px;
+}
+
+.righthead #undone {
+	float: left;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #addd96;
+	background: #dcf4d1;
+	margin: 0 0 0 10px;
+}
+
+.row-fluid {
+	margin: 0 auto;
+	width: 170px;
+}
+
+.grid {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 1px 1px 1px 1px;
+	margin-bottom: 2px;
+	display: inline;
+	min-height: 30px;
+	float: left;
+	display: inline;
+}
+
+#leftcontent {
+	float: left;
+}
+
+#rightcontent {
+	width: 200px;
+	position: fixed;
+	right: 30px;
+	_zoom: 1;
+	display: none;
+	float: left;
+	border: 1px solid #dfdfdf;
+	background: #fff;
+	display: block;
+	-moz-box-shadow: 0 1px 2px #d3d3d3;
+	-webkit-box-shadow: 0 1px 2px #d3d3d3;
+	box-shadow: 0 1px 2px #d3d3d3;
+	margin: 50px 0px 0px 0%;
+	padding-bottom: 20px;
+	-moz-box-shadow: 0 1px 2px #d3d3d3
+}
+
+.h10 {
+	overflow: hidden;
+}
+
+.sticky {
+	z-index: 999;
+	top: 40px;
+	width: 1000px;
+	position: fixed;
+	margin-top: 0;
+	_position: absolute;
+	_bottom: auto;
+	_top: expression(eval(document.documentElement.scrollTop) );
+}
+
+/* 标题栏的样式 */
+.hnav {
+	background-color: #3B3B3B;
+	position: fixed;
+}
+
+.hnav_ul {
+	list-style: none outside none;
+	-moz-box-sizing: border-box;
+	display: block;
+	background-color: #333333;
+	color: white;
+	float: left;
+	padding-top: 1em;
+}
+
+.hnav_user_pic {
+	padding-top: 1em;
+	float: left;
+}
+
+.hnav_user {
+	padding-top: 1em;
+}
+
+.hnav_ul  li {
+	list-style: none;
+	float: left;
+	width: 24%;
+	color: white;
+}
+
+.hnav_ul li a {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.hnav_user a {
+	cursor: pointer;
+	float: left;
+}
+
+.hnav-middle {
+	width: 70%;
+	margin: 0 auto;
+}

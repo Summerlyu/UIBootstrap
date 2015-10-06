@@ -1,0 +1,36 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        	<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        		<h3 id="myModalLabel">发送私信</h3>
+        	</div>
+        	<div class="modal-body">
+        		<div id="sendMessageBox">
+			                 私信标题:<input id="messageTitle" class="span5" type="text"/><br>
+			                 私信内容:<textarea id="messageText" class="span5" rows="5"></textarea><br>
+                 <!-- to user id-->
+                 <input type="hidden" id="touserid"/>
+        		</div>
+        	</div>
+    		<div class="modal-footer">
+    			<button class="btn" id="closeMessageBtn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                 <button id="sendMessageBtn" class="btn btn-success">发送私信</button>
+    		</div>
+</div>
+
+<!-- 请先在页面插入以上代码片段 -->
+
+
+<a href='#myModal' data-toggle='modal' style="text-decoration:none;"><i class="icon-edit" style="margin-right:.3em;"></i>发私信</a>
+
+<!-- 然后在合适的位置添加以上按钮用于弹出窗口 。
+窗口弹出前，请先确保"发信目标用户的id"已经通过js赋给了对话框里的 <input type="hidden" id="touserid"/> 控件
+ -->
+ 
+ 
+<script src="js/pm/util.js"></script>
+<script src="js/pm/personalMessage.js"></script>
+    
+<!-- 最后添加js/pm下的personalMessage.min.js和util.js文件引用。(请确保页面已经引入了Bootstrap组件）-->

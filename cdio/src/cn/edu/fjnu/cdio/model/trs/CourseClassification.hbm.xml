@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- @Author 曹欣炎 说明:课程计划hibernate配置文件 -->
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.trs">
+	<class name="CourseClassification" table="t_course_classification">
+
+		<id name="id" type="int">
+			<column name="pk_id" />
+			<generator class="assigned" />
+			<!-- <generator class="increment" /> -->
+		</id>
+
+		<property name="pId" type="int">
+			<column name="classification_pId" />
+		</property>
+
+		<property name="name" type="string">
+			<column name="classification_name" />
+		</property>
+
+	</class>
+</hibernate-mapping>

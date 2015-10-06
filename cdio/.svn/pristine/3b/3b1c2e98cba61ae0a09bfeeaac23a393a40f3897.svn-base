@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    <struts>
+	    <constant name="struts.multipart.maxSize" value="900000000"/>
+	    <constant name="struts.i18n.encoding" value="UTF-8" />
+	    <constant name="struts.ui.theme" value="simple"></constant>
+	    <constant name="struts.multipart.saveDir" value="/tmp"></constant>
+		
+		<package name="util" extends="struts-default">
+			<default-action-ref name="welcomeAction"></default-action-ref>
+			<action name="pageNotFund">
+				<result>WEB-INF/jsps/common/404.jsp</result>
+			</action>
+		</package>  
+	  
+	    
+	   	<include file="cn/edu/fjnu/cdio/config/common/struts_common.xml"></include>
+	   	<include file="cn/edu/fjnu/cdio/config/common/struts_pm.xml"></include>
+	   
+	    <include file="cn/edu/fjnu/cdio/config/coa/struts_coa.xml"></include> 
+    	<include file="cn/edu/fjnu/cdio/config/pym/struts_pym.xml"></include>
+    	<include file="cn/edu/fjnu/cdio/config/grp/struts_grp.xml"></include>
+		<include file="cn/edu/fjnu/cdio/config/res/struts_res.xml"></include>
+	    <include file="cn/edu/fjnu/cdio/config/stu/struts_stu.xml"></include>
+		<include file="cn/edu/fjnu/cdio/config/trs/struts_trs.xml"></include>
+	    <include file="cn/edu/fjnu/cdio/config/bgm/struts_bgm.xml"></include>
+		<include file="cn/edu/fjnu/cdio/config/cmt/struts_cmt.xml"></include>
+		<include file="cn/edu/fjnu/cdio/config/mat/struts_mat.xml"></include>
+		<include file="cn/edu/fjnu/cdio/config/test/struts_test.xml"></include>
+    
+    </struts>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.common">
+	<class name="Scope" table="t_scope">
+		<id name="scopeId" column="pk_scope_id" type="java.lang.Long">
+			<generator class="identity" />
+		</id>
+		<property name="name" type="java.lang.String" column="name"
+			length="100" not-null="true" />
+		<property name="sequence" type="java.lang.Integer" column="sequence"
+			not-null="true" />
+		<property name="level" type="java.lang.Integer" column="level"
+			not-null="true" />
+
+		<many-to-one name="parentScope" class="Scope" column="fk_parent_id" />
+
+		<set name="scopes" table="t_scope" cascade="all">
+			<key column="fk_parent_id"></key>   <!-- 外键 -->
+			<one-to-many class="Scope" />  <!-- 封装方式 -->
+		</set>
+	</class>
+</hibernate-mapping>

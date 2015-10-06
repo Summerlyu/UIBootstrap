@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+   <class name="cn.edu.fjnu.cdio.model.res.ResDangerous" table="t_resdangerous" dynamic-insert="true" dynamic-update="true">
+   
+       <id name="resId" type="java.lang.Long" length="10" column="pk_res_id">
+       </id>
+       <property name="resName" type="java.lang.String" column="res_name" length="50"/>
+       <property name="resPath" type="java.lang.String" column="res_path" length="200"   />
+       <property name="resRank" type="java.lang.Integer" column="res_rank"/>
+         
+   </class>
+</hibernate-mapping>
+

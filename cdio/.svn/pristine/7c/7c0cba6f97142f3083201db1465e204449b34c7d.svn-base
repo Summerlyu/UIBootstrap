@@ -1,0 +1,143 @@
+﻿.pym_donUser{
+	font-size: 16px;
+	font-family: 宋体;
+	width:25%;
+}
+
+.pym_donSpace{
+	width:2%;
+}
+
+
+.pym_donUserimage{
+    border:1px;
+    padding:5px;
+	  box-shadow:3px 3px 4px #000;
+	  background:#fff;
+    width:60%;
+    height:160px;
+}
+
+.pym_donIcro{
+	padding-bottom:4px;
+    margin-right: 1%;
+}
+
+.pym_donSun{
+    padding-bottom:4px;
+    margin-right: 1%;
+
+}
+
+.pym_donImg span{
+	position: relative;
+	font-family: 宋体;
+	font-size:16px;
+  top:10px;
+}
+
+.pym_donColor{
+	color:#FF9900;
+	font-weight: bold;
+	font-family: 宋体; 
+}
+
+.pym_donEPcolor{
+    color:#FF9900;
+    font-weight: bold;
+    font-family: 宋体; 
+}
+
+.pym_buttonbg{
+	background-color:#66CCFF;
+}
+
+.pym_donHead{
+	font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+
+
+.pym_cteacher{
+
+font-weight: bold;
+font-size: 14px;
+font-family: 宋体;
+}
+
+
+.pym_donImg{
+font-weight: bold;
+}
+
+.border{
+    border: #DDDDDD;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.border1{
+    border-bottom-color: #CDCDCD;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    margin-bottom: 10px;
+    border-top-color: #CDCDCD;
+    border-top-style: dashed;
+    border-top-width: 1px;
+    min-height:105px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img_border{
+    border:1px;
+    padding:6px;
+    solid #000;
+    margin-top: 20%;
+    width:100px;
+    height: 100px;
+}
+
+.border2{
+    background-color:#E5EDF2;
+    width: 110%;
+    height:5px;
+    margin-bottom: 5px;
+
+}
+
+
+.pym_donHeadbg{
+    background-color:#C2D5E3;
+}
+
+
+
+.page-skip {
+    color:#005580;
+    display: inline-block;
+    font-family: Tahoma,SimSun,Arial;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 16px;
+    padding: 0 5px;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.pagination .span1{
+    height: 20px;
+}
+.pym_quePage
+{
+    position: relative;
+    text-align:right;
+}

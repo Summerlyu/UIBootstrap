@@ -1,0 +1,548 @@
+body {
+	margin: 0px;
+	color: rgb(68, 68, 68);
+	font-family: Arial;
+	font-size: 12px;
+}
+
+div {
+	margin: 0px;
+	padding: 0px;
+	border: 0px currentColor;
+}
+
+form {
+	margin: 0px;
+	padding: 0px;
+	border: 0px currentColor;
+}
+
+img {
+	margin: 0px;
+	padding: 0px;
+	border: 0px currentColor;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+	border: 0px currentColor;
+}
+
+ol {
+	margin: 0px;
+	padding: 0px;
+	border: 0px currentColor;
+}
+
+li {
+	margin: 0px;
+	padding: 0px;
+	border: 0px currentColor;
+}
+
+dl {
+	margin: 0px;
+	padding: 0px;
+	border: 0px currentColor;
+}
+
+dt {
+	margin: 0px;
+	padding: 0px;
+	border: 0px currentColor;
+}
+
+dd {
+	margin: 0px;
+	padding: 0px;
+	border: 0px currentColor;
+}
+
+h1 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+h2 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+h3 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+h4 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+h5 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+h6 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+table {
+	font-size: 12px;
+	margin: 0px auto;
+}
+
+td {
+	font-size: 12px;
+}
+
+tr {
+	font-size: 12px;
+}
+
+th {
+	font-size: 12px;
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+.Hidebox {
+	display: none;
+}
+
+.Showbox {
+	display: block;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+a {
+	color: rgb(68, 68, 68);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(204, 0, 0);
+	text-decoration: underline;
+}
+
+.cRed {
+	color: rgb(255, 0, 0);
+}
+
+a.cRed:link {
+	color: rgb(255, 0, 0);
+}
+
+a.cRed:visited {
+	color: rgb(255, 0, 0);
+}
+
+.h10 {
+	width: 100%;
+	height: 10px;
+}
+
+.mainBody {
+	background: url("http://img.233.com/wx/img/uc/201203/left_box.png")
+		repeat-y 5px rgb(255, 255, 255);
+	margin: 0px auto;
+	padding: 0px 5px 15px;
+	width: 990px;
+	height: auto;
+	position: relative;
+}
+
+.footer {
+	margin: 0px auto;
+	padding: 15px 0px;
+	width: 990px;
+	height: auto;
+	color: rgb(136, 136, 136);
+	line-height: 22px;
+	border-top-color: rgb(82, 171, 216);
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+
+.bigti {
+	font: 24px/35px "微软雅黑";
+	margin: 0px auto;
+	width: 1000px;
+	height: auto;
+	position: relative;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+
+#menu .headbox {
+	position: relative;
+	z-index: 999;
+}
+
+.Mask {
+	background: rgb(153, 153, 153);
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 1580px;
+	position: absolute;
+	z-index: 999;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+}
+
+.DshareWrap {
+	background: rgb(255, 255, 233);
+	padding: 20px 10px;
+	border: 1px solid rgb(245, 235, 196);
+	width: 30%;
+	color: rgb(102, 102, 102);
+	line-height: 22px;
+	margin-top: 20px;
+	margin-right: 20px;
+	float: right;
+	display: inline;
+}
+
+.cRed {
+	color: rgb(255, 102, 0);
+}
+
+a.cRed:link {
+	color: rgb(255, 102, 0);
+}
+
+a.cRed:visited {
+	color: rgb(255, 102, 0);
+}
+
+.clearfix::after {
+	height: 0px;
+	clear: both;
+	display: block;
+	visibility: hidden;
+	content: ".";
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+.lf {
+	float: left;
+}
+
+.rt {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+* html,* html body /* 修正IE6振动bug */ {
+	background-image: url(about:blank);
+	background-attachment: fixed;
+}
+
+.top {
+	width: 100%;
+	display: block;
+	_display: inline;
+	background: #f1f1f1;
+	float: left;
+	position: relative;
+	z-index: 99999;
+	left: 0;
+	top: 0;
+	clear: both;
+	position: fixed;
+	_position: absolute;
+	_top: expression(documentElement.scrollTop);
+	height: 38px;
+	font-family: Tahoma, Geneva, '\5fae\8f6f\96c5\9ed1', '\5B8B\4F53';
+	background: #f1f1f1;
+	border: #e2e2e2 solid 1px;
+	border-left: none;
+	border-right: none;
+	color: #666;
+}
+
+.top b {
+	color: #F60;
+}
+
+/* CSS Document */
+/**/
+.frame-header {
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 11;
+	height: 38px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.header-nav {
+	position: relative;
+	float: left;
+	font-size: 14px;
+}
+
+.header-nav ul,.header-nav ul li {
+	float: left;
+}
+
+.top .header-nav ul a {
+	float: left;
+	height: 38px;
+	padding: 0 15px;
+	line-height: 38px;
+	overflow: hidden;
+	font-weight: bold;
+	cursor: pointer;
+	color: #666;
+	border-left: #e2e2e2 solid 1px;
+	border-right: #fbfbfb solid 1px;
+}
+
+.header-nav ul a:hover,.header-nav ul a.current {
+	text-decoration: none;
+	background: #FFF;
+	color: #666;
+	border-left: #e2e2e2 solid 1px;
+	border-right: #fff solid 1px
+}
+
+.header-nav ul a.current {
+	cursor: default;
+}
+
+.header-nav ul {
+	float: left
+}
+
+.header-nav li .item_home {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 10;
+	overflow: hidden;
+	background: url(http://img.233.com/www/img/233indextop/icon_space.png)
+		-275px 0px no-repeat;
+	cursor: pointer;
+	position: absolute;
+	left: 10px;
+	top: 12px
+}
+
+.header-nav li.home a {
+	padding-left: 35px
+}
+
+.header-nav i {
+	position: relative;
+	top: 17px;
+	float: left;
+	width: 7px;
+	height: 5px;
+	overflow: hidden;
+	background: url(http://img.233.com/www/img/233indextop/icon_space.png)
+		no-repeat -484px 0;
+	right: -7px
+}
+
+.header-nav li.hover {
+	color: #666;
+	border: #e2e2e2 solid 1px;
+	background: #FFF;
+	position: relative;
+	height: 38px;
+	margin-bottom: -3px
+}
+
+.header-nav li.hover div {
+	display: block;
+}
+
+.header-nav li.hover a {
+	color: #666;
+	height: 39px;
+	border: 0px
+}
+
+.header-nav li.hover a:hover {
+	background: none;
+	color: #666;
+	border: none !important
+}
+
+.header-nav ul span {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: none;
+	float: left
+}
+
+/**/
+.header-user-panel {
+	position: relative;
+	float: right;
+	zoom: 1;
+	font-size: 12px;
+}
+
+.hu-info {
+	position: relative;
+	float: left;
+}
+
+.hu-info dl {
+	position: relative;
+	float: left;
+	height: 38px;
+}
+
+.hu-info dt {
+	position: relative;
+	top: 2px;
+	z-index: 2;
+	float: left;
+	height: 37px;
+	padding-right: 10px;
+	line-height: 32px;
+	font-weight: bold;
+	color: #666;
+	border: 1px solid;
+	border-bottom: 0 none;
+	border-color: transparent;
+	cursor: pointer;
+	_border-color: pink;
+	_filter: chroma(color =   pink);
+}
+
+.hu-info dt span {
+	float: left;
+	padding: 0 6px 0 36px;
+}
+
+.hu-info dt span a {
+	color: #333
+}
+
+.hu-info dt span a:hover {
+	color: #d00
+}
+/**/
+.frame-header-logo {
+	position: relative;
+	float: left;
+	border-right: 1px solid #353535;
+}
+
+.frame-header-logo:after {
+	content: "beta";
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 23px;
+	height: 10px;
+	line-height: 10;
+	overflow: hidden;
+}
+
+.frame-header-logo a {
+	display: block;
+	width: 114px;
+	height: 38px;
+	line-height: 10;
+	overflow: hidden;
+}
+
+.top.roll {
+	background: #3B3B3B;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.top.roll .header-nav ul a {
+	border-left: 1px solid #434343;
+	border-right: 1px solid #353535;
+	color: #E2E2E2;
+}
+
+.top.roll .header-nav ul a:hover,.top.roll .header-nav ul a.current {
+	color: #FFF;
+	border-color: #4F4F4F;
+	background: #4F4F4F;
+}
+
+.top.roll .header-nav ul li.hover a {
+	border: none;
+	color: #666;
+}
+
+.top.roll .header-nav ul li.hover a:hover {
+	border-left: 1px solid #e2e2e2;
+	border-right: 1px solid #fff;
+	background: none !important;
+	color: #f60 !important;
+}
+
+.top.roll .hu-info dt {
+	color: #fff
+}
+
+.top.roll .hu-info .hover dt {
+	color: #333;
+}
+
+.top.roll .hu-info dt span a {
+	color: #FFF
+}
+
+.top.roll .hu-info dl.hover dt a {
+	color: #333
+}
+
+.top.roll hu-info dt span a:hover {
+	color: #d00
+}
+
+/*=============================顶部TOP样式结束=============================*/
+thead .info {
+	background-color: #c4e3f3;
+}

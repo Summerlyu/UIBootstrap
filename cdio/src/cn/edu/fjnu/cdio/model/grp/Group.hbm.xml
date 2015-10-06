@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.grp.Group" table="t_group">
+
+		<!--社群小组信息 -->
+		
+		<id name="groupId" type="long">
+			<column name="pk_group_id" />
+			<generator class="increment" />
+		</id>
+		
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" lazy="false">
+            <column name="FK_USER_ID"/>
+        </many-to-one><!-- 一个user对应多个小组 -->
+      
+        
+		<property name="groupName" type="java.lang.String">
+			<column name="group_name" length="30" />
+		</property>
+		
+		<property name="groupRemark" type="java.lang.String">
+			<column name="group_remark" length="30" />
+		</property>
+
+		
+		<property name="groupNums" type="java.lang.Integer">
+			<column name="group_nums" />
+		</property>
+		
+		<property name="groupCreateTime" type="java.util.Date">
+		    <column name="group_create_time"/>
+		</property>
+		<property name="groupIntro" type="java.lang.String">
+			<column name="group_intro"/>
+		</property>
+		
+		<property name="groupPic" type="org.springframework.orm.hibernate3.support.BlobByteArrayType" lazy="true">
+			<column name="group_pic"></column>
+		</property>
+		
+		 <set name="topics" table="t_topic" cascade="all" inverse="true">
+            	<key column="FK_GROUP_ID"></key>
+            	<one-to-many class="cn.edu.fjnu.cdio.model.grp.Topic" />
+        	</set>
+        	
+         <set name="members" table="t_member" cascade="all" inverse="true">
+            	<key column="FK_GROUP_ID"></key>
+            	<one-to-many class="cn.edu.fjnu.cdio.model.grp.Member" />
+        	</set>
+	</class>
+</hibernate-mapping>

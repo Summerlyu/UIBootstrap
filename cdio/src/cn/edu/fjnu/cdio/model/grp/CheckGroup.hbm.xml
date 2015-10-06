@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.grp.CheckGroup" table="t_check_group">
+
+		<!--审核社群小组信息 -->
+		<id name="checkGroupId" type="long">
+			<column name="pk_check_group_id" />
+			<generator class="increment" />
+		</id>
+		
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" lazy="false">
+            <column name="FK_USER_ID"/>
+        </many-to-one><!-- 一个user对应多个审核小组 -->
+        
+        
+		
+		<property name="checkGroupName" type="java.lang.String">
+			<column name="check_group_name" length="30" />
+		</property>
+		
+		<property name="checkGroupRemark" type="java.lang.String">
+			<column name="check_group_remark" length="30" />
+		</property>
+		
+		<property name="checkGroupNums" type="java.lang.Integer">
+			<column name="check_group_nums" />
+		</property>
+		
+		<property name="checkGroupCreateTime" type="java.util.Date">
+		    <column name="check_group_create_time"/>
+		</property>
+		
+		<property name="checkGroupIntro" type="java.lang.String">
+			<column name="check_group_intro"/>
+		</property>
+		
+		<property name="checkGroupPic" type="org.springframework.orm.hibernate3.support.BlobByteArrayType" lazy="true">
+			<column name="check_group_pic"></column>
+		</property>
+	</class>
+</hibernate-mapping>

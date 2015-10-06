@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="match" namespace="/match" extends="struts-default">
+		<action name="matchAction" class="cn.edu.fjnu.cdio.controller.mat.MatchAction" method="match">
+			<result name="success">/WEB-INF/jsps/mat/mat_main_page.jsp</result>
+			<result name="error">/WEB-INF/jsps/mat/Error.jsp</result>
+		</action>
+		
+		<action name="changePage" class="cn.edu.fjnu.cdio.controller.mat.MatchAction" method="matchPage">
+			<result name="success">/WEB-INF/jsps/mat/mat_main_page.jsp</result>
+			<result name="error">xxxx.jsp</result>
+		</action>
+		<action name="detailAction" class="cn.edu.fjnu.cdio.controller.mat.MatchAction" method="detail">
+		    <result name="success">/WEB-INF/jsps/mat/mat_detail_page.jsp</result>
+		</action>
+	</package>
+</struts>

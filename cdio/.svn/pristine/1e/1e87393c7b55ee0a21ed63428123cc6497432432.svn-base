@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.trs">
+	<class name="CourseRecord" table="t_course_record">
+
+	
+		<id name="recordId" type="java.lang.Long">
+			<column name="pk_record_id" />
+			<generator class="increment" />
+		</id>
+		
+		<property name="courseContent" type="java.lang.String">
+			<column name="course_content" length="200" />
+		</property>
+		
+		<property name="beginTime" type="java.util.Date">
+			<column name="begin_time" />
+		</property>
+		
+		<property name="endTime" type="java.util.Date">
+			<column name="end_time" />
+		</property>
+		
+		<property name="recordContent" type="java.lang.String">
+			<column name="record_content" length="500" />
+		</property>
+		
+		<property name="videoUrl" type="java.lang.String">
+			<column name="video_url" length="50" />
+		</property>
+		
+		<property name="report" type="java.lang.String">
+			<column name="report" length="200" />
+		</property>
+		
+		<property name="testMID" type="java.lang.Long">
+			<column name="pk_testM_id"></column>
+		</property>
+		
+		<many-to-one name="course" class="cn.edu.fjnu.cdio.model.coa.Course" column="fk_course_id" lazy="false"></many-to-one>
+		
+	</class>
+</hibernate-mapping>

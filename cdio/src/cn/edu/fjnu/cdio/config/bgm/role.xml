@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="role" namespace="/role" extends="struts-default">
+		<action name="load" class="cn.edu.fjnu.cdio.controller.bgm.RoleAction">
+			<result name="success">/WEB-INF/jsps/bgm/roleMain.jsp</result>
+		</action>
+		
+		<action name="input" class="cn.edu.fjnu.cdio.controller.bgm.RoleAction" method="input">
+			<result name="inputUI">/WEB-INF/jsps/bgm/addRole.jsp</result>
+		</action>
+		
+		<action name="add" class="cn.edu.fjnu.cdio.controller.bgm.RoleAction" method="add">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+		
+		<action name="updateP" class="cn.edu.fjnu.cdio.controller.bgm.RoleAction" method="getSingleRole">
+			<result name="success">/WEB-INF/jsps/bgm/updateRole.jsp</result>
+		</action>
+		
+		<action name="update" class="cn.edu.fjnu.cdio.controller.bgm.RoleAction" method="updateRole">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+		
+		<action name="delete" class="cn.edu.fjnu.cdio.controller.bgm.RoleAction" method="deleteRole">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+		
+		
+	</package>
+</struts>

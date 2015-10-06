@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.pym.ApplyTable" table="t_applyTable">
+
+		<!--交易表的信息 -->
+		<id name="applyID" type="long">
+			<column name="pk_apply_id"/>
+			<generator class="increment" />
+		</id>
+		
+		<property name="trueName" type="java.lang.String">
+			<column name="true_name" length="40" not-null="true"/>
+		</property>
+
+		<property name="address" type="java.lang.String">
+			<column name="address"  length="40" not-null="true"/>
+		</property>
+		
+		<property name="email" type="java.lang.String">
+			<column name="email" length="30" not-null="true"></column>
+		</property>
+		
+		<property name="phone" type="java.lang.String">
+			<column name="phone" length="15" not-null="true"></column>
+		</property>
+		
+		<property name="idCard" type="java.lang.String">
+			<column name="id_card" length="30" not-null="true"></column>
+		</property>
+		
+		<property name="applyEP" type="java.lang.Double">
+			<column name="apply_ep" not-null="true"></column>
+		</property>
+		
+		<property name="application" type="org.springframework.orm.hibernate3.support.ClobStringType">
+			<column name="application" not-null="true"></column>
+		</property>
+		
+		<property name="attestation" type="java.lang.Integer">
+			<column name="attestation" length="1" not-null="true"></column>
+		</property>
+		
+		<property name="time" type="java.util.Date">
+			<column name="time" not-null="true"></column>
+		</property>
+		
+		<property name="reason" type="java.lang.String">
+			<column name="reason" length="200"></column>
+		</property>
+		
+		<property name="reEp" type="java.lang.Double">
+			<column name="re_ep"></column>
+		</property>
+		
+		 <property name="pic" type="org.springframework.orm.hibernate3.support.BlobByteArrayType" lazy="true">
+			<column name="picture"></column>
+		</property>
+		
+		<property name="stuCard" type="org.springframework.orm.hibernate3.support.BlobByteArrayType" lazy="true">
+			<column name="stu_card"></column>
+		</property>
+		
+		<property name="evidenceName" type="java.lang.String">
+			<column name="evidence_name" length="40"/>
+		</property>
+		
+		<property name="job" type="java.lang.String">
+			<column name="job" length="40"/>
+		</property>
+		
+		<property name="workUnit" type="java.lang.String">
+			<column name="work_unit" length="40"/>
+		</property>
+		
+		<property name="evidenceEmail" type="java.lang.String">
+			<column name="evidence_email" length="40"/>
+		</property>
+		
+		<property name="evidencePhone" type="java.lang.String">
+			<column name="evidence_phone" length="40"/>
+		</property>
+		
+		<property name="evidenceIdcard" type="java.lang.String">
+			<column name="evidence_idcard" length="40"/>
+		</property>
+		
+		<property name="evidencePic" type="org.springframework.orm.hibernate3.support.BlobByteArrayType" lazy="true">
+			<column name="evidence_pic"></column>
+		</property>
+		
+		<many-to-one name="user" fetch="join" lazy="false" class="cn.edu.fjnu.cdio.model.common.User" column="fk_user_id"></many-to-one>
+		
+		 <one-to-one name="receive" class="cn.edu.fjnu.cdio.model.pym.ReceiveGrant" property-ref="apply" cascade="all"/>  
+	</class>
+</hibernate-mapping>

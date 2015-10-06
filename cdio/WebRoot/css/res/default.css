@@ -1,0 +1,228 @@
+body {
+	font: 12px/16px Arial, Helvetica, sans-serif;
+}
+#fileQueue {
+	width: 400px;
+	height: 60px;
+	padding-left:20px;
+	margin-bottom: 10px;
+	display:none;
+}
+.navbar{
+   	border:solid 1px #dde1e0;
+}
+.container{
+    margin-top:-20px;
+}
+#uploadArea-header{
+    background-color:#e8f7f0;
+    border-bottom:solid 1.5px #aeb7b4; 
+    height:25pt;      
+}
+#fileInfor{
+    padding-top:20px;
+    display:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:10pt;
+	font-weight:bold;
+	padding-bottom:10px
+}
+
+.nesLabelTip{
+    
+    width:80px;;
+}
+.inforLabel{
+    padding-right:15px;  
+}
+
+
+#subFileInforBtn{
+    width:100px;   
+	display: inline-block;
+	*display: inline;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	*margin-left: .3em;
+	font-size: 14px;
+	line-height: 20px;
+	color: #FFFFFF;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	vertical-align: middle;
+	cursor: pointer;
+	background-color:#39986F;
+	*background-color:#39986F;
+	background-repeat: repeat-x;
+	border: 1px solid #7D9EC0;
+	*border: 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	*zoom: 1;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	
+}
+.input-append{
+    padding-top:5px;
+}
+#definedTags{
+   
+    width:500px;
+}
+.input-append{
+	margin-top:10px;
+}
+.pull-left{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#000;
+	text-transform:uppercase;	
+}
+
+#fileInfor{
+	 min-height: 40px;
+	 padding-right: 20px;
+	 padding-left: 20px;
+	 background-color:#FCFCFC;
+	 background-repeat: repeat-x;
+	 border: 1px solid #d4d4d4;
+	 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
+	 *zoom: 1;	
+}
+.docAuthority{
+	 width:100px;
+	 height:25px;
+}
+#videoUrl{
+	 height:30px;
+	 padding-left:20px;
+}
+.videoTip{
+	 height:15px;
+	 width:600px;
+	 padding-left:20px;
+	 padding-bottom:40px;
+	 background-color:#FFFFFF;
+	 border:1px solid #FFFFFF;
+	 display:none;font-size:8pt;
+}
+
+.select-fileCatBtn{
+  display: inline-block;
+  *display: inline;
+  padding: 2px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #FDFDFD;
+  *background-color: #FDFDFD;
+  background-image: -moz-linear-gradient(top, #FDFDFD, #FDFDFD);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FDFDFD), to(#FDFDFD));
+  background-image: -webkit-linear-gradient(top, #FDFDFD, #FDFDFD);
+  background-image: -o-linear-gradient(top,  #FDFDFD, #FDFDFD);
+  background-image: linear-gradient(to bottom, #FDFDFD, #FDFDFD);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+
+}
+.private-uploadFile-select{
+	 	font-size:8pt;
+	 	color:gray;
+	 	text-decoration:none;
+	 	font-weight:normal;
+	 	height:20px;
+	 	display: inline-block;
+	    *display: inline;
+	    padding: 2px 12px;
+	    margin-bottom: 0;
+	    *margin-left: .3em;
+	    font-size: 14px;
+	    line-height: 20px;
+	    color: #333333;
+	    text-align: center;
+	    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	    vertical-align: middle;
+	    cursor: pointer;
+	    background-color: #EBEBE4;
+	    *background-color: #EBEBE4;
+	    background-image: -moz-linear-gradient(top, #EBEBE4, #EBEBE4);
+	    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EBEBE4), to(#EBEBE4));
+	    background-image: -webkit-linear-gradient(top, #EBEBE4, #EBEBE4);
+	    background-image: -o-linear-gradient(top,  #EBEBE4, #EBEBE4);
+	    background-image: linear-gradient(to bottom, #EBEBE4, #EBEBE4);
+	    background-repeat: repeat-x;
+	    border: 1px solid #E1E1E1;
+	    *border: 0;
+	    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	    border-bottom-color: #b3b3b3;
+	    -webkit-border-radius: 0px;
+	     -moz-border-radius: 0px;
+	          border-radius: 0px;
+	  
+	 	
+	 }
+#uploadResultMsg{
+	  	width:400px; 
+	  	background-color:#FAFAFA; 
+	  	border-top:5px solid #2f805d;
+	  	overflow:hidden; 
+	  	display:none;
+	 }
+	 #fileDesBar{
+	 	margin-top:-20px;
+	 	height:20px;
+	 	background-color:#EEEEE0;
+	 	margin-left:-20px;
+	 	width:100%;
+	 	margin-bottom:15px
+	 }
+	 #btn-continueUpload{
+	 	margin-right:30px;
+	 	width:90px;
+	 	background-color:#39966E;
+	 	*background-color:#39966E;
+	 	background-image:-moz-linear-gradient(top, #39966E, #39966E); 
+	 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#39966E), to(#39966E));
+  	    background-image: -webkit-linear-gradient(top, #39966E, #39966E);
+  	    color:#FFFFFF;
+  	    font-weight:bold
+	 }
+	 #btn-scanUploadedFile{
+	 	background-color:#EBF9F2;
+	 	*background-color:#EBF9F2; 
+	 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EBF9F2), to(#EBF9F2));
+  		background-image: -webkit-linear-gradient(top, #EBF9F2, #EBF9F2);
+  		background-image:-moz-linear-gradient(top, #EBF9F2, #EBF9F2);
+  	    color:#245c45;
+  	    font-weight:bold
+	 }
+	 #uploadResultMsg{
+	  	width:400px; 
+	  	background-color:#FAFAFA; 
+	  	border-top:5px solid #2f805d;
+	  	overflow:hidden; 
+	  	display:none;
+	 }

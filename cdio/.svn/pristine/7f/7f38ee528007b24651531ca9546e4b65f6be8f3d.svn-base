@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+	default-autowire="byName">
+	<context:component-scan base-package="cn.edu.fjnu.cdio" />
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/cdio?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password" value="123" />
+		<property name="maxActive">
+			<value>100</value>
+		</property>
+		<property name="maxIdle">
+			<value>20</value>
+		</property>
+		<property name="maxWait">
+			<value>30000</value>
+		</property>
+
+	</bean>
+
+	<bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler"
+		lazy-init="true" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+
+		<property name="lobHandler" ref="lobHandler" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingDirectoryLocations">
+			<list>
+				<!-- 加载hibernate的映射文件*.hbm.xml -->
+				<!--<value>classpath:cn/edu/fjnu/cdio/model/demo</value> -->
+
+				<value>classpath:cn/edu/fjnu/cdio/model/common</value>
+
+				<!-- stu组的映射文件 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/stu</value>
+
+				<!-- coa组映射文件所在路径 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/coa</value>
+
+				<!-- grp组映射文件 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/grp</value>
+
+				<!-- pym组映射文件 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/pym</value>
+
+				<!-- trs组映射文件 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/trs</value>
+
+				<!-- mat组映射文件 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/mat</value>
+
+				<!-- cmt组映射文件 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/cmt</value>
+
+				<!-- test组映射文件 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/test</value>
+
+				<!-- res组映射文件 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/res</value>
+
+				<!-- bgm组映射文件 -->
+				<value>classpath:cn/edu/fjnu/cdio/model/bgm</value>
+
+			</list>
+		</property>
+		<property name="hibernateProperties">
+
+			<props>
+			<!--  <prop key="hibernate.search.default.indexBase">E:\\java\\lucene_index</prop>-->
+			<prop key="hibernate.search.default.indexBase">/Hibernate_Search</prop>
+				<prop key="hibernate.search.default.directory_provider">filesystem</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.connection.pool_size">5</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="current_session_context_class">thread</prop>
+				<prop key="javax.persistence.validation.mode">none</prop>
+			</props>
+
+		</property>
+	</bean>
+
+	<bean name="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 配置事务传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="find*" propagation="REQUIRED" />
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- 配置参与事务的类 -->
+	<aop:config>
+		<aop:pointcut id="ServiceMethod"
+			expression="execution(* cn.edu.fjnu.cdio.service.*.*.*(..))" />
+		<aop:advisor pointcut-ref="ServiceMethod" advice-ref="txAdvice" />
+	</aop:config>
+
+</beans>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.common">
+	<class name="CourseType" table="t_course_type">
+		<id name="typeId" column="pk_type_id" type="java.lang.Long">
+			<generator class="identity" />
+		</id>
+
+		<many-to-one name="subject" class="Scope" column="subject"
+			lazy="false" fetch="join" not-null="true" />
+
+		<many-to-one name="version" class="Scope" column="version"
+			lazy="false" fetch="join" not-null="true" />
+
+		<many-to-one name="grade" class="Scope" column="grade"
+			lazy="false" fetch="join" not-null="true" />
+
+		<many-to-one name="chapter" class="Scope" column="chapter"
+			lazy="false" fetch="join" not-null="true" />
+
+		<many-to-one name="section" class="Scope" column="section"
+			lazy="false" fetch="join" not-null="true" />
+
+	</class>
+</hibernate-mapping>

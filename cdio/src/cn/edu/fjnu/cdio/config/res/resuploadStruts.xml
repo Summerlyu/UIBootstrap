@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  
+  <package name="res-upload" extends="struts-default" namespace="/file">
+     <action name="*_res"  method="{1}" class="cn.edu.fjnu.cdio.controller.res.ResUploadAction">
+         <result name="uploadPage" >/WEB-INF/jsps/res/upload_res.jsp</result>
+         <result name="error">/WEB-INF/jsps/res/error.jsp</result>
+         <result name="repeat">/WEB-INF/jsps/res/resRepeat.jsp</result>
+     </action>
+     
+     <action name="loadRepeatPage" class="cn.edu.fjnu.cdio.controller.res.ResUploadAction" method="repeat">
+    		 <result name="repeat">/WEB-INF/jsps/res/resRepeat.jsp</result>	
+     </action>
+     
+     <action name="loadUpload" class="cn.edu.fjnu.cdio.controller.res.PerUploadAction" method="loadPerUpload">
+    			<result name="loadPerUpload_page">/WEB-INF/jsps/res/resmodify.jsp</result>
+    			<result name="noPerUpload_page">/WEB-INF/jsps/res/noPerUpload.jsp</result>
+     </action>
+     <action name="deletePerUpload" class="cn.edu.fjnu.cdio.controller.res.PerUploadAction" method="deletePerUpload">
+    			<result name="loadPerUpload_page" type="redirectAction">loadUpload</result>
+     </action>
+     <action name="update_resInfor"  method="updateResDetail" class="cn.edu.fjnu.cdio.controller.res.PerUploadAction">      
+     </action>
+     
+     <action name = "showdeal" method ="showdeal" class="cn.edu.fjnu.cdio.controller.res.ResUploadAction">
+   			<result name = "showdeal">/WEB-INF/jsps/res/resdeal.jsp</result>
+   	</action>
+     
+  </package>
+  
+  <package name="res-uploadResult" extends="struts-default" namespace="/resUpload">
+		 <action name="upload_resInfor"  method="uploadResDetail" class="cn.edu.fjnu.cdio.controller.res.ResUploadAction">   
+		 </action>
+		 <action name="upload_videoUrl"  method="validateVideoUrl" class="cn.edu.fjnu.cdio.controller.res.ResUploadAction">      
+		 </action>
+		 <action name="get_resInfor"  method="getResDetail" class="cn.edu.fjnu.cdio.controller.res.PerUploadAction">      
+		 </action>
+		  
+   </package>
+   <package name="showdeal" extends="struts-default" namespace = "deal">
+   		<action name = "show_deal" method ="showdeal" class="cn.edu.fjnu.cdio.controller.res.ResUploadAction">
+   			<result name = "showdeal">/WEB-INF/jsps/res/resdeal.jsp</result>
+   		</action>
+   	</package>
+</struts>

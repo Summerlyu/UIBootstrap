@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+#span{
+	background-color:rgb(250,250,250);
+}
+
+.legend{
+	background-color:rgb(231,247,189);
+	}
+	
+#bod{	
+	background-color:rgb(241,247,228);
+}
+	

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+@Author 曹欣炎
+说明:课程计划hibernate配置文件
+-->
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.trs">
+	<class name="CoursePlan" table="t_course_plan">
+	
+		<id name="planID" type="java.lang.Long">
+			<column name="pk_plan_id" />
+			<generator class="increment" />
+		</id>
+
+		<property name="planName" type="java.lang.String">
+			<column name="plan_name" length="20" />
+		</property>
+
+		<property name="schoolHourStr" type="java.lang.String">
+			<column name="school_hour" />
+		</property>
+		
+		<many-to-one name="course" class="cn.edu.fjnu.cdio.model.coa.Course"  column="fk_course_id" lazy="false"></many-to-one>
+		
+	</class>
+</hibernate-mapping>

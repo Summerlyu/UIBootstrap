@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- 拦截处理 -->
+	<constant name="struts.devMode" value="false" /><!-- 开发模式 -->
+	<package name="group-default" namespace="/group" extends="struts-default">
+		<action name="*" class="cn.edu.fjnu.cdio.controller.grp.GroupAction" method="{1}">
+			<result name="addGroup" type="dispatcher">/WEB-INF/jsps/grp/MySocily.jsp</result>
+			<result name="goIntoGrpHomePage" type="dispatcher">/WEB-INF/jsps/grp/MySocily.jsp
+			</result>
+			<result name="mySocily" type="dispatcher">/WEB-INF/jsps/grp/MySocily.jsp
+			</result>
+			<result name="gotoCreateGroup" type="dispatcher">/WEB-INF/jsps/grp/CreateGroup.jsp</result>
+			<result name="myGroup" type="dispatcher">/WEB-INF/jsps/grp/MyGroup.jsp</result>
+			
+			<result name="pageMyGroup" type="dispatcher">/WEB-INF/jsps/grp/MyGroup.jsp
+			</result>
+			<result name="hotGroup" type="dispatcher">/WEB-INF/jsps/grp/HotGroup.jsp
+			</result>
+			
+			<result name="manageGroup" type="dispatcher">/WEB-INF/jsps/grp/ManageGroup.jsp
+			</result>
+			
+			<result name="showGroup" type="dispatcher">/WEB-INF/jsps/grp/SocilyHome.jsp
+			</result>
+			<result name="showByRemark" type="redirectAction">
+				<param name="namespace">/group</param>
+				<param name="actionName">showByPage</param>
+				<param name="remark">${remark}</param>
+				<param name="status">${status}</param>
+			</result>
+			
+			<result name="showTopic" type="redirectAction">
+				<param name="namespace">/topic</param>
+				<param name="actionName">showOneTopic</param>
+				<param name="topicId">${topic.topicId}</param>
+				
+			</result>
+			<result name="pageGroupByRemark" type="dispatcher">/WEB-INF/jsps/grp/RemarkGroup.jsp
+			</result>
+			<result name="needToKnow" type="dispatcher">/WEB-INF/jsps/grp/NeedToKnow.jsp
+			</result>
+			<result name="gotoEachGroup" type="dispatcher">/WEB-INF/jsps/grp/EachGroup.jsp
+			</result>
+			<result name="error" type="dispatcher">/WEB-INF/jsps/grp/error.jsp</result>
+		</action>
+	</package>
+	<package name="topic-default" namespace="/topic" extends="struts-default">
+		<action name="*" class="cn.edu.fjnu.cdio.controller.grp.TopicAction" method="{1}">
+			<result name="gotoEachTopic" type="dispatcher">/WEB-INF/jsps/grp/EachTopic.jsp
+			</result>
+			<result name="showOneSuccess" type="dispatcher">/WEB-INF/jsps/grp/EachTopic.jsp
+			</result>
+			<result name="gotoAddTopic" type="dispatcher">/WEB-INF/jsps/grp/PointTopic.jsp
+			</result>
+			<result name="addSuccess" type="redirectAction">showOneTopic?topicId=${topic.topicId}
+			</result>
+			<result name="talkTopic" type="dispatcher">/WEB-INF/jsps/grp/WMHotTopic.jsp</result>
+			<result name="searchTopic" type="dispatcher">/WEB-INF/jsps/grp/WMHotTopic.jsp</result>
+		    <result name="hotTopic" type="dispatcher">/WEB-INF/jsps/grp/HotTopic.jsp</result>
+		    <result name="myTopic" type="dispatcher">/WEB-INF/jsps/grp/MyTopic.jsp</result>
+			
+			<result name="delTopic" type="redirectAction">
+				<param name="namespace">/group</param>
+				<param name="actionName">manageGroup</param>
+				<param name="groupId">${groupId}</param>
+			</result>
+
+			<result name="addAgree" type="redirectAction">
+				<param name="namespace">/topic</param>
+				<param name="actionName">showOneTopic</param>
+				<param name="topicId">${topic.topicId}</param>
+				<param name="isAgree">${isAgree}</param>
+			</result>
+			<result name="pageTopic" type="dispatcher">/WEB-INF/jsps/grp/MyTopic.jsp</result>
+			<result name="error" type="dispatcher">/index.jsp</result>
+		</action>
+	</package>
+
+	<package name="reply_topic-default" namespace="/replyTopic" extends="struts-default">
+		<action name="*" class="cn.edu.fjnu.cdio.controller.grp.ReplyTopicAction" method="{1}">
+			<result name="addReply" type="redirectAction">
+				<param name="namespace">/topic</param>
+				<param name="actionName">showOneTopic</param>
+				<param name="topicId">${topicId}</param>
+			</result>
+			<result name="addReplyReply" type="redirectAction">
+				<param name="namespace">/topic</param>
+				<param name="actionName">showOneTopic</param>
+				<param name="topicId">${topicId}</param>
+			</result>
+			
+			
+			<result name="delReply" type="redirectAction">
+				<param name="namespace">/topic</param>
+				<param name="actionName">myTopic</param>
+				<param name="userId">${userId}</param>
+	
+			</result>
+			
+			
+			<result name="updateFlag" type="redirectAction">
+				<param name="namespace">/topic</param>
+				<param name="actionName">showOneTopic</param>
+				<param name="topicId">${topicId}</param>
+			</result>
+			<result name="error" type="dispatcher">/index.jsp</result>
+		</action>
+	</package>
+
+	<package name="member-default" namespace="/member" extends="struts-default">
+		<action name="*" class="cn.edu.fjnu.cdio.controller.grp.MemberAction" method="{1}">
+			<result name="addMember" type="redirectAction">
+				<param name="namespace">/group</param>
+				<param name="actionName">gotoEachGroup</param>
+				<param name="groupId">${groupId}</param>
+			</result>
+
+			<result name="delMember" type="redirectAction">
+				<param name="namespace">/group</param>
+				<param name="actionName">joinGroup</param>
+				<param name="user.id">${user.id}</param>
+			</result>
+			
+			<result name="dropMember" type="redirectAction">
+				<param name="namespace">/group</param>
+				<param name="actionName">gotoEachGroup</param>
+				<param name="groupId">${groupId}</param>
+			</result>
+			
+			<result name="error" type="dispatcher">/index.jsp</result>
+		</action>
+	</package>
+	<package name="groupAdm-default" namespace="/groupAdm" extends="struts-default">
+		<action name="*" class="cn.edu.fjnu.cdio.controller.grp.GroupAdmAction" method="{1}">
+			<result name="goIntoBackStage" type="redirectAction">
+				<param name="namespace">/groupAdm</param>
+				<param name="status">${status}</param>
+				<param name="actionName">showExamineGroupByPage</param>
+			</result>
+			<result name="closeGroup" type="redirectAction">
+				<param name="namespace">/groupAdm</param>
+				<param name="status">${status}</param>
+				<param name="remark">${remark}</param>
+				<param name="actionName">showExamineGroupByPage</param>
+			</result>
+			<result name="addGroupRemark" type="redirectAction">
+				<param name="namespace">/groupAdm</param>
+				<param name="status">${status}</param>
+				<param name="actionName">showExamineGroupByPage</param>
+			</result>
+			<result name="gotoGroupExamine" type="dispatcher">/WEB-INF/jsps/grp/GroupExamine.jsp</result>
+			<result name="gotoCloseGroup" type="dispatcher">/WEB-INF/jsps/grp/CloseGroup.jsp</result>
+			<result name="gotoBackStageManagement" type="dispatcher">/WEB-INF/jsps/grp/BackStageManagement.jsp</result>
+			<result name="gotoAddGroupRemark" type="dispatcher">/WEB-INF/jsps/grp/BackStageManagement.jsp</result>
+			<result name="showExamineGroup" type="dispatcher">/WEB-INF/jsps/grp/GroupInfo.jsp</result>
+			<result name="manageGroup" type="redirectAction">
+				<param name="namespace">/groupAdm</param>
+				<param name="status">${status}</param>
+				<param name="actionName">showExamineGroupByPage</param>
+			</result>
+			<result name="groupIsChecked" type="redirectAction">goIntoBackStage</result>
+			<result name="closeGroupRemarks" type="redirectAction">manageGroup</result>
+			
+			<result name="error" type="dispatcher">/index.jsp</result>
+		</action>
+	</package>
+</struts>

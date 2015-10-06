@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="judgeStudent"  extends="json-default">
+       <action name="*_teacher" class="cn.edu.fjnu.cdio.controller.cmt.TeacherAction" method="{1}">
+          <result name="loadJudgeStudentPage">WEB-INF/jsps/cmt/cmt_judge_student.jsp</result>
+         
+          <result name ="judgeResult" type="json">  
+                <param name="root">addJudgeResult</param>  
+          </result> 
+         
+       </action>  
+    </package>
+    
+    <package name="judgeQuestionNaire"  extends="struts-default">
+       <action name="*_judgeQuestion" class="cn.edu.fjnu.cdio.controller.cmt.AdminAction" method="{1}">
+          <result name="addJudgeQuestionPage">WEB-INF/jsps/cmt/cmt_add_judge_question.jsp</result>
+          <result name="listJudgeQuestionPage">WEB-INF/jsps/cmt/cmt_list_judge_question.jsp</result>
+          <result name="updateJudgeQuestionPage">WEB-INF/jsps/cmt/cmt_update_judge_question.jsp</result>
+          <result name="loadAction" type="redirectAction">loadPage_judgeQuestion</result>
+          <result name="success">WEB-INF/jsps/cmt/success.jsp</result>
+          <result name="error">WEB-INF/jsps/cmt/error.jsp</result>
+       </action>  
+    </package>
+    
+     <package name="adminQueryJudge"  extends="struts-default">
+       <action name="*_adminQueryJudge" class="cn.edu.fjnu.cdio.controller.cmt.AdminQueryJudgeAction" method="{1}">
+           <result name="listTeacherJudgeHistoryPage">WEB-INF/jsps/cmt/cmt_look_up_teacher_judge_history.jsp</result>
+           <result name="listStudentJudgeHistoryPage">WEB-INF/jsps/cmt/cmt_look_up_student_judge_history.jsp</result>
+           <result name="teacherChart">WEB-INF/jsps/cmt/cmt_look_up_teacher_chart.jsp</result>
+       </action>  
+    </package>
+    
+    <package name="judgeTeacher"  extends="json-default">
+       <action name="*_student" class="cn.edu.fjnu.cdio.controller.cmt.StudentAction" method="{1}">
+          <result name="loadJudgeTeacherPage">WEB-INF/jsps/cmt/cmt_judge_teacher.jsp</result>
+          <result name="loadJudgeTeacherHistoryPage">WEB-INF/jsps/cmt/cmt_judge_history_management.jsp</result>
+          <result name="updateJudgeTeacherPage">WEB-INF/jsps/cmt/cmt_update_judge_teacher.jsp</result>
+          <result name="loadAction" type="redirectAction">loadJudgeTeacherHistoryPage_student</result>
+          <result name ="addResult" type="json">  
+                <param name="root">judgeResult</param>  
+          </result> 
+       </action>  
+    </package>
+    
+    <package name="queryJudge"  extends="struts-default">
+       <action name="*_queryJudge" class="cn.edu.fjnu.cdio.controller.cmt.QueryJudgeAction" method="{1}">
+          <result name="loadStudentPage">WEB-INF/jsps/cmt/cmt_teacher_judge_forme.jsp</result>
+          <result name="teacherQueryJudge">WEB-INF/jsps/cmt/cmt_teacher_query_judge.jsp</result>
+       </action>  
+    </package>
+    
+    
+    <!-- 报表 -->
+    <package name="scoreCharts" extends="json-default">
+        <action name = "*_chart" class = "cn.edu.fjnu.cdio.controller.cmt.ChartAction" method = "{1}">
+            <result name="studentChartPage">WEB-INF/jsps/cmt/cmt_myScore.jsp</result>
+            <result name="loadStudentClassChart">WEB-INF/jsps/cmt/cmt_studentScoreChart.jsp</result>
+           
+            <result name ="courseList" type="json">  
+                <param name="root">courseList</param>  
+            </result> 
+            
+            <result name ="unitList" type="json">  
+                <param name="root">unitList</param>  
+            </result>  
+            
+              <result name ="testNumList" type="json">  
+                <param name="root">testNumList</param>  
+            </result> 
+            
+             <result name ="teachCourse" type="json">  
+                <param name="root">teachCourse</param>  
+            </result> 
+        </action>
+    </package>
+</struts>

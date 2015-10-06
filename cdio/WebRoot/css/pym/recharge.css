@@ -1,0 +1,44 @@
+.pym_recHead{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.pym_recHeadbg{
+height: 50px;
+background-color:#00CC00 ;
+FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#00CC00,endColorStr=#FFFFFF);/*IE6*/
+background:-moz-linear-gradient(top,#00CC00,#FFFFFF);/*非IE6的其它*/
+background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#00CC00), to(#FFFFFF));/*非IE6的其它*/
+}
+
+
+
+.pym_recStar{
+  font-size:20px; 
+  color:red;
+  padding-right:5%; 
+  vertical-align:middle;
+}
+
+
+#pym_recPrices,#pym_recResult,#pym_recSpan{
+  padding-top:5px;
+  font-family:宋体;
+  font-size:14px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+.pym_recForm{
+ position: relative;
+ padding-top:3%;
+ padding-left:13%; 
+}
+
+.pym_bgroundColor{
+  background:#DDDDDD;  
+}
+

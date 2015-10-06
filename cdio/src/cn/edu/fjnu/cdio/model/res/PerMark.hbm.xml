@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class name="cn.edu.fjnu.cdio.model.res.PerMark" table="t_permark">
+       <composite-id name="perRes" class="cn.edu.fjnu.cdio.model.res.PerRes"> 
+			 <key-many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User">
+                 <column name="pk_user_id" />
+             </key-many-to-one> 
+             <key-many-to-one name="resDetail" class="cn.edu.fjnu.cdio.model.res.ResDetail">
+                 <column name="pk_res_id" />
+             </key-many-to-one> 
+		</composite-id> 
+       <property name="markDate" type="java.util.Date" column="res_markdate" not-null="true"></property>
+   </class>
+</hibernate-mapping>
+

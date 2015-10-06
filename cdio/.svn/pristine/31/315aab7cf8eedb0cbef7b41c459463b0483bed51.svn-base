@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    <struts>
+	   <constant name="struts.objectFactory" value="spring" />
+	   <package name="cdio2010-pm" extends="struts-default">
+			<action name="*_pm" class="pmAction" method="{1}">
+				<result name="TOPAGE">/WEB-INF/jsps/pm/Message.jsp</result>
+			</action>
+	  </package>
+    </struts>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.edu.fjnu.cdio.model.pym.DoDetail" table="t_dodetail">
+        <id name="DeId" type="java.lang.Integer">
+            <column name="pk_de_id" />
+            <generator class="increment" />
+        </id>
+        
+        <property name="ep" type="java.lang.Double">
+            <column name="ep" not-null="true" />
+        </property>
+        
+        <many-to-one name="fromDonation" class="cn.edu.fjnu.cdio.model.pym.Donation" lazy="false" fetch="select">
+            <column name="fk_fu_id" not-null="true" />
+        </many-to-one>
+        
+        <many-to-one name="toReceive" class="cn.edu.fjnu.cdio.model.pym.ReceiveGrant" lazy="false" fetch="select">
+            <column name="fk_tu_id" not-null="true" />
+        </many-to-one>
+        
+    </class>
+</hibernate-mapping>

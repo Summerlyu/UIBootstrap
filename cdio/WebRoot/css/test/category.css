@@ -1,0 +1,63 @@
+#filter {
+	width: 730px;
+	margin-left: auto;
+	margin-right: auto;
+	font: 12px/1.5 tahoma, arial, ËÎÌåb8b\4f53;
+	margin-top: 1px;
+	border: 1px solid #dcdcdc;
+	border-top: 2px solid #6699FF;
+	background-color: #fff;
+}
+
+#filter dl {
+	clear: both;
+	margin: 0;
+	margin-left: 10px;
+	overflow: hidden;
+	margin-left: 15px;
+	padding:7px 0;
+}
+
+#filter dt,dd {
+	display: block;
+	float: left;
+	width: auto;
+	padding: 0;
+}
+
+#filter dt {
+	font-weight: bold;
+	color: #333333;
+}
+
+#filter dd {
+	color: #005AA0;
+	margin-left: 5px;
+}
+
+#filter a {
+	cursor: pointer;
+	margin-right: 7px;
+	padding: 0 2px 1px;
+	text-decoration: none;
+}
+
+#filter a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.seling {
+	background-color: #3a87ad;
+	color: #FFFFFF;
+}
+
+.seled {
+	background-color: #3a87ad;
+	color: #FFFFFF;
+}
+
+.category {
+	border-bottom: 1px dashed #dcdcdc;
+	overflow: hidden;
+}

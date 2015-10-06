@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+    <struts> 		
+    	<package name="show"  extends="struts-default">
+  			<action name="show" class="cn.edu.fjnu.cdio.controller.res.ShowAction" method="list">
+	    		<result name="list">/WEB-INF/jsps/res/list.jsp</result>
+	    	</action> 
+	    	<action name="upload" class="cn.edu.fjnu.cdio.controller.res.ShowAction" method="uploadFile"> 
+	    		<result name="toUpload">/WEB-INF/jsps/res/upload.jsp</result>
+	    	</action>
+	    	<action name = "view" class="cn.edu.fjnu.cdio.controller.res.ShowAction" method ="view">
+	    		<result name ="docView">/WEB-INF/jsps/res/resDocBrowse.jsp</result>
+	    		<result name ="videoView">/WEB-INF/jsps/res/resVideoBrowse.jsp</result>
+	    		<result name ="docNotExists">/WEB-INF/jsps/res/resNotExist.jsp</result>
+	    	</action>
+	    	<action name = "up_res" class="cn.edu.fjnu.cdio.controller.res.ShowAction" method ="upRes">
+	    	</action>
+	    	<action name = "down_res" class="cn.edu.fjnu.cdio.controller.res.ShowAction" method ="downRes">
+	    	</action>
+	    	<action name = "add_perMark" class="cn.edu.fjnu.cdio.controller.res.ShowAction" method ="addPerMark">	
+	    	</action>
+	    	<action name="fullTextSearch" class="cn.edu.fjnu.cdio.controller.res.SearchAction" method="fullTextSearch">
+         	<result name="searchResultPage">/WEB-INF/jsps/res/searchList.jsp</result>
+    	 </action>
+    	 <action name="loadResDangerous" class="cn.edu.fjnu.cdio.controller.res.ResMgrAction" method="load">
+    		<result name="loadResDangerous">/WEB-INF/jsps/res/resdangerous.jsp</result>
+    	</action>
+    	<action name="resCatList" class="cn.edu.fjnu.cdio.controller.res.ResMgrAction" method="listResByCat">
+    			<result name="loadResCat">/WEB-INF/jsps/res/resCatCheck.jsp</result>
+    			<result name="loadResCat2">/WEB-INF/jsps/res/resCatCheck.jsp</result>
+    	</action>
+    	
+    	<action name="loadAllMarkResAction" class="cn.edu.fjnu.cdio.controller.res.PerMarkAction" method="loadAll">
+    			<result name="loadAllPage">/WEB-INF/jsps/res/listMarkRes.jsp</result>
+    			<result name="NoMarkResPage">/WEB-INF/jsps/res/noMarkResPage.jsp</result>		
+    	</action>
+    	<action name="loadPerDownAction" class="cn.edu.fjnu.cdio.controller.res.FileDownloadAction" method="loadAll">
+    			<result name="loadAllPage">/WEB-INF/jsps/res/listDownload.jsp</result>
+    			<result name="NoDownResPage">/WEB-INF/jsps/res/noMarkResPage.jsp</result>
+    	</action>
+    	<action name="loadUpload" class="cn.edu.fjnu.cdio.controller.res.PerUploadAction" method="loadPerUpload">
+    			<result name="loadPerUpload_page">/WEB-INF/jsps/res/resmodify.jsp</result>
+    			<result name="noPerUpload_page">/WEB-INF/jsps/res/noPerUpload.jsp</result>
+       </action>
+	    	
+	    	
+    	</package>
+</struts>
+ 

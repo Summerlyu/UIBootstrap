@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.pym.ReceiveGrant" table="t_receiveGrant">
+
+		<!--交易表的信息 -->
+		<id name="reID" type="java.lang.Integer">
+			<column name="pk_re_id" />
+			<generator class="increment" />
+		</id>
+		<property name="reTime" type="java.util.Date">
+			<column name="re_time" not-null="true"/>
+		</property>
+
+		<property name="reEP" type="java.lang.Double">
+			<column name="re_ep" not-null="true"/>
+		</property>
+		
+		<property name="reGrate" type="java.lang.String">
+			<column name="re_grate" length="200"></column>
+		</property>
+		
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" lazy="false" column="fk_user_id" fetch="join"></many-to-one>
+		
+		 <many-to-one name="apply" class="cn.edu.fjnu.cdio.model.pym.ApplyTable" lazy="false" column="fk_apply_id" unique="true"></many-to-one>
+		
+		<set name="dotetails" table="t_dodetail" cascade="all" inverse="true" lazy="false" fetch="select">
+            	<key column="fk_tu_id"></key>
+            	<one-to-many class="cn.edu.fjnu.cdio.model.pym.DoDetail" />
+        	</set>
+	</class>
+</hibernate-mapping>

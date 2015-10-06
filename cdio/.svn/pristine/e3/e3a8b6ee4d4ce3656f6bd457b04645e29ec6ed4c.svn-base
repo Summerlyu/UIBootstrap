@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.res.ResTag" table="t_tag">
+
+		<!-- 标签库hibernate文件配置 -->
+		<id name="tagId" type="java.lang.Integer">
+			<column name="pk_tag_id" />
+			<generator class="increment" />
+		</id>
+		<property name="tagContent" type="java.lang.String" column="tag_content" not-null="true"/>
+		
+		<!--<set name="resDetails" table="t_res_tag" cascade="all">
+          <key column="pk_tag_id"/>
+          <many-to-many class="cn.edu.fjnu.cdio.model.res.ResDetail" column="pk_res_id"/>
+       </set>   -->
+       
+       	<many-to-one name="resDetail" class="cn.edu.fjnu.cdio.model.res.ResDetail" column="fk_res_id"/>
+	</class>
+</hibernate-mapping>

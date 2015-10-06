@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+@Author 曹欣炎
+说明:在线教学模式hibernate配置文件 
+-->
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.trs">
+	<class name="CourseSchema" table="t_course_schema">
+		<id name="schemaID" type="java.lang.Long">
+			<column name="pk_schema_id" />
+			<generator class="increment" />
+		</id>
+		<property name="schemaName" type="java.lang.String">
+			<column name="schema_name" length="50" />
+		</property>
+
+		<property name="schemaDetail" type="java.lang.String">
+			<column name="schema_detail" />
+		</property>
+
+	</class>
+</hibernate-mapping>

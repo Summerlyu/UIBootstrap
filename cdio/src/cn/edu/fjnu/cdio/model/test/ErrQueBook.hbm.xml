@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.test">
+	<class name="ErrQueBook" table="t_err_que_book">
+		<id name="errId" column="pk_err_id" type="java.lang.Long">
+			<generator class="identity" />
+		</id>
+		<property name="errCnt" type="java.lang.Integer" column="err_cnt"
+			length="5" not-null="true" />
+
+		<property name="maxErrAns" type="java.lang.String" column="max_err_ans"
+			length="10" not-null="false" />
+
+		<many-to-one name="subject" class="cn.edu.fjnu.cdio.model.common.Scope" column="fk_subject_id"
+			lazy="false" fetch="join" not-null="true"></many-to-one>
+			
+		<many-to-one name="question" class="Question" column="fk_que_id"
+			lazy="false" fetch="join" not-null="true"></many-to-one>
+		<many-to-one name="student" class="cn.edu.fjnu.cdio.model.common.User"
+			column="fk_stu_id" lazy="false" fetch="join" not-null="true"></many-to-one>
+
+	</class>
+</hibernate-mapping>

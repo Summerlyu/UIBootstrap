@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	
+	<package name="Trs" namespace="/*" extends="struts-default">
+		<!-- 提交教学报告action -->
+		<action name="addCourseRecordAction"
+			class="cn.edu.fjnu.cdio.controller.trs.AddCourseRecordAction">
+			<result name="success" type="redirectAction">SelectedCourseAction</result>
+			<result name="page1" type="redirectAction">SelectedCourseAction</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="forSubmitReport"
+			class="cn.edu.fjnu.cdio.controller.trs.AddCourseRecordAction" method="forSubmitReport">
+			<result name="success">WEB-INF/jsps/trs/coach/submitReport.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="afterAddFalse"
+			class="cn.edu.fjnu.cdio.controller.trs.AddCourseRecordAction" method="afterAddFalse">
+			<result name="success">frame.html</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+
+		<!-- 在线辅导系统主页面action -->
+		<action name="SelectedCourseAction"
+			class="cn.edu.fjnu.cdio.controller.trs.SelectedCourseAction">
+			<result name="success">WEB-INF/jsps/trs/listCourse.jsp</result>
+			<result name="ForAdmin">WEB-INF/jsps/trs/admin/listCourse.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="selectedCourseForAdmin"
+			class="cn.edu.fjnu.cdio.controller.trs.SelectedCourseAction" method="selectedCourseForAdmin">
+			<result name="success">WEB-INF/jsps/trs/admin/listCourse.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="getCourseInfoForAdmin"
+			class="cn.edu.fjnu.cdio.controller.trs.SelectedCourseAction" method="getCourseInfoForAdmin">
+			<result name="success">WEB-INF/jsps/trs/admin/detailsCourse.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="deleteCourseAction"
+			class="cn.edu.fjnu.cdio.controller.trs.SelectedCourseAction" method="deleteCourseAction">
+			<result name="success">WEB-INF/jsps/trs/admin/listCourse.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+
+		<!-- 教学计划管理的action -->
+		<action name="toModifyPlan" class="cn.edu.fjnu.cdio.controller.trs.CoursePlanAction"
+			method="toModifyPlan">
+			<result name="success">WEB-INF/jsps/trs/coach/coursePlan.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="savePlanWithAjax" class="cn.edu.fjnu.cdio.controller.trs.CoursePlanAction"
+			method="savePlanWithAjax">
+		</action>
+		<action name="deletePlanWithAjax" class="cn.edu.fjnu.cdio.controller.trs.CoursePlanAction"
+			method="deletePlanWithAjax">
+		</action>
+		<action name="updatePlanWithAjax" class="cn.edu.fjnu.cdio.controller.trs.CoursePlanAction"
+			method="updatePlanWithAjax">
+		</action>
+
+		<!-- 教学过程管理action -->
+		<action name="TutorManagerAction"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction">
+			<result name="success">WEB-INF/jsps/trs/courseStart.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+			<result name="redirect" type="redirectAction">
+				<param name="actionName">inTutoring</param>
+				<param name="course.courseID">${course.courseID}</param>
+				<param name="courseRecord.recordId">${courseRecord.recordId}</param>
+				<param name="trsTask">${trsTask}</param>
+			</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="startClass"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="startClass">
+			<result name="success">WEB-INF/jsps/trs/student/courseStatus.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+		</action>
+		<action name="inTutoring"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="inTutoring">
+			<result name="success">WEB-INF/jsps/trs/coach/courseStatus.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+		</action>
+		<action name="endClass"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="endClass">
+			<result name="success">WEB-INF/jsps/trs/student/courseEnd.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+			<result name="redirect" type="redirectAction">
+				<param name="actionName">startClass</param>
+				<param name="course.courseID">${course.courseID}</param>
+			</result>
+		</action>
+		<action name="afterClass"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="afterClass">
+			<result name="success">WEB-INF/jsps/trs/coach/courseEnd.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+		</action>
+		<action name="completeClass"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="completeClass">
+			<result name="success">WEB-INF/jsps/trs/courseComplete.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+		</action>
+		<action name="askStatus"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="askStatus">
+		</action>
+		<action name="sendStatus"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="sendStatus">
+		</action>
+		<action name="askBeginStatus"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="askBeginStatus">
+		</action>
+		<action name="sendBeginStatus"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="sendBeginStatus">
+		</action>
+		<action name="recordDetail"
+			class="cn.edu.fjnu.cdio.controller.trs.TutorManagerAction" method="recordDetail">
+			<result name="success">WEB-INF/jsps/trs/admin/detailsRecord.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+		</action>
+		<!-- 在线教学模式action -->
+		<action name="SchemaManagerAction"
+			class="cn.edu.fjnu.cdio.controller.trs.CourseSchemaAction">
+			<result name="success">/WEB-INF/jsps/trs/admin/addPattern.jsp</result>
+			<result name="error">WEB-INF/jsps/trs/trsError.jsp</result>
+		</action>
+
+		
+	</package>
+
+	<package name="courseClassification" extends="json-default">
+		<action name="CourseClassificationSelect"
+			class="cn.edu.fjnu.cdio.controller.trs.CourseClassificationAction">
+			<result type="json">
+				<param name="noCache"></param>
+				<param name="contentType"></param>
+			</result>
+		</action>
+	</package>
+</struts>
+ 

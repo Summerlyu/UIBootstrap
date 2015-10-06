@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    <struts>
+	   <constant name="struts.multipart.maxSize" value="900000000"/>
+	   <constant name="struts.multipart.saveDir" value="/tempDir"/><!-- 用来保存文件上传的临时文件的目录 -->
+	   <constant name="struts.i18n.encoding" value="UTF-8" />
+	   
+	  <package name="struts"   extends="struts-default">
+	       	<action name="forFrameAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="forFrame">	    		
+	    		<result name="toFramePage">/WEB-INF/jsps/common/frame.jsp</result>
+            </action>    
+	    	
+	    	<action name="forHomeAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="forHome">
+	    		<result name="gotoHomePage">/WEB-INF/jsps/coa/coa_home.jsp</result>
+                <result name="success">/WEB-INF/jsps/coa/coaMain.jsp</result>
+	        </action>
+<!-- 	       <action name="forHomeAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="forHome">
+
+	    		<result name="gotoHomePage">/WEB-INF/jsps/coa/coaMain.jsp</result>
+
+	        </action> -->
+	        <action name="forMainAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="forMain">
+	    		<result name="success">/WEB-INF/jsps/coa/coaMain.jsp</result>
+	        </action> 
+
+	 
+	        
+	        <!--实名认证-->
+	        <action name="RCertifyAction" class="cn.edu.fjnu.cdio.controller.coa.RCertifyAction">
+		        <result name="success">/WEB-INF/jsps/coa/coa_realname_identify.jsp</result> 
+	    	</action>	
+	    	<action name="submitSuccessAction" class="cn.edu.fjnu.cdio.controller.coa.RCertifyAction"
+	    		method="submitSuccess">
+	    	    <interceptor-ref name="fileUpload">
+	              <param name="allowedTypes">
+	                 image/bmp,image/pjpeg,image/png,image/jpeg,image/gif,image/jpg,image/x-png
+	              </param>
+	              <param name="maximumSize">200000</param>
+                </interceptor-ref> 
+                <interceptor-ref name="defaultStack"/>
+                
+	    	    <result name="success">/WEB-INF/jsps/coa/realname_success.jsp</result>
+	    	    <result name="toRidentifyPage" type="redirectAction">
+          	  		<param name="actionName">submitFalseAction</param>
+          	  	</result> 
+	        </action>     
+	        <action name="submitFalseAction" class="cn.edu.fjnu.cdio.controller.coa.RCertifyAction"
+	    		method="submitFalse">
+	    	    <result name="success">/WEB-INF/jsps/coa/coa_realname_identify.jsp</result>
+	        </action>
+	        <action name="getIDcPicAction" class="cn.edu.fjnu.cdio.controller.coa.RCertifyAction" method="getIDcPic">
+    			
+    		</action>
+	        <!--后台管理：实名认证审核-->
+	        <action name="ForAuditOneAction" class="cn.edu.fjnu.cdio.controller.coa.RCertifyAction"
+	            method="ForAuditOne">
+		        <result name="toRCpage">/WEB-INF/jsps/coa/coa_MaSys/coaRealname.jsp</result> 
+	    	</action>
+	    	<action name="isPassAction" class="cn.edu.fjnu.cdio.controller.coa.RCertifyAction"
+	            method="isPass">
+		        <result name="reloadall">/WEB-INF/jsps/coa/coa_MaSys/coa_verify_list.jsp</result> 
+	    	</action>
+	    	<action name="notPassAction" class="cn.edu.fjnu.cdio.controller.coa.RCertifyAction"
+	            method="notPass">
+		        <result name="reloadall">/WEB-INF/jsps/coa/coa_MaSys/coa_verify_list.jsp</result> 
+	    	</action>
+	    	
+
+            <!--后台管理：显示全部coach认证审核前信息-->
+            <action name="coaVerifyListOneAction" class="cn.edu.fjnu.cdio.controller.coa.RCertifyAction"
+                method="coaVerifyListOne">
+		        <result name="loadall">/WEB-INF/jsps/coa/coa_MaSys/coa_verify_list.jsp</result> 
+	    	</action>
+	    	<!--<action name="coaVerifyListTwoAction" class="cn.edu.fjnu.cdio.controller.coa.RCertifyAction"
+                method="coaVerifyListTwo">
+		        <result name="loadall">/WEB-INF/jsps/coa/coa_MaSys/coa_verify_list.jsp</result> 
+	    	</action>-->
+	        
+	         <!--资格认证-->
+	        <action name="CertificateAction" class="cn.edu.fjnu.cdio.controller.coa.CertificateAction"
+	    		>
+	    		<result name="success">/WEB-INF/jsps/coa/coa_certificate_identify.jsp</result>
+	    		<result name="gotoHomePage" type="redirectAction">
+          	  		<param name="actionName">forHomeAction</param>
+          	  	</result> 		    		    	
+	    	</action>
+	    	<action name="submitSucAction" class="cn.edu.fjnu.cdio.controller.coa.CertificateAction"
+	    		method="submitSuc">
+	    		<interceptor-ref name="fileUpload">
+	              <param name="allowedTypes">
+	                 image/bmp,image/pjpeg,image/png,image/jpeg,image/gif,image/jpg,image/x-png
+	              </param>
+	              <param name="maximumSize">200000</param>
+                </interceptor-ref> 
+                <interceptor-ref name="defaultStack"/>
+                
+	    	    <result name="success">/WEB-INF/jsps/coa/realname_success.jsp</result>
+	    	    <result name="toCertificatePage" type="redirectAction">
+          	  		<param name="actionName">submitFailAction</param>
+          	  	</result> 
+	        </action> 
+	        <action name="submitFailAction" class="cn.edu.fjnu.cdio.controller.coa.CertificateAction"
+	    		method="submitFail">
+	    	    <result name="success">/WEB-INF/jsps/coa/coa_certificate_identify.jsp</result>
+	        </action>
+	        <action name="getCoa_licenseAction" class="cn.edu.fjnu.cdio.controller.coa.CertificateAction" method="getCoa_license">
+    			
+    		</action>
+	        <!--后台管理：资格认证审核-->
+	        <action name="ForAuditTwoAction" class="cn.edu.fjnu.cdio.controller.coa.CertificateAction"
+	            method="ForAuditTwo" >
+		        <result name="toCpage">/WEB-INF/jsps/coa/coa_MaSys/coaCertify.jsp</result> 
+	    	</action>
+	    	<action name="isPassCAction" class="cn.edu.fjnu.cdio.controller.coa.CertificateAction"
+	            method="isPassC">
+		        <result name="reloadall">/WEB-INF/jsps/coa/coa_MaSys/coa_verify_list.jsp</result> 
+	    	</action>
+	    	<action name="notPassCAction" class="cn.edu.fjnu.cdio.controller.coa.CertificateAction"
+	            method="notPassC">
+		        <result name="reloadall">/WEB-INF/jsps/coa/coa_MaSys/coa_verify_list.jsp</result> 
+	    	</action>
+	        
+	        
+	        
+	        
+	    	<!--<action name="addcourseAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="addcourse">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_course_add.jsp</result>
+	    	</action>
+	    	--><action name="teachMagAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="teachMag">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_teach_history.jsp</result>
+	    	</action>
+	    	<action name="coaInfoAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="coaInfo">
+	    		<result name="success">/WEB-INF/jsps/coa/show_coa_info.jsp</result>
+	    	</action>
+
+	    	<!-- 讲师个人信息管理 -->
+    		<action name="CreateAction" class="cn.edu.fjnu.cdio.controller.coa.CoachAction" method="create">
+    		   <interceptor-ref name="fileUpload">
+                 <param name="allowedTypes">
+				 image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg
+				</param>
+				 <param name="maximumSize">200000</param>
+               </interceptor-ref>
+                <interceptor-ref name="defaultStack" />
+    			<result name="listcoachAction" type="redirectAction">
+    			 <param name="actionName">LoadAction</param>  
+                 <param name="coachID">${coachID}</param>
+                </result>
+                <result name="gotoHomePage">/WEB-INF/jsps/coa/coaMain.jsp</result>
+    		</action>
+    		
+    		<action name="InputAction" class="cn.edu.fjnu.cdio.controller.coa.CoachAction" method="input">
+    			<result name="inputPage">WEB-INF/jsps/coa/coa_info.jsp</result> 
+    		</action>
+    		
+    		<action name="LoadAction" class="cn.edu.fjnu.cdio.controller.coa.CoachAction" method="load">
+    			<result name="showcoachPage">WEB-INF/jsps/coa/show_coa_info.jsp</result>
+    		</action>
+    		
+    		<action name="ForUpdateAction" class="cn.edu.fjnu.cdio.controller.coa.CoachAction" method="forupdate">
+    			<result name="updatecoachPage">WEB-INF/jsps/coa/coa_info_modify.jsp</result>
+    		</action>
+    		
+    		<action name="UpdateAction" class="cn.edu.fjnu.cdio.controller.coa.CoachAction" method="update">
+    			<!--<result name="listcoachAction" type="redirectAction">LoadAction</result>-->
+    			<result name="listcoachAction" type="redirectAction">
+    			 <param name="actionName">LoadAction</param>  
+                 <param name="coachID">${coachID}</param>
+    			</result>
+    		</action>
+    		
+    		<action name="getpicAction" class="cn.edu.fjnu.cdio.controller.coa.CoachAction" method="getpic">
+    			
+    		</action>
+
+
+	    	<!-- 显示教学记录-->
+	    	<action name="teachHishoryCoa" class="cn.edu.fjnu.cdio.controller.coa.TeachHistoryAction">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_teach_history.jsp</result>
+	    	</action>
+	    	
+	    	<!-- 后台 显示讲师信息 -->
+	    	<!-- 显示所有讲师信息 -->
+	    	<action name="coainfoAction" class="cn.edu.fjnu.cdio.controller.coa.CoachMgrAction" method="coaInfoList">
+	    		<result name="coa_info_page">/WEB-INF/jsps/coa/coa_MaSys/coa_info_search_list.jsp</result>
+	    	</action>
+	    	<!-- 显示讲师个人信息 -->
+	    	<action name="coainfoSearchAction" class="cn.edu.fjnu.cdio.controller.coa.CoachMgrAction" method="coaInfoSearch">
+	    		<result name="coaInfo_page">/WEB-INF/jsps/coa/coa_MaSys/coaInfoSearch.jsp</result>
+	    	</action>
+	    	
+	    	<action name="coachSearchAction" class="cn.edu.fjnu.cdio.controller.coa.CoachMgrAction" method="coachSearch">
+	    		<result name="coachSearch_page">/WEB-INF/jsps/coa/coa_MaSys/coa_info_search_list.jsp</result>
+	    	</action>
+	    	<action name="coaResUploadAction" class="cn.edu.fjnu.cdio.controller.coa.CoachMgrAction" method="coaResUpload">
+	    		<result name="coaResUpload_page">/WEB-INF/jsps/coa/coa_MaSys/coaUploadRecordSearch.jsp</result>
+	    	</action>
+	    	
+	    	<!--后台管理  -->
+	    	 <action name="coaInfoListAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="coaInfoList">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_MaSys/coa_info_search_list.jsp</result>
+	    	</action>
+	    	
+	    	<action name="coaInfoSearchAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="coaInfoSearch">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_MaSys/coaInfoSearch.jsp</result>
+	    	</action>
+	    	
+	    	<action name="coaAssessRecordSearchAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="coaAssessRecordSearch">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_MaSys/coaAssessRecordSearch.jsp</result>
+	    	</action>
+	    	
+	    	<action name="coaTeachRecordSearchAction" class="cn.edu.fjnu.cdio.controller.coa.TeachRecordSearchAction"
+	    		method="coaTeachRecordSearch">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_MaSys/coaTeachRecordSearch.jsp</result>
+	    	</action>
+	    	
+	    	<action name="coaUploadRecordSearchAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="coaUploadRecordSearch">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_MaSys/coaUploadRecordSearch.jsp</result>
+	    	</action>
+	    	
+	    	<!--<action name="coaVerifyListAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="coaVerifyList">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_MaSys/coa_verify_list.jsp</result>
+	    	</action>
+	    	
+	    	<action name="ForAuditOneAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="ForAuditOne">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_MaSys/coaRealname.jsp</result>
+	    	</action>
+
+	   
+	    	
+	    	<action name="ForAuditTwoAction" class="cn.edu.fjnu.cdio.controller.coa.TestAction"
+	    		method="ForAuditTwoSearch">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_MaSys/coaCertify.jsp</result>
+	    	</action>
+	    --></package>
+	    
+	    
+	    <!-- 课程管理 -->
+	   <package name="course_mgr" extends="struts-default">
+	   
+	   <!-- 跳转至添加课程页面  显示全部课程-->
+	   
+	    	<action name="addcourseAction"
+	    		class="cn.edu.fjnu.cdio.controller.coa.CourseMgrAction"
+	    		method="loadAllCourse">
+	    		<result name="loadAllCourse">/WEB-INF/jsps/coa/coa_course_add.jsp</result>
+	    		<interceptor-ref name="defaultStack"></interceptor-ref>
+	    	</action>
+	    	
+	    	<!-- 添加课程 -->
+	    	<action name="addCourseAction" 
+	    		class="cn.edu.fjnu.cdio.controller.coa.CourseMgrAction" 
+	    		method="addCourse">
+	    		<result name="addCourse" type="redirectAction">addcourseAction</result>
+	    		<interceptor-ref name="defaultStack"></interceptor-ref>
+	    	</action>
+	    	
+	    	<!--根据学科名，版本，年级查找此教师的课程--> 
+	    	<action name="selectCourseAction"
+	    		class="cn.edu.fjnu.cdio.controller.coa.CourseMgrAction"
+	    		method="selectCourse">
+	    		<result name="selectCourse">/WEB-INF/jsps/coa/coa_course_add.jsp</result>
+	    		<interceptor-ref name="defaultStack"></interceptor-ref>
+	    	</action>
+	    	
+	    	<!--根据courseid删除course--> 
+	    	<action name="coaDeleteCourseAction"
+	    		class="cn.edu.fjnu.cdio.controller.coa.CourseMgrAction"
+	    		method="deleteCourse">
+	    		<result name="deleteCourse" type="redirectAction">addcourseAction</result>
+	    		<interceptor-ref name="defaultStack"></interceptor-ref>
+	    	</action>
+	    	
+	    	<!-- 跳转至修改 -->
+	    	<action name="toCourseUpdateAction"
+	    		class="cn.edu.fjnu.cdio.controller.coa.CourseMgrAction"
+	    		method="toCoaCourseUpdatePage">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_course_update.jsp</result>
+	    		<interceptor-ref name="defaultStack"></interceptor-ref>
+	    	</action>
+	    	
+	    	<!--修改Course--> 
+	    	<action name="alterCourseAction"
+	    		class="cn.edu.fjnu.cdio.controller.coa.CourseMgrAction"
+	    		method="alterCourse">
+	    		<result name="alterCourse" type="redirectAction">addcourseAction</result>
+	    		<interceptor-ref name="defaultStack"></interceptor-ref>
+	    	</action>
+	   		
+	   		<!-- 查询教学历史记录 -->
+	   		<action name="searchBoughtCourse"
+	    		class="cn.edu.fjnu.cdio.controller.coa.TeachManageAction"
+	    		method="searchBoughtCourse">
+	    		<result name="success">/WEB-INF/jsps/coa/coa_teach_history.jsp</result>
+	    	</action>
+	   </package>
+	    
+	    <!-- 联动-->
+	    <package name="coa_scope" extends="json-default">
+	    	<action name="coaGetScopeById" class="cn.edu.fjnu.cdio.controller.coa.CoaScopeAction"
+	    		method="getScopeById">
+				<result name="success" type="json">
+				</result>
+			</action>
+		</package>
+		<package name="json_coa" extends="json-default">
+			<action name="linkageActionCity" class="cn.edu.fjnu.cdio.controller.coa.CoachAction" method="cityLinkage">
+		    		<!-- 提交ajax数据 -->
+		    		<result type="json">
+		    			<param name="root">cityList</param>
+		    		</result>
+			</action>
+			<action name="linkageActionArea" class="cn.edu.fjnu.cdio.controller.coa.CoachAction" method="areaLinkage">
+		    		<!-- 提交ajax数据 -->
+		    		<result type="json">
+		    			<param name="root">areaList</param>
+		    		</result>
+			</action>
+	    </package>
+    </struts>

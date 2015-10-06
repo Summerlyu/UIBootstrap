@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.coa.TeachInfo" table="t_TeachInfo">
+
+		<!--当前教学情况课程信息 -->
+		<id name="courseID" type="java.lang.Integer">
+			<column name="pk_course_id" />
+			<generator class="increment" />
+		</id>
+		<property name="courseName" type="java.lang.String">
+			<column name="course_name" length="5"/>
+		</property>
+
+		<property name="grade" type="java.lang.String">
+			<column name="grade" length="5" />
+		</property>
+		
+		<property name="unit" type="java.lang.String">
+			<column name="unit" length="20" />
+		</property>
+		
+		<property name="ep" type="java.lang.Double">
+			<column name="ep" />
+		</property>
+		
+		<property name="classTime" type="java.sql.Date">
+			<column name="class_time" />
+		</property>
+		
+		<property name="version" type="java.lang.String">
+			<column name="version" length="20" />
+		</property>
+
+		<property name="pattern" type="java.lang.Integer">
+			<column name="pattern" />
+		</property>
+		<!-- 
+			<property name="coachID" type="java.lang.Integer">
+				<column name="coach_id" />
+			</property>
+			
+			<property name="schoolHour" type="java.lang.Long">
+				<column name="school_hour" />
+			</property>
+		 -->
+		<property name="stuAmount" type="java.lang.Integer">
+			<column name="stuAmount" />
+		</property>		
+
+	</class>
+</hibernate-mapping>

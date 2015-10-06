@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+.EG_Container{
+	width:100%;
+	}
+.EG_Header{
+	position:relative;
+	width:80%;
+	left:10%;
+	height:200px;
+
+	}
+.EG_img{
+	position:relative;
+	width:23%;
+	float:left;
+	height:173px;
+	top:10px;
+	-webkit-box-shadow:3px 3px 4px #333;
+	-moz-box-shadow:3px 3px 4px #333;
+	box-shadow:3px 3px 2px #999;
+	}
+.EG_img img{
+	position:relative;
+	top:2px;
+	left:2px;
+	}
+.EG_content{
+	position:relative;
+	width:75%;
+	float:right;
+	height:200px;
+	}
+.EG_Name{
+	position:relative;
+	width:100%;
+	height:50px;
+	border-bottom:1px #CCC dashed;
+	}
+.EG_Name span{
+	position:relative;
+	top:18px;
+	left:15px;
+	font-family:"宋体";
+	color:#777777;
+	font-size:16px;
+	font-weight:bold;
+	float:left;
+	}
+.EG_sm{
+	position:relative;
+	float:left;
+	top:20px;
+	left:10px;
+	width:16px;
+	height:16px;
+	background:url(../img/glyphicons-halflings.png);
+	background-position:-0px -24px;
+	cursor:pointer;
+	}
+.EG_creater{
+	position:relative;
+	width:100%;
+	height:30px;
+	border-bottom:1px #CCC dashed;
+	}
+.EG_creater span{
+	position:relative;
+	float:left;
+	top:8px;
+	left:15px;
+	font-family:"宋体";
+	color:#777777;
+	font-size:14px;
+	}
+.EG_sm2{
+	position:relative;
+	float:left;
+	top:10px;
+	left:10px;
+	width:16px;
+	height:16px;
+	background:url(../img/glyphicons-halflings.png);
+	background-position:-168px 0px;
+	cursor:pointer;
+	}
+.EG_itro{
+	position:relative;
+	width:100%;
+	height:100px;
+	border-bottom:1px #CCC dashed;
+	}
+.EG_itro span{
+	position:relative;
+	left:30px;
+	font-family:"宋体";
+	font-size:12px;
+	word-break:break-all;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	}
+.EG_sm3{
+	position:relative;
+	float:left;
+	top:10px;
+	left:10px;
+	width:16px;
+	height:16px;
+	background:url(../img/glyphicons-halflings.png);
+	background-position:-24px -24px;
+	cursor:pointer;
+	}
+.EG_care_button{
+	position:relative;
+	left:50px;
+	top:13px;
+	float:left;
+	border:1px solid #DDDDDD;
+	background:#efffff;
+	cursor:pointer;
+	padding:0.2em 0.4em 0.3em 0.4em;
+	border-radius:2px 2px 2px 2px;
+	font-family:"宋体";
+	color:#888888;
+	}
+.EG_care_button img{
+	position:relative;
+	width:16px;
+	}
+.EG_tie{
+	position:relative;
+	width:100%;
+	}
+.EG_tie_left{
+	position:relative;
+	float:left;
+	width:78%;
+	}
+.EG_tie_left_turn{
+	position:relative;
+	width:100%;
+	top:40px;
+	left:200px;
+	}
+.EG_tie_right{
+	position:relative;
+	float:right;
+	width:20%;
+	}
+.EG_container2{
+	position:relative;
+	width:100%;
+	border:1px #CCC solid;
+	padding-bottom:100px;
+	}
+.tie{
+	position:relative;
+	width:100%;
+	left:0%;
+	top:30px;
+
+	padding-bottom:20px;
+	}
+.comment{
+	position:relative;
+	width:15%;
+	float:left;
+	text-align:center;
+	}
+.te{
+	top:10px;
+	position:relative;
+	float:left;
+	width:45%;
+	border:1px #00FFCC solid;
+	background:#00FFCC;
+	text-align:center;
+	left:20px;
+	}
+.te span{
+	position:relative;
+	top:2px;
+	}
+#test4 {
+	left:20px;
+	top:15px;
+	position:relative;
+	float:left;
+    height:0px;
+    width:0px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-color: transparent transparent transparent #00FFCC;
+	border-style:solid  solid solid solid;
+    border-width:5px;
+}	
+
+.content{
+	position:relative;
+	float:left;
+	width:60%;
+	}
+.article_title{
+	position:relative;
+	width:100%;
+	top:5px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	}
+.article_title a{
+	font:"Lucida Console", Monaco, monospace;
+	font-size:16px;
+	text-decoration:none;
+	color:#06C;
+	}
+.article_content{
+	position:relative;
+	width:100%;
+	font-size:12px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	 white-space:nowrap;
+	 top:10px;
+	}
+.article_img{
+	top:2px;
+	position:relative;
+	width:100%;
+	top:20px;
+	}
+.auther{
+	position:relative;
+	float:left;
+	width:19%;
+	}
+.auther_self{
+	position:relative;
+	width:100%;
+	top:5px;
+	left:50px;
+	font-size:12px;
+	font-weight:bold;
+	color:#06F;
+	}
+.auther_img{
+	position:relative;
+	float:left;
+	width:16px;
+	height:16px;
+	background:url(../img/glyphicons-halflings.png);
+	background-position:-168px 0px;
+	}	
+
+	
+.clear{
+	clear:both;
+	}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="complaint" namespace="/complaint" extends="struts-default">
+		<action name="load" class="cn.edu.fjnu.cdio.controller.bgm.ComplaintAction">
+			<result name="success">/WEB-INF/jsps/bgm/compMain.jsp</result>
+		</action>
+		
+		<action name="input" class="cn.edu.fjnu.cdio.controller.bgm.ComplaintAction" method="input">
+			<result name="inputUI">/WEB-INF/jsps/bgm/addComp.jsp</result>
+		</action>
+		
+		<action name="add" class="cn.edu.fjnu.cdio.controller.bgm.ComplaintAction" method="add">
+			<result name="success" >/WEB-INF/jsps/bgm/welBgm.jsp</result>
+		</action>
+		
+		<action name="forUpdate" class="cn.edu.fjnu.cdio.controller.bgm.ComplaintAction" method="forUpdate">
+			<result>/WEB-INF/jsps/bgm/updateComp.jsp</result>
+		</action>
+		
+		<action name="update" class="cn.edu.fjnu.cdio.controller.bgm.ComplaintAction" method="update">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+		
+		<action name="delete" class="cn.edu.fjnu.cdio.controller.bgm.ComplaintAction" method="delete">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+		
+	</package>
+</struts>

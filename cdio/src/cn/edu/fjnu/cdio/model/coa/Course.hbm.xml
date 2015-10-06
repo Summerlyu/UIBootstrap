@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.coa.Course" table="t_course">
+
+		<!--课程信息 -->
+		<id name="courseID" type="java.lang.Long">
+			<column name="pk_course_id" />
+			<generator class="increment" />
+		</id>
+		
+		<property name="describtion" type="java.lang.String">
+			<column name="describtion" length="400" />
+		</property>
+		
+		<property name="ep" type="java.lang.Double" not-null="true">
+			<column name="ep" />
+		</property>
+		
+		<property name="classTime" type="timestamp" not-null="true">
+			<column name="class_time" />
+		</property>
+		
+		<property name="teachStyle" type="java.lang.String" not-null="true">
+			<column name="teach_style" length="10" />
+		</property>
+		
+		<property name="pattern" type="java.lang.Integer" not-null="true">
+			<column name="pattern" />
+		</property>
+		
+		<property name="state" type="java.lang.String" not-null="true">
+			<column name="state" length="20" />
+		</property>
+		
+		<property name="schoolHour" type="java.lang.Long" not-null="true">
+			<column name="school_hour" />
+		</property>
+		
+		<property name="speed" type="java.lang.String" not-null="true">
+			<column name="speed" length="10" />
+		</property>
+		
+		<property name="nature" type="java.lang.String" not-null="true">
+			<column name="nature" length="10" />
+		</property>
+		
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" column="fk_user_id" lazy="false"></many-to-one>
+		
+		<many-to-one name="courseType" class="cn.edu.fjnu.cdio.model.common.CourseType" column="fk_type_id" lazy="false" cascade="save-update"></many-to-one>
+		
+		<set name="courseRecords" table="t_course_record" lazy="false" cascade="all">
+			<key column="fk_course_id"></key>
+			<one-to-many class="cn.edu.fjnu.cdio.model.trs.CourseRecord"></one-to-many>
+		</set>
+		
+		<set name="users" table="t_student_course" cascade="all" lazy="false">
+			<key column="fk_course_id"></key>
+			<many-to-many class="cn.edu.fjnu.cdio.model.common.User" column="fk_user_ID"></many-to-many>
+		</set>
+	 </class>
+
+</hibernate-mapping>

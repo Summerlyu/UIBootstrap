@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.pym.Donation" table="t_donation">
+
+		<!--交易表的信息 -->
+		<id name="doID" type="java.lang.Integer">
+			<column name="pk_do_id" />
+			<generator class="increment" />
+		</id>
+		
+	<!-- 	<version name="version" column="version" type="java.lang.Integer"></version>  -->
+		
+		<property name="doTime" type="java.util.Date">
+			<column name="do_time" not-null="true"/>
+		</property>
+
+		<property name="doEP" type="java.lang.Double">
+			<column name="do_ep" not-null="true"/>
+		</property>
+		
+		<property name="doGrate" type="java.lang.String">
+			<column name="do_grate" length="200"></column>
+		</property>
+		
+		<property name="doStatus" type="java.lang.String">
+            <column name="do_status" length="1" />
+        </property>
+        
+        <property name="doRecipient" type="java.lang.Double">
+            <column name="do_recipient" />
+        </property>
+        
+        <property name="doMesStr" type="java.lang.String">
+            <column name="do_mes" length="20" />
+        </property>
+        
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" lazy="false" column="fk_user_id" fetch="join"></many-to-one>
+		
+		<set name="dotetails" table="t_dodetail" cascade="all" lazy="false" inverse="true">
+            	<key column="fk_fu_id"></key>
+            	<one-to-many class="cn.edu.fjnu.cdio.model.pym.DoDetail" />
+        	</set>
+	</class>
+</hibernate-mapping>

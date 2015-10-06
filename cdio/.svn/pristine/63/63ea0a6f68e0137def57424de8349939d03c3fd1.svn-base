@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.bgm.Permission" table="t_permission">
+
+		<!--用户的账户信息 -->
+		<id name="permID" type="long">
+			<column name="pk_perm_id" />
+			<generator class="increment" />
+		</id>
+		
+		<property name="ppid" type="long">
+			<column name="pp_id" />
+		</property>
+		
+		<property name="permName" type="java.lang.String">
+			<column name="perm_name" length="20" />
+		</property>
+
+		<property name="descr" type="text">
+			<column name="descr" />
+		</property>
+		
+		<property name="status" type="java.lang.String">
+			<column name="status" length="20" />
+		</property>
+		
+		<set name="roles" table="t_role_permission" lazy="false">
+			<key column="pk_perm_id"/>
+			<many-to-many class="cn.edu.fjnu.cdio.model.bgm.Role" column="pk_role_id"/>
+		</set>
+	</class>
+</hibernate-mapping>

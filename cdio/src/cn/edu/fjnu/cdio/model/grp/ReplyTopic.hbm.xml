@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.grp.ReplyTopic" table="t_reply_topic">
+
+		<id name="replyTopicId" type="long">
+			<column name="pk_reply_topic_id" />
+			<generator class="increment" />
+		</id>
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" lazy="false">
+            <column name="FK_USER_ID"/>
+        </many-to-one><!-- 一个user对应多个replyTopic -->
+        
+        <many-to-one name="topic" class="cn.edu.fjnu.cdio.model.grp.Topic" lazy="false">
+            <column name="FK_TOPIC_ID"/>
+        </many-to-one><!-- 一个topic对应多个replyTopic -->
+        
+		<property name="replyContent" type="java.lang.String">
+			<column name="reply_content" length="100" />
+		</property>
+		
+		<property name="replyTime" type="java.util.Date">
+			<column name="reply_time" />
+		</property>
+		
+		<property name="nums" type="int">
+			<column name="nums"/>
+		</property>
+		
+		<property name="flag" type="int">
+			<column name="flag"/>
+		</property>
+		
+		 <set name="replyReplys" table="t_reply_reply" cascade="all" inverse="true">
+            	<key column="fk_reply_topic_id"></key>
+            	<one-to-many class="cn.edu.fjnu.cdio.model.grp.ReplyReply" />
+        	</set>
+        	
+        	 <set name="replyMassages" table="t_reply_massage" cascade="all" inverse="true">
+            	<key column="FK_reply_topic_ID"></key>
+            	<one-to-many class="cn.edu.fjnu.cdio.model.grp.ReplyMassage" />
+        	</set>
+		<!--
+			这里的column="fk_group_id"是指明了自身(t_group表)表里的fk_group_id属性，指向topic表的外键
+		-->
+	</class>
+</hibernate-mapping>

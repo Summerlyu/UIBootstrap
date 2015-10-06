@@ -1,0 +1,97 @@
+
+.pym_proAlign{
+  position: relative;
+  text-align: right;
+}
+
+.pym_proBgcolor{
+    background-color: #EFEFEF;
+    background-image: -moz-linear-gradient(center top , #FDFDFD 0%, #EAEAEA 100%);
+    border-bottom: 1px solid #CDCDCD;
+    height:auto;
+}
+
+
+
+.pym_proHead{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.page-skip {
+    color:#005580;
+    display: inline-block;
+    font-family: Tahoma,SimSun,Arial;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 16px;
+    padding: 0 5px;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.pagination .span1{
+    height: 20px;
+}
+
+.pym_proPage
+{
+  position: relative;
+    text-align:right;
+}
+
+.help_step_box{
+  background:#f1f7e4;
+  height:55px;
+  overflow:hidden;
+  border-top:1px solid #FFF;
+  width: 100%;
+}
+.help_step_item{
+  float:left;
+  height:55px;
+  width:19%;
+  line-height:55px;
+  padding:0 7.3% 0 7%;
+  cursor:pointer;
+  position:relative;
+  font-size:14px;
+  font-weight:bold;
+}
+.help_step_num{
+  width:7%;
+  height:19px;
+  line-height:19px;
+  position:absolute;
+  text-align:center;
+  top:18px;left:10%;
+  font-size:16px;
+  font-weight:bold;
+  color:#156600;
+}
+.help_step_set{
+  background:#5bb75b;color:#FFF;
+}
+.help_step_set .help_step_left{
+  width:10%;
+  height:55px;
+  background:url() left top no-repeat;position:absolute;
+  left:0;
+  top:0;
+}
+.help_step_set .help_step_right{
+  width:6%;
+  height:55px;
+  background:url() left bottom no-repeat; 
+  position:absolute;
+  right:-5%;
+  top:0;
+}
+
+.fa{
+  width:100%;
+}

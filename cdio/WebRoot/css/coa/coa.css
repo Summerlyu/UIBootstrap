@@ -1,0 +1,381 @@
+.mt-me-rel{
+ height:82px;
+ width:550px;
+ background:whiteSmoke;
+ border-radius:4px;
+ margin-bottom:10px;
+}
+
+
+.verify-task {
+    width: 825px;
+    margin-left: 50px;
+    border: 1px solid rgb(196, 213, 223);
+}
+
+.verify-box {
+    margin: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(196, 213, 223);
+}
+
+
+
+.verify-intro {
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: rgb(178, 178, 178);
+    padding: 5px 0px 0px;
+}
+
+.verify-status {
+    width: 100%;
+    overflow: hidden;
+}
+
+.shop-info {
+    border-bottom: 0px none;
+}
+
+.verify-box .verify-status s {
+    background: url("http://img01.taobaocdn.com/tps/i1/T1nj5lXfXyXXXXXXXX-148-318.jpg") no-repeat scroll 0 -210px transparent;
+    display: block;
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    margin-right: 6px;
+    width: 18px;
+}
+
+#fm-items {
+    padding:2% 2% 2% 15%;
+    text-align: right;
+    width:26%;
+
+}
+
+.fm-item {
+    padding: 0px 5px 15px 20%;
+    padding-top:5px;
+    margin-left: 8%;
+}
+
+.fm-items {
+         padding: 0px 5px 15px 110px;
+    padding-top:10px;
+}
+
+.fm-itemss {
+	padding: 0px 5px 15px 10px;
+    padding-top:10px;
+    font-size: 14px;
+}
+
+.fm-item .fm-label {
+    float: left;
+    width: 26%;
+    margin-left: -35%;
+    text-align: right;
+    font-size: 14px;
+    padding-top: 1%;
+}
+
+.fm-distance {
+    font-size: 14px;
+    margin-left: 6px;
+}
+
+.fm-span {
+    width: 15%;
+    text-align: right;
+    padding-top: 3px;
+}
+
+.fm-radio {
+	margin-left:20%;
+}
+
+.fm-labels {
+    width: 170px;
+    text-align: right;
+    font-size: 14px;
+    padding-top: 10px;
+    color:dark-gray;
+}
+
+.fm-tlabel {
+	width: 50%;
+    text-align: right;
+    font-size: 14px;
+    padding-top: 10px;    
+}
+
+.fm-t {
+	border-style:none;
+}
+
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+div.fm-selectbox .i-radio {
+    vertical-align: top;
+}
+
+.fm-selectbox .i-radio {
+    margin-top: 5px;
+}
+
+label#newLab {
+    width: 148px;
+}
+
+label#newLab, label#oldLab, label#temperLab {
+    padding-top: 50px;
+    color: rgb(178, 178, 178);
+    display: inline-block;
+    height: 10px;
+    width: 70px;
+    background: url("https://img.alipay.com/pa/page/certify/cardLogo.png") no-repeat scroll 0% 0% transparent;
+}
+
+label#temperLab {
+    background-position: -218px 0px;
+}
+
+.fm-label .required {
+    margin-right: 6px;
+    font-family: SimSun;
+    font-size: 14px;
+    color: rgb(255, 0, 0);
+}
+
+.fm-required {
+	margin-left:5%;
+    font-family: SimSun;
+    font-size: 14px;
+    color: rgb(255, 0, 0);
+}
+
+.fm-item .fm-explain {
+    font-size: 12px;
+    color: rgb(178, 178, 178);
+    padding: 5px 0px 0px;
+}
+
+.ui-expand {
+    margin: 0px 0px 17px;
+    padding: 20px 0px 0px;
+    background: none repeat scroll 0% 0% rgb(250, 250, 250);
+    border: 1px solid rgb(239, 239, 239);
+}
+
+div.side-container {
+    position: relative;
+}
+
+#certifyForm .fm-side {
+    top: -100px;
+}
+
+.fm-side {
+    width: 288px;
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    z-index: 10;
+}
+
+body .fn-hide, body a.fn-hide {
+    display: none;
+}
+
+.fm-side-preview {
+    margin-top: 5px;
+    position: relative;
+}
+
+#flash-box1 {
+    position: absolute;
+    top: 108px;
+    left: 120px;
+}
+
+body .fn-hide, body a.fn-hide {
+    display: none;
+}
+
+fieldset, img, a img {
+    border: 0px none;
+}
+
+body {
+    font: 12px Tahoma,Helvetica,Arial,Simsun;
+    color: rgb(77, 77, 77);
+}
+
+}
+.fm-item .i-text {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+}
+
+.fm-item .i-text {
+    vertical-align: middle;
+}
+
+.i-text {
+    border: 1px solid rgb(156, 156, 156);
+    font-family: Tahoma;
+}
+ 
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0px;
+    padding: 0px;
+}
+
+.verify-module {
+    margin-bottom: 10px;
+    padding: 5px;
+   /*  margin-top:60px; */
+   margin: 10px 10px 15px;
+}
+
+.verify-top {
+	margin-bottom:250px;
+}
+
+.verify-disable {
+    background: none repeat scroll 0% 0% rgb(247, 247, 247);
+}
+
+.verify-line {
+	 background: none repeat scroll 0% 0% rgb(247, 247, 247);
+	 width:100%;
+
+}
+
+.verify-line.fm-line {
+	float: left;
+    width: 26%;
+    margin-left: -35%;
+    text-align: right;
+    font-size: 18px;
+    padding-top: 1%;
+}
+
+.verify-module .hd {
+    height: 42px;
+    line-height: 42px;
+}
+
+.clearfix {
+}
+
+.verify-module .hd .title {
+    font-size: 24px;
+
+    font-family: '微软雅黑';
+}
+
+.verify-disable .hd .title {
+    color: rgb(153, 153, 153);
+}
+
+.verify-module .hd {
+    line-height: 42px;
+}
+
+.verify-disable .hd .title .num {
+    background-position: -135px 0px;
+}
+
+.verify-module .hd .title i {
+    background: url("http://img01.taobaocdn.com/tps/i1/T1x9zMXolgXXcth2.f-206-102.png") no-repeat scroll -9999px -9999px transparent;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 25px;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.verify-module .bd {
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+}
+
+.verify-disable .bd {
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.verify-module .bd .shop-verify-wrap {
+    padding: 25px 0px;
+}
+
+.verify-module .bd .shop-result {
+    padding: 0px 40px;
+}
+
+#ctwarming{
+  display: inline-block;
+  *display: inline;
+  /* padding-left: 5px; */
+  vertical-align: middle;
+  *zoom: 1;
+  color: #b94a48;
+}
+
+.ui-expand .pf-avatar-box {
+/* display: inline-block;
+position: absolute;
+top:17%;
+left:69%; */
+/* border: 3px solid #E6E6E6; */
+width: 100px;
+/* height: 100px; */
+margin-top:10%;
+}
+
+.ui-expand .pf-avatar-up {
+/* position: absolute;
+top:35%;
+left:70.5%; */
+padding:4.7%;
+}
+
+.up {
+padding:10px;
+}
+
+.down {
+	position: absolute;
+	padding:10.5%;
+	top: 50%;
+}
+
+#tabletop{
+	border-style: none; 
+	padding-top: 17px;
+}
+
+#coa_info{
+	border-style: none; 
+	width:70%;
+}
+.ui-expand .uphead {
+background:none repeat scroll 0 0 transparent;
+cursor:pointer;
+height:0px;
+width:0px;
+overflow: hidden;
+/* opacity:0; */
+}

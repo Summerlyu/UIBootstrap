@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <package name="res-search" namespace="/search" extends="struts-default">
+    	<action name="gotoSearchHome" class="cn.edu.fjnu.cdio.controller.res.SearchHomeAction" method="gotoSearchHome">
+         	<result name="gotoSearchHomePage">/WEB-INF/jsps/res/searchHome.jsp</result>
+    	 </action>
+    	 <action name="fullTextSearch" class="cn.edu.fjnu.cdio.controller.res.SearchAction" method="fullTextSearch">
+         	<result name="searchResultPage">/WEB-INF/jsps/res/searchList.jsp</result>
+    	 </action>
+    </package>
+    
+
+</struts>

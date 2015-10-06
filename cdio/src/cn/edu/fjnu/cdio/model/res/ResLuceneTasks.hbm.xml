@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.res.ResLuceneTasks" table="t_reslucenetasks">
+
+		<!--用户对知识库文档的操作信息（增删改） -->
+		<id name="taskId" type="long">
+			<column name="pk_task_id" />
+			<generator class="increment" />
+		</id>
+		<property name="taskOpt" type="java.lang.Integer" column="task_opt" not-null="true"/>
+		<property name="createTime" type="java.util.Date" column="create_time" not-null="true"/>
+		<property name="taskStatus" type="java.lang.Integer" column="task_status" not-null="true"/>
+		<property name="handleTime" type="java.util.Date" column="handle_time"/>
+		
+		<many-to-one name="resDetail" class="cn.edu.fjnu.cdio.model.res.ResDetail" column="fk_res_id" lazy="false"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="test-doubt" namespace="/test/doubt" extends="struts-default">
+		<action name="listStu_doubt" class="cn.edu.fjnu.cdio.controller.test.DoubtAction"
+			method="listStu">
+			<result name="listStuDoubtPage">/WEB-INF/jsps/test/doubt/listStudent_doubt.jsp
+			</result>
+		</action>
+		<action name="listCoach_doubt" class="cn.edu.fjnu.cdio.controller.test.DoubtAction"
+			method="listCoach">
+			<result name="listCoachDoubtPage">/WEB-INF/jsps/test/doubt/listCoach_doubt.jsp
+			</result>
+		</action>
+		<action name="updateCoach_doubt" class="cn.edu.fjnu.cdio.controller.test.DoubtAction"
+			method="updateCoachDoubt">
+			<result name="listCoachDoubtAction" type="redirectAction">listCoach_doubt
+			</result>
+		</action>
+
+		<action name="addStu_doubt" class="cn.edu.fjnu.cdio.controller.test.DoubtAction"
+			method="addStuDoubt">
+			     
+		</action>
+
+	</package>
+
+</struts>

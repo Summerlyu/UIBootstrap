@@ -1,0 +1,4 @@
+#Thu Jun 20 00:29:53 CST 2013
+eclipse.preferences.version=1
+validator.Checked=WebRoot/WEB-INF/jsps/common/frame.jsp,WebRoot/js/common/jquery-1.8.3.min.js,WebRoot/js/stu/timeMain.js,WebRoot/WEB-INF/jsps/common/welcome.jsp,WebRoot/js/common/jquery-1.8.2.min.js,WebRoot/js/stu/jquery-1.8.2.min.js
+validator.Unchecked=

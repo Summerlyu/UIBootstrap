@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.common.User" table="t_user">
+
+		<!--用户信息 -->
+		
+		<!-- bgm小组 -->
+
+		<id name="id" type="long">
+			<column name="pk_user_id" />
+			<generator class="increment" />
+		</id>
+		
+		<property name="name" type="java.lang.String">
+			<column name="name" length="20" />
+		</property>
+
+		<property name="userName" type="java.lang.String">
+			<column name="user_name" length="20" />
+		</property>
+
+		<property name="password" type="java.lang.String">
+			<column name="password" length="36" />
+		</property>
+
+		<property name="picture"
+			type="org.springframework.orm.hibernate3.support.BlobByteArrayType">
+			<column name="picture"></column>
+		</property>
+
+		<property name="sex" type="java.lang.String">
+			<column name="sex" length="2"></column>
+		</property>
+
+		<property name="address" type="java.lang.String">
+			<column name="address" length="50"></column>
+		</property>
+
+		<property name="school" type="java.lang.String">
+			<column name="school" length="50"></column>
+		</property>
+
+		<property name="age" type="java.lang.Integer">
+			<column name="age" length="5"></column>
+		</property>
+
+		<property name="grade" type="java.lang.String">
+			<column name="grade" length="20"></column>
+		</property>
+
+		<property name="eduBackground" type="java.lang.String">
+			<column name="edu_background" length="50"></column>
+		</property>
+
+		<property name="phone" type="java.lang.String">
+			<column name="phone" length="20"></column>
+		</property>
+
+		<property name="email" type="java.lang.String">
+			<column name="email" length="50"></column>
+		</property>
+
+		<property name="qqNum" type="java.lang.String">
+			<column name="qqnum" length="20"></column>
+		</property>
+
+		<property name="hobbies" type="java.lang.String">
+			<column name="hobbies" length="100"></column>
+		</property>
+
+		<property name="selfIntroduction" type="java.lang.String">
+			<column name="self_introduction" length="1000"></column>
+		</property>
+
+		<property name="nativePlace" type="java.lang.String">
+			<column name="native_place" length="20"></column>
+		</property>
+
+		<property name="nation" type="java.lang.String">
+			<column name="nation" length="10"></column>
+		</property>
+
+		<property name="politicsStatus" type="java.lang.String">
+			<column name="politics_status" length="10"></column>
+		</property>
+
+		<property name="job" type="java.lang.String">
+			<column name="job" length="20"></column>
+		</property>
+
+		<property name="workPlace" type="java.lang.String">
+			<column name="work_place" length="50"></column>
+		</property>
+
+		<property name="comment" type="java.lang.String">
+			<column name="comment" length="500"></column>
+		</property>
+
+		<set name="roles" table="t_user_role" cascade="all" lazy="false">
+			<key column="fk_user_id" />
+			<many-to-many class="cn.edu.fjnu.cdio.model.bgm.Role"
+				column="fk_role_id" />
+		</set>
+
+
+		<!-- pym小组 -->
+
+		<property name="ep" type="java.lang.Double">
+			<column name="all_EP" length="4"></column>
+		</property>
+
+		<set name="tradeRecords" table="t_tradeRecord" cascade="all"
+			inverse="true" lazy="true" fetch="select">
+			<key column="fk_user_id"></key>   <!-- 外键 -->
+			<one-to-many class="cn.edu.fjnu.cdio.model.pym.TradeRecord" />  <!-- 封装方式 -->
+		</set>
+
+		<set name="applyTables" table="t_applyTable" cascade="all"
+			inverse="true" lazy="true" fetch="select">
+			<key column="fk_user_id"></key>   <!-- 外键 -->
+			<one-to-many class="cn.edu.fjnu.cdio.model.pym.ApplyTable" />  <!-- 封装方式 -->
+		</set>
+
+		<set name="donations" table="t_donation" cascade="all" inverse="true"
+			lazy="true" fetch="select">
+			<key column="fk_user_id"></key>   <!-- 外键 -->
+			<one-to-many class="cn.edu.fjnu.cdio.model.pym.Donation" />  <!-- 封装方式 -->
+		</set>
+
+		<set name="receiveGrants" table="t_receiveGrant" cascade="all"
+			inverse="true" lazy="true" fetch="select">
+			<key column="fk_user_id"></key>   <!-- 外键 -->
+			<one-to-many class="cn.edu.fjnu.cdio.model.pym.ReceiveGrant" />  <!-- 封装方式 -->
+		</set>
+
+		<set name="scs" table="t_student_course" cascade="all" inverse="true"
+			lazy="true" fetch="select">
+			<key column="fk_user_id"></key>   <!-- 外键 -->
+			<one-to-many class="cn.edu.fjnu.cdio.model.pym.Sc" />  <!-- 封装方式 -->
+		</set>
+
+
+		<!-- test小组 -->
+
+		<set name="testMains" table="t_test_main" cascade="all" inverse="true">
+			<key column="fk_stu_id"></key>   <!-- 外键 -->
+			<one-to-many class="cn.edu.fjnu.cdio.model.test.TestMain" />  <!-- 封装方式 -->
+		</set>
+
+		<set name="errQueBooks" table="t_err_que_book" cascade="all"
+			inverse="true">
+			<key column="fk_stu_id" /> <!-- 外键 -->
+			<one-to-many class="cn.edu.fjnu.cdio.model.test.ErrQueBook" />
+		</set>
+
+		<set name="stuDoubts" table="t_stu_doubt" cascade="all" inverse="true">
+			<key column="fk_stu_id" /> <!-- 外键 -->
+			<one-to-many class="cn.edu.fjnu.cdio.model.test.StuDoubt" />
+		</set>
+
+		<!-- trs小组 -->
+
+		<set name="courses" table="t_student_course" cascade="all">
+			<key column="fk_user_id"></key>
+			<many-to-many class="cn.edu.fjnu.cdio.model.coa.Course"
+				column="fk_course_id"></many-to-many>
+		</set>
+
+		<!-- grp小组 -->
+		<property name="userFans" type="java.lang.Integer">
+			<column name="user_fans" />
+		</property>
+
+		<property name="userFollows" type="java.lang.Integer">
+			<column name="user_follows" />
+		</property>
+		
+		<!-- res小组 -->
+		<set name="perUploads" table="tbl_perupload" cascade="all"
+			inverse="true" lazy="false">
+			<key column="pk_user_id" /> <!-- 外键 -->
+			<one-to-many class="cn.edu.fjnu.cdio.model.res.PerUpload" />
+		</set>
+
+		<!-- coa小组 -->
+		<property name="level" type="java.lang.String">
+			<column name="level" length="20" />
+		</property>
+		<property name="birth" type="java.sql.Date">
+			<column name="birth" length="20" />
+		</property>
+
+		<!--资格认证信息 -->
+		
+		<property  name="ctrain_num"  type="java.lang.String">
+			<column length="50" name="ctrain_num" not-null="false" />
+		</property>
+		<property  name="coa_license" type="org.springframework.orm.hibernate3.support.BlobByteArrayType">
+			<column name="coa_license" not-null="false" />
+		</property>
+		<property  name="sub_cer_date" type="java.sql.Date">
+			<column length="8" name="sub_cer_date" not-null="false" />
+		</property>
+		<property  name="isverify_C" type="java.lang.Integer">
+			<column  length="1" name="isverify_C"  />
+		</property>
+
+		<!--实名认证信息 -->
+		<property  name="IDcard" not-null="true" type="java.lang.String">
+			<column length="18" name="IDcard" />
+		</property>
+		<property  name="deadline" type="java.sql.Date">
+			<column length="8" name="deadline" not-null="false" />
+		</property>
+		<property  name="IDcPic" type="org.springframework.orm.hibernate3.support.BlobByteArrayType">
+			<column name="IDcPic" not-null="false" />
+		</property>
+		<property  name="sub_real_date" type="java.sql.Date">
+			<column length="8" name="sub_real_date" not-null="false" />
+		</property>
+		<property  name="isverify_R" type="java.lang.Integer">
+			<column length="1" name="isverify_R"  />
+		</property>
+		
+
+		<!-- pm -->
+		<set name="messageSet" order-by="JUDGE_CREATE_TIME desc" lazy="false">
+			<key column="FK_TO_USER_ID" />
+			<one-to-many class="cn.edu.fjnu.cdio.model.common.Message" />
+		</set>
+	</class>
+</hibernate-mapping>

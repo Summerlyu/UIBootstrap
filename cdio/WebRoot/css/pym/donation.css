@@ -1,0 +1,42 @@
+
+.pym_donFrame{
+	position:relative; 
+  margin-top: 5%;
+  left:12%;
+  width:85%;
+	}
+
+
+.pym_donForm{
+  padding-top:5%;
+}
+
+
+.pym_donGround{
+  width: 100%;
+  padding-bottom:5%;
+  background-color:#f1f7e4;
+  } 
+
+.pym_donPrices{
+  padding-top:5px;
+  font-family:宋体;
+  font-size:15px;
+  font-weight: bold;
+  display: inline-block;
+  color:#FF6100;
+}
+
+
+.pym_donLable{
+  font-size: 15px;
+  font-family: 宋体;
+  font-weight: bold;
+}
+
+.pym_appHead{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}

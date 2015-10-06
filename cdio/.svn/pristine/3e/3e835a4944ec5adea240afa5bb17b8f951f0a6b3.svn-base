@@ -1,0 +1,43 @@
+
+.pym_proAlign{
+  position: relative;
+  text-align: right;
+}
+
+.pym_proBgcolor{
+    background-color: #EFEFEF;
+    background-image: -moz-linear-gradient(center top , #FDFDFD 0%, #EAEAEA 100%);
+    border-bottom: 1px solid #CDCDCD;
+    height:auto;
+}
+
+
+.pym_proHead{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.page-skip {
+    color:#005580;
+    display: inline-block;
+    font-family: Tahoma,SimSun,Arial;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 16px;
+    padding: 0 5px;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.pagination .span1{
+    height: 20px;
+}
+
+.pym_proPage
+{
+  position: relative;
+    text-align:right;
+}

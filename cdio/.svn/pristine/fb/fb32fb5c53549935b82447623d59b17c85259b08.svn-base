@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping
+        SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.mat">
+	<class name="StuMatchInfo" table="t_stu_mat">
+		<id name="id" column="info_id">
+			<generator class="foreign">
+			    <param name="property">user</param>
+			</generator>
+		</id>
+		<property name="teachStyle" />
+		<property name="pattern" />
+		<many-to-one name="courseType" class="cn.edu.fjnu.cdio.model.common.CourseType" fetch="join" column="type_id"  />
+		<one-to-one name="user"/>
+	</class>
+</hibernate-mapping> 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="Trs" location="50,50" size="192,1183">
+    <action name="addCourseRecordAction" location="34,42" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="submitReport.jsp" />
+      </result>
+    </action>
+    <action name="forSubmitReport" location="34,134" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="submitReport.jsp" />
+      </result>
+    </action>
+    <action name="afterAddFalse" location="34,234" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="frame.html" />
+      </result>
+    </action>
+    <action name="SelectedCourseAction" location="34,334" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="listCourse.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="frame.html" />
+      </result>
+    </action>
+    <action name="selectedCourseForAdmin" location="34,434" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="listCourse.jsp" />
+      </result>
+    </action>
+    <action name="getCourseInfoForAdmin" location="34,534" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="detailsCourse.jsp" />
+      </result>
+    </action>
+    <action name="deleteCourseAction" location="34,634" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="listCourse.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="submitReport.jsp" path="WEB-INF/jsps/trs/submitReport.jsp" location="350,50" size="150,55" />
+  <webResource name="submitReport.jsp" path="WEB-INF/jsps/trs/coach/submitReport.jsp" location="350,200" size="150,55" />
+  <webResource name="Frame.html" path="Frame.html" location="350,350" size="150,55" />
+  <webResource name="listCourse.jsp" path="WEB-INF/jsps/trs/listCourse.jsp" location="350,500" size="150,55" />
+  <webResource name="frame.html" path="frame.html" location="350,650" size="150,55" />
+  <webResource name="listCourse.jsp" path="WEB-INF/jsps/trs/admin/listCourse.jsp" location="350,800" size="150,55" />
+  <webResource name="detailsCourse.jsp" path="WEB-INF/jsps/trs/admin/detailsCourse.jsp" location="350,950" size="150,55" />
+</Struts2Diagram>
+

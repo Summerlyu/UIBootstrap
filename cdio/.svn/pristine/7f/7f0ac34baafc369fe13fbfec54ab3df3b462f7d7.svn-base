@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.edu.fjnu.cdio.model.common.Message" table="T_MESSAGE">
+        <id name="messageId" type="long" column="PK_MESSAGE_ID">
+            <generator class="increment"/>
+        </id>  
+        <many-to-one name="fromUser" class="cn.edu.fjnu.cdio.model.common.User" lazy="false">
+            <column name="FK_FROM_USER_ID"/>
+        </many-to-one>
+        <many-to-one name="toUser" class="cn.edu.fjnu.cdio.model.common.User" lazy="false">
+            <column name="FK_TO_USER_ID"/>
+        </many-to-one>
+        <property name="title" type="string">
+            <column name="JUDGE_TITLE" length="30"/>
+        </property> 
+        <property name="messageString" type="string">
+            <column name="JUDGE_MESSAGE_STRING" />
+        </property> 
+        <property name="createdDate" type="calendar">
+            <column name="JUDGE_CREATE_TIME" length="10"/>
+        </property>
+    </class>
+</hibernate-mapping>

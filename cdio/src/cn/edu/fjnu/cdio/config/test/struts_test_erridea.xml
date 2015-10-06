@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="test-errIdea" namespace="/test/errIdea" extends="struts-default">
+
+		<action name="listErr_errIdea" class="cn.edu.fjnu.cdio.controller.test.ErrIdeaAction"
+			method="listErr">
+			<result name="listErrPage">/WEB-INF/jsps/test/errIdea/list_err_question.jsp
+			</result>
+		</action>
+
+		<action name="addErrIdea_doubt" class="cn.edu.fjnu.cdio.controller.test.ErrIdeaAction"
+			method="addErrIdea">
+		</action>
+
+		<action name="forCorrect_question" class="cn.edu.fjnu.cdio.controller.test.ErrIdeaAction"
+			method="forCorrect">
+			<result name="updateQuestionPage">/WEB-INF/jsps/test/queBank/update_question.jsp
+			</result>
+		</action>
+	</package>
+
+</struts>

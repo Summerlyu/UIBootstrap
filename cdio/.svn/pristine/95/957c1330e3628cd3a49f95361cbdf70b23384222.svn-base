@@ -1,0 +1,332 @@
+body,div,
+h1,h2,p,
+ol,ul,li {
+  margin: 0;
+  padding: 0;
+  border: 0; 
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  min-width: 290px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: #444 url("../../image/common/debut_dark.png") repeat;
+  color: #666;
+  font: normal 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#firstmenu .container{
+	width:1250px;
+}
+
+.null{
+	height:180px;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+.main {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-top-left-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0, .6);
+  top: 3em;
+  margin-bottom:2.5em;
+  margin-left:18em;
+  bottom: 0;
+  width: 1020px;
+  background: #fff;
+}
+ .frfooter {
+    bottom: 0;
+    width:960px;
+    color: white;
+    padding-left:30%;
+    position: absolute;
+}
+
+
+
+.main::-webkit-scrollbar {
+  -webkit-appearance: none;
+  background-color: rgba(0,0,0, .15);
+  width: 8px;
+  height: 8px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: rgba(0,0,0, .4);
+}
+
+#nav {
+  width: 18em;
+  top: 1em;
+  left: 0;
+}
+
+  .null .perInfo{
+  width:18em;
+  height: 100px;
+display: block;
+  }
+
+#nav ul {
+	display:none;
+  width: 100%;
+  list-style: none;
+  margin:0;
+}
+
+#nav ul  li {
+  width: 100%;
+  display: block;
+ height:40px;
+}
+
+#nav a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size:16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: background .3s ease;
+  -moz-transition: background .3s ease;
+  transition: background .3s ease;
+  text-shadow: 0 -1px rgba(0,0,0, .5);
+  border-bottom: 1px solid rgba(0,0,0, .2);
+  border-top: 1px solid rgba(255,255,255, .1);
+  display: block;
+  padding: .6em;
+  width: 100%;
+  text-decoration:none;
+  text-align:center;
+}
+
+#nav a:hover { background-color:#00bd85;  }
+#nav .active a { background-color:#00bd85; }
+#nav li:first-child a { border-top: 0 }
+#nav li:last-child a { border-bottom: 0 }
+#toggle { display: none }
+
+#firstmenu .Fmenu  a:hover { background-color:#00bd85; }
+#firstmenu .active a {background-color:#00bd85;}
+
+  #firstmenu .active a:hover { background-color:#00bd85;  }
+  
+    .js #firstmenu {
+    position: relative;
+    max-height: 60px;
+  }
+  
+  #firstmenu .Fmenu .logo{
+	display:block;
+	width:105px;
+	padding:0;
+	margin-left:1em;
+	
+}
+#firstmenu #logoimg{
+	display:block;
+	height:45px;
+	background: url("../../image/common/logo_white.png") no-repeat;
+	
+}
+  
+   #perImg{
+  	height:80px;
+  	width:35%;
+    margin-top:10px;
+    margin-left:10%;
+  	float: left;
+  }
+  
+  #UserNamelink{
+    text-decoration:none;
+    cursor:pointer;
+    color:white;
+  }
+  #UserNamelink:hover{
+    text-decoration:none;
+    color:#f0fcff;
+  }
+
+  #UserInfo{
+  color:white;
+	width:45%; 
+	height:90px;
+	float:right;
+	margin-top:5px;
+	margin-right:5px;
+  }
+  #UserName{
+  	margin-top:15px;
+    
+  }
+    #UserMoney{
+  	margin-top:10px;
+  }
+
+ #firstmenu #fl{
+	width:20%;
+	float:right;
+}
+
+#firstmenu,
+#firstmenu * {
+	list-style: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width:100%;
+}
+
+  #firstmenu .Fmenu ul {
+    width: 60%;
+    margin-left:7%;
+    list-style: none;
+	float: left;
+  }
+  
+  #firstmenu .Fmenu li {
+  float: left;
+   width: 14%;
+    *width: 12.1%; /* IE7 Hack */
+    _width: 10%; /* IE6 Hack */
+  display:none;
+}
+ 
+  #firstmenu a {
+  color: #ffffff;
+  text-decoration: none;
+  width: 100%;
+    margin: 0;
+    padding: .8em;
+    float: left;
+    text-align: center;
+    border-bottom: 0;
+    border-right: 1px solid #2d3538;
+  } 
+  
+  #h-User {
+	float:left;
+	width:140px;
+  }
+  
+  #authority {
+  margin-left:5px;
+  top:5px;
+  width:35%;
+  float:left;
+  position:relative;
+  }
+  
+  /*--------------------------用户名样式---------------------------------*/
+#h-Username{
+	width:45%;
+	float:left;
+	position:relative;
+}
+
+/*-------------------------私信菜单样式----------------------------*/
+#h-Message{
+	width:25%;
+	float:left;
+	position:relative;
+	cursor:pointer;
+}
+#h-Message a{
+	padding-bottom:.5em;
+}
+
+#h-Message:hover{
+	background-color:#333333;
+}
+
+#h-Message:hover .msg_menu{
+	display:block;
+	
+}
+#h-Message  .msg_menu{
+	list-style:none;
+	display:none;
+	position:fixed;
+	top:35px;
+	right:12em;
+	width:120px;
+	z-index:2;
+	background-color:#333333;
+	border-top:none;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.msg_menu li{
+	list-style:none;
+	float:left;
+	transition: all 0.3s ease-out 0s;
+	cursor:pointer;
+}
+
+.msg_menu li:hover{
+	background-color:#00bd85;
+	color:white;
+}
+
+/*----------------设置菜单样式-------------*/
+
+#h-Setting{
+	width:25%;
+	float:left;
+	position:relative;
+}
+
+#h-Setting a{
+	padding-bottom:.5em;
+}
+#h-Setting:hover{
+	background-color:#333333;
+}
+
+#h-Setting:hover .set_menu{
+	display:block;	
+}
+#h-Setting  .set_menu{
+	list-style:none;
+	display:none;
+	position:fixed;
+	top:38px;
+	right:10em;
+	width:120px;
+	z-index:2;
+	background-color:#333333;
+	border-top:none;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.set_menu li{
+	list-style:none;
+	float:left;
+	transition: all 0.3s ease-out 0s;
+	cursor:pointer;
+}
+
+.set_menu li:hover{
+	background-color:#00bd85;
+	color:white;
+}

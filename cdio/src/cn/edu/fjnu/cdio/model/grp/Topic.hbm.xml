@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.grp.Topic" table="t_topic">
+
+		<id name="topicId" type="long">
+			<column name="pk_topic_id" />
+			<generator class="increment" />
+		</id>
+		
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" lazy="false">
+            <column name="FK_USER_ID"/>
+        </many-to-one><!-- 一个user对应多个topic -->
+        
+        <many-to-one name="group" class="cn.edu.fjnu.cdio.model.grp.Group" lazy="false">
+            <column name="FK_GROUP_ID"/>
+        </many-to-one><!-- 一个user对应多个topic -->
+        
+		<property name="topicName" type="java.lang.String">
+			<column name="topic_name" length="30" />
+		</property>
+
+		<property name="topicContent" type="java.lang.String">
+			<column name="topic_content" length="100" />
+		</property>
+		
+		<property name="topicCreateTime" type="java.util.Date">
+			<column name="topic_create_time" />
+		</property>
+		
+		<property name="nums" type="java.lang.Integer">
+			<column name="topic_nums" />
+		</property>
+		
+		<property name="topicAgree" type="java.lang.Integer">
+			<column name="topic_agree" />
+		</property>
+		
+		<!--
+			这里的column="fk_group_id"是指明了自身(t_group表)表里的fk_group_id属性，指向topic表的外键
+		-->
+		<set name="replyTopics" table="t_reply_topic" cascade="all" inverse="true">
+            	<key column="FK_TOPIC_ID"></key>
+            	<one-to-many class="cn.edu.fjnu.cdio.model.grp.ReplyTopic" />
+        	</set>
+        	
+       <set name="replyMassages" table="t_reply_massage" cascade="all" inverse="true">
+            	<key column="FK_Topic_ID"></key>
+            	<one-to-many class="cn.edu.fjnu.cdio.model.grp.ReplyMassage" />
+        	</set>
+	</class>
+</hibernate-mapping>

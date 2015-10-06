@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.multipart.maxSize" value="900000000" />
+	<!-- 用来保存文件上传的临时文件的目录 -->
+	<constant name="struts.multipart.saveDir" value="/tempDir" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<package name="main" extends="struts-default">
+
+		<!-- ================================================拦截器配置======================================== -->
+		<interceptors>
+			<!-- 登录拦截器 -->
+			<interceptor name="loginInterceptor"
+				class="cn.edu.fjnu.cdio.security.UserLoginInterceptor"></interceptor>
+			<!-- 访客拦截器 -->
+			<interceptor name="visitorInterceptor"
+				class="cn.edu.fjnu.cdio.security.VisitorInterceptor"></interceptor>
+
+			<!-- 默认拦截器栈，需要用户登录 -->
+			<interceptor-stack name="myDefaultInterceptor">
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+				<interceptor-ref name="visitorInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+
+			<!-- 访客拦截器栈 -->
+			<interceptor-stack name="visitorInterceptorStack">
+				<interceptor-ref name="visitorInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- 声明myDefaultInterceptor为默认拦截器 -->
+		<default-interceptor-ref name="myDefaultInterceptor"></default-interceptor-ref>
+
+
+		<!-- =============================================== 全局结果 =============================================== -->
+		<global-results>
+			<!-- 没有权限，返回系统登录界面 -->
+			<result name="noPermission" type="redirectAction">welcomeAction</result>
+		</global-results>
+
+
+		<!-- ============================================== 控制器配置 ============================================== -->
+
+		<!-- 登录 -->
+		<action name="welcomeAction" class="cn.edu.fjnu.cdio.controller.common.WelcomeAction">
+			<result name="success">WEB-INF/jsps/common/welcome.jsp</result>
+			<!-- 用户登入页面，不对该action进行loginInterceptor拦截，显示声明拦截器是访客拦截器 -->
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>
+		</action>
+
+		<!-- 主界面 -->
+		<action name="frame" class="cn.edu.fjnu.cdio.controller.common.FrameAction"
+			method="getFrame">
+			<result name="success">WEB-INF/jsps/common/frame.jsp</result>
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>
+		</action>
+		<action name="getUserHeadPicAction" class="cn.edu.fjnu.cdio.controller.common.FrameAction"
+			method="getHeadPic"></action>
+
+		<!-- 忘记密码 -->
+		<action name="forget" class="cn.edu.fjnu.cdio.controller.common.ForgetAction">
+			<result name="success">WEB-INF/jsps/common/forgetPassword.jsp</result>
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref><!--忘记密码页面 -->
+		</action>
+
+		<!-- 发送邮件 -->
+		<action name="sendEmail" class="cn.edu.fjnu.cdio.controller.common.SendEmail">
+			<result name="success">WEB-INF/jsps/common/welcome.jsp</result>
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref><!--登录页面 -->
+		</action>
+
+		<!-- 验证“忘记密码”返回的链接 -->
+		<action name="verify" class="cn.edu.fjnu.cdio.controller.common.VerifyAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">verifySuccess</param>
+				<param name="userName">${userName}</param>
+			</result>
+			<result name="false" type="redirectAction">
+				<param name="actionName">verifyFalse</param>
+			</result>
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>
+		</action>
+		<action name="verifySuccess" class="cn.edu.fjnu.cdio.controller.common.VerifyAction"
+			method="verifySuccess">
+			<result name="success">WEB-INF/jsps/common/modifyPassword.jsp</result>
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>
+		</action>
+		<action name="verifyFalse" class="cn.edu.fjnu.cdio.controller.common.VerifyAction"
+			method="verifyFalse">
+			<result name="success">WEB-INF/jsps/common/welcome.jsp</result>
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>
+		</action>
+
+		<!-- 修改密码后登录 -->
+		<action name="modify" class="cn.edu.fjnu.cdio.controller.common.ModifyAction">
+			<result name="success">WEB-INF/jsps/common/frame.jsp</result>
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>
+		</action>
+
+
+		<!-- <action name="loginAction" class="cn.edu.fjnu.cdio.controller.common.LoginAction"> 
+			<result name="success">WEB-INF/jsps/common/frame.jsp</result> <result name="input">WEB-INF/jsps/common/welcome.jsp</result> 
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>因为是用户登入页面，所以不能对该action进行拦截，所以必须显示声明拦截器是系统默认的拦截器 
+			</action> -->
+
+		<!-- <action name="registeAction" class="cn.edu.fjnu.cdio.controller.common.RegisteAction"> 
+			<result name="success" type="redirectAction">通过重定向防止表单重复提交 <param name="actionName">registeSuccess</param> 
+			<param name="userName">${userName}</param> 如果要传递参数可以通过下面方式传递： <param name="email">${email}</param> 
+			</result> <result name="input" type="redirectAction"> <param name="actionName">registeFalse</param> 
+			</result> <interceptor-ref name="visitorInterceptorStack"></interceptor-ref>因为是用户登入页面，所以不能对该action进行拦截，所以必须显示声明拦截器是系统默认的拦截器 
+			</action> <action name="registeSuccess" class="cn.edu.fjnu.cdio.controller.common.RegisteAction" 
+			method="afterAddSuccess"> <result name="success">WEB-INF/jsps/common/frame.jsp</result> 
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>因为是用户登入页面，所以不能对该action进行拦截，所以必须显示声明拦截器是系统默认的拦截器 
+			</action> <action name="registeFalse" class="cn.edu.fjnu.cdio.controller.common.RegisteAction" 
+			method="afterAddFalse"> <result name="success">WEB-INF/jsps/common/frame.jsp</result> 
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>因为是用户登入页面，所以不能对该action进行拦截，所以必须显示声明拦截器是系统默认的拦截器 
+			</action> -->
+
+	</package>
+
+	<package name="json" extends="json-default" namespace="/">
+		<interceptors>
+			<!-- 登录拦截器 -->
+			<interceptor name="loginInterceptor"
+				class="cn.edu.fjnu.cdio.security.UserLoginInterceptor"></interceptor>
+			<!-- 访客拦截器 -->
+			<interceptor name="visitorInterceptor"
+				class="cn.edu.fjnu.cdio.security.VisitorInterceptor"></interceptor>
+
+			<!-- 默认拦截器栈，需要用户登录 -->
+			<interceptor-stack name="myDefaultInterceptor">
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+				<interceptor-ref name="visitorInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+
+			<!-- 访客拦截器栈 -->
+			<interceptor-stack name="visitorInterceptorStack">
+				<interceptor-ref name="visitorInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- 声明myDefaultInterceptor为默认拦截器 -->
+		<default-interceptor-ref name="myDefaultInterceptor"></default-interceptor-ref>
+
+		<action name="loginAction" class="cn.edu.fjnu.cdio.controller.common.LoginAction">
+			<!-- 提交ajax数据 -->
+			<result type="json"></result>
+			<!-- 用户登入页面，不对该action进行loginInterceptor拦截，显示声明拦截器是访客拦截器 -->
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>
+		</action>
+
+		<action name="registeAction" class="cn.edu.fjnu.cdio.controller.common.RegisteAction">
+			<!-- 提交ajax数据 -->
+			<result type="json"></result>
+			<!-- 用户登入页面，不对该action进行loginInterceptor拦截，显示声明拦截器是访客拦截器 -->
+			<interceptor-ref name="visitorInterceptorStack"></interceptor-ref>
+		</action>
+
+	</package>
+
+</struts>

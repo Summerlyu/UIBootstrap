@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.cmt">
+   <class name="JudgeStudent" table="t_judge_student">
+      <id name="judgeID" column="pk_judge_id" type="java.lang.Long" >
+         <generator class="increment">
+         </generator>
+      </id>
+      <property name="studentName" column="student_name" type="java.lang.String" length="50" not-null="true"></property>
+      <property name="teacherName" column="teacher_name" type="java.lang.String" length="50" not-null="true"></property>
+      <property name="judgeContent" column="judge_content" type="java.lang.String" length="256" not-null="true"></property>
+      <property name="judgeMerit" column="judge_merit" type="java.lang.String" length="1" not-null="true"></property>
+      <property name="judgeDetail" column="judge_detail" type="java.lang.String" length="50" not-null="true"></property>
+      <property name="judgeTime" column="judge_time" type="java.lang.String"  not-null="true"></property>     
+      <many-to-one name="course" class="cn.edu.fjnu.cdio.model.coa.Course" column="fk_course_id" lazy="false" fetch="join"></many-to-one>
+   </class>
+
+</hibernate-mapping>

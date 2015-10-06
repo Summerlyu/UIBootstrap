@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.bgm.Parameter" table="t_Parameter">
+
+		<!--用户的账户信息 -->
+		<id name="paraID" type="long">
+			<column name="pk_para_id" />
+			<generator class="increment" />
+		</id>
+		<property name="paraName" type="java.lang.String">
+			<column name="para_name" length="100" />
+		</property>
+
+		<property name="descr" type="text">
+			<column name="descr"/>
+		</property>
+		
+		<property name="status" type="java.lang.String">
+			<column name="status" length="20" />
+		</property>
+		
+		<property name="time" type="timestamp">
+			<column name="time" />
+		</property>
+	</class>
+</hibernate-mapping>

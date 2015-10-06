@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+	table{
+				border-bottom:1px solid #DDDDDD;
+				width:60%;
+			}
+			td{ 
+				font:normal 12px/17px Arial;
+				padding:2px;
+				width:100px;
+			}
+			th{ 
+				font-family:微软雅黑;
+				text-align:left;
+				padding:4px;
+				height:25px;
+				background-color:#F6FBFA;
+			}
+			
+			.even{ 
+				background-color:#F9F9F9;
+				}  /* 偶数行样式*/
+			.odd{ 
+				background-color:#FFFFFF;
+			}  /* 奇数行样式*/
+			.table-hover tbody tr:hover > td,
+			.table-hover tbody tr:hover > th {
+				
+			  background-color:#FAFAD2;
+			  border-bottom:1px solid #F5F5DC;
+			  border-top:1px solid #F5F5DC;
+			}
+		.operand{
+	    font-size:10pt;
+	 	color:gray;
+	 	text-decoration:none;
+	 	font-weight:normal;
+	 	height:20px;
+	 	display: inline-block;
+	    *display: inline;
+	    padding: 2px 12px;
+	    margin-bottom: 0;
+	    *margin-left: .3em;
+	   
+	    line-height: 20px;
+	    color: #333333;
+	    text-align: center;
+	    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	    vertical-align: middle;
+	    cursor: pointer;
+	    background-color: #EBEBE4;
+	    *background-color: #EBEBE4;
+	    background-image: -moz-linear-gradient(top, #EBEBE4, #EBEBE4);
+	    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EBEBE4), to(#EBEBE4));
+	    background-image: -webkit-linear-gradient(top, #EBEBE4, #EBEBE4);
+	    background-image: -o-linear-gradient(top,  #EBEBE4, #EBEBE4);
+	    background-image: linear-gradient(to bottom, #EBEBE4, #EBEBE4);
+	    background-repeat: repeat-x;
+	    border: 1px solid #E1E1E1;
+	    *border: 0;
+	    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	    border-bottom-color: #b3b3b3;
+	    -webkit-border-radius: 0px;
+	     -moz-border-radius: 0px;
+	          border-radius: 0px;
+	       text-decoration:none;   
+		}
+		.modifyBtn{
+			margin-right:30px;
+		}
+		.btnTd{
+			width:35%
+		}
+		.tabHeader{
+			margin-left:10px;
+			
+			font-size:10pt;
+			font-bold:normal
+		}
+		.minicontainer{
+			width:750px;
+	    }
+		.tablecolor{
+			background-color:#FF6;
+		}
+		
+		.table tbody tr.change > td {
+		  background-color:#FCF8E3;
+		}
+		.try{
+			background-color:#d0e9c6;
+		}
+		.th col{
+			font-family:微软雅黑;font-size:16px;text-align:center;padding-top:12px;background-color:#d0e9c6;
+		}
+		div.minicontainer span.life{
+			font-family:微软雅黑;font-size:20px;font-weight:bold
+			}
+		.lig{
+		   margin-left:20px;
+		   margin-right:10px;
+		   text-decoration:none;
+		   font-family:微软雅黑;
+		   font-weight:bold;
+		   font-size:15px;
+		}
+		div.minicontainer div ul.nav li.active a{
+			margin-left:20px;
+			margin-right:20px;
+			
+			}

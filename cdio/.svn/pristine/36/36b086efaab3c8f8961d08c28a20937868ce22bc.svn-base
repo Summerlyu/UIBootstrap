@@ -1,0 +1,119 @@
+/*题目分类最外面的那层的样式*/
+.question-classify {
+	margin: 0 auto;
+	width: 850px;
+	border-bottom: 2px solid #6699FF;
+	padding-bottom: 10px;
+}
+
+/*题目分类那一块的头部的样式*/
+.question-classify-header {
+	padding: 8px 35px 8px 14px;
+	background-color: #f2f3f2;
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	overflow: hidden;
+}
+
+#batch-input-question {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page-top {
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 850px;
+	border-bottom: 2px solid #6699FF;
+}
+
+.mycontainer {
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 850px;
+}
+
+/*表格头部的颜色样式*/
+thead .info {
+	background-color: #c4e3f3;
+}
+
+/*表格头部的颜色样式*/
+thead .success {
+	background-color: #dff0d8;
+}
+
+/*用于表格小号字体的样式*/
+.smallfont {
+	font-size: 13px;
+}
+
+.question-label {
+	display: inline-block;
+	padding: 5px 7px;
+	font-size: 11.844px;
+	font-weight: bold;
+	line-height: 14px;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	white-space: nowrap;
+	vertical-align: baseline;
+}
+
+/* this CSS is not part of the widget, it is here just as an example of the demo page styling.... Don't copy this one, roll your own. One
+ * of the key things about the widget is that it allows you to do your own styling!
+ */
+.edit_question_area {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#editor {
+	max-height: 250px;
+	height: 120px;
+	background-color: white;
+	border-collapse: separate;
+	border: 1px solid rgb(204, 204, 204);
+	padding: 4px;
+	box-sizing: content-box;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+	outline: none;
+}
+
+div[data-role="editor-toolbar"] {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.dropdown-menu a {
+	cursor: pointer;
+}
+
+.page-skip {
+	color: #005580;
+	display: inline-block;
+	font-family: Tahoma, SimSun, Arial;
+	height: 24px;
+	line-height: 24px;
+	margin: 0;
+	min-width: 16px;
+	padding: 0 5px;
+	text-align: center;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+.pagination .input-append {
+	margin-top: -12px;
+}
+
+.pagination .span1 {
+	height: 30px;
+}

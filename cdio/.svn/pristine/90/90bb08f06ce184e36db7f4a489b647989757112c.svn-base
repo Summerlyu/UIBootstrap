@@ -1,0 +1,139 @@
+
+.frameblank{
+  height:70px;
+}
+
+#cwidth{
+  width:1170px;
+}
+
+.safecolor{
+  background-color:#252525;
+}
+
+.log_inout{
+  margin-left:18px;
+  margin-top:10px;
+}
+   #toggleframe{
+          font-size: 22px;
+        }
+   #framefooter{
+      background-color: #252525;
+      padding:45px 0px;
+      display: block;
+      width: 100%;
+    }
+    #framefooter p{color:#bababa;
+        padding:15px 0px;}
+    #framefooter ul{list-style:none;
+        margin:0px;color:#6a6a6a;
+        font-size:13px;}
+
+    #framefooter ul li{margin-bottom:10px;}
+
+    #framefooter .links-horizontal li{float:left;margin-left:20px;}
+
+    #framefooter ul li:first-child{margin-bottom:15px;margin-left:0px;}
+
+    #framefooter .row{margin-bottom:20px;}
+
+    #framefooter a{color:#bdbdbd;text-decoration: none;}
+
+    #framenavbar{
+      margin-bottom:0px;
+      font-weight: bold;
+      height:40px;
+    }
+    #framemenu{
+      text-decoration: none;
+      color: #252525;
+      background-image: url("../../image/common/menu.jpg"); 
+      border-bottom-style:solid; 
+      border-bottom-width: 1px;
+      border-radius: 10px;
+    }
+
+    #framemenu:hover{
+      color: #1abc9c;
+      cursor: pointer;
+    }
+
+    #accordion2{
+      text-align: center;
+    }
+    #framecontainer{
+      margin-left: 220px;
+      width: 950px;
+      min-height: 600px;
+    }
+
+    #framemenudiv{
+      background-color:#d6d7b7;
+      margin-left: 0px;
+      border-radius:10px;
+      width:200px;
+    }
+
+    #frameaccordion-group{
+      border: 0px;
+      font-size: 18px;
+      font-weight: bold;
+          
+    }
+    #collapseOne,#collapseTwo,#collapseThree,#collapseFour,
+    #collapseFive,#collapseSix,#collapseSeven,#collapseEight,
+    #collapseNine,#collapseTen,#collapseEleven,#collapseTwelve,
+    #collapseThirteen,#collapseFourteen{
+        background-color: transparent;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .framemenu-inner{
+      text-decoration: none;
+      color: white;
+    }
+
+     .framemenu-inner:hover{
+      color: #1abc9c;
+      cursor: pointer;
+    }
+
+    #framenavbarDiv{
+      margin-left: 400px;
+    }
+
+    #minimenu{
+      display: none;
+      margin-top: 5px;
+      margin-left: 600px;
+      width: 60px;
+      height: 40px;
+
+    }
+    .icon-bar{
+      width: 40px;
+      height: 6px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+      margin-bottom: 5px;
+      margin-left: 0px;
+      background-color: white; 
+    }
+     
+
+
+                #pacman { 
+                    width: 0px; 
+                    height: 0px; 
+                    position:relative;
+                    margin-left:190px;
+                    z-index:2;
+                    border-right: 30px solid transparent; 
+                    border-top: 30px solid #d6d7b7; 
+                    border-left: 30px solid #d6d7b7; 
+                    border-bottom: 30px solid #d6d7b7; 
+                    
+                }

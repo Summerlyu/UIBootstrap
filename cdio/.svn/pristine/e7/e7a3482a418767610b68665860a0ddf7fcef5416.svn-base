@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.grp.ReplyMassage" table="t_reply_massage">
+
+		<id name="replyMassageId" type="long">
+			<column name="pk_reply_massage_id" />
+			<generator class="increment" />
+		</id>
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" lazy="false">
+            <column name="FK_USER_ID"/>
+        </many-to-one><!-- 一个user对应多个小组 -->
+        
+        <many-to-one name="topic" class="cn.edu.fjnu.cdio.model.grp.Topic" lazy="false">
+            <column name="FK_Topic_ID"/>
+        </many-to-one>
+        <many-to-one name="replyTopic" class="cn.edu.fjnu.cdio.model.grp.ReplyTopic" lazy="false">
+            <column name="FK_reply_topic_ID"/>
+        </many-to-one>
+        
+	</class>
+</hibernate-mapping>

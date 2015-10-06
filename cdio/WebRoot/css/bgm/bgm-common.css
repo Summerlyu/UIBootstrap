@@ -1,0 +1,6 @@
+.control-label .required{
+	margin-right: 6px;
+    font-family: SimSun;
+    font-size: 14px;
+    color: rgb(255, 0, 0);
+}

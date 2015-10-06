@@ -1,0 +1,89 @@
+   	 body{
+   	 	font-weight:normal;
+   	 }
+   	 textarea{
+    	width:500px;
+     }
+     .navbar input{
+		height:30px;	    
+	 }
+	 input[type="text"]:focus{
+		 border-color:#bababa;
+		 border-size:2px;
+		 -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0 0px rgba(0, 0, 0, 0);
+	     -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0 0px rgba(0, 0, 0, 0);
+	     box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0 0px rgba(0, 0, 0, 0);
+	 }
+	 
+	 #fileModifyBar{
+	 	margin-top:-20px;
+	 	height:25px;
+	 	background-color:#32978F;
+	 	margin-left:-20px;
+	 	width:103%;
+	 	margin-bottom:15px
+	 }
+	 #fileModifyForm{
+	    padding-top:20px;
+	    padding-left:20px;
+	    font-family:Arial, Helvetica, sans-serif;
+	    font-size:13px;
+		color:#000;
+		padding-bottom:10px;
+		background-color:#FCFCFC;
+		width:97%;
+		border:2px solid #1D9162;
+		display:none;
+     }
+     span{
+      	font-size:10.3pt;
+      	font-weight:normal;
+     }
+     input[type="radio"]{
+        font-size:10.3pt;
+      	font-weight:normal;
+     }
+     span8 div{
+     	padding-bottom:-20px;
+     }
+     select{
+     	width:100px;
+     }
+     #cancelBtn{
+     	background-color:#247A71;
+	    *background-color:#247A71; 
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#247A71), to(#247A71));
+		background-image: -webkit-linear-gradient(top, #247A71, #247A71);
+		background-image:-moz-linear-gradient(top, #247A71, #247A71);
+		color:#fff;
+		font-size:10pt;
+		width:80px;
+		border:1px solid #7A7A7A ;
+     }
+     #modifyBtn{
+     	margin-right:30px;
+		width:90px;
+		background-color:#FEA21B;
+		*background-color:#FEA21B;
+		background-image:-moz-linear-gradient(top, #FEA21B, #FEA21B); 
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FEA21B), to(#FEA21B));
+		background-image: -webkit-linear-gradient(top, #FEA21B, #FEA21B);
+		color:#FFFFFF;
+		font-size:10pt; 
+     }
+     table{
+    	 text-aligh:center;
+     }
+     .resNewTag
+      {
+            padding:2px 4px;
+            margin:2px 5px;
+            background-color:#1ABC9C;
+       }
+       .header{
+       		border-bottom-style:dotted; 
+       		border-bottom-color:#BDC3C7;
+       	    padding-bottom:10px;
+       	    margin-bottom:20px
+       }
+	

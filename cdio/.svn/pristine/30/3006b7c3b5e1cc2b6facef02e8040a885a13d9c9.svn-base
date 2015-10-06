@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="test-queBank" namespace="/test/queBank" extends="struts-default">
+
+		<action name="input_question" class="cn.edu.fjnu.cdio.controller.test.QueBankAction"
+			method="input">
+			<result name="inputQuePage">/WEB-INF/jsps/test/queBank/input_question.jsp
+			</result>
+		</action>
+
+		<action name="list_question" class="cn.edu.fjnu.cdio.controller.test.QueBankAction"
+			method="list">
+			<result name="listQuePage">/WEB-INF/jsps/test/queBank/list_question.jsp
+			</result>
+		</action>
+
+		<action name="temp_question" class="cn.edu.fjnu.cdio.controller.test.QueBankAction"
+			method="temp">
+			<result name="listTempPage">/WEB-INF/jsps/newMain.jsp
+			</result>
+		</action>
+
+		<action name="createBySingle_question" class="cn.edu.fjnu.cdio.controller.test.QueBankAction"
+			method="createBySingle">
+			<result name="listQuestionAction" type="redirectAction">list_question</result>
+			<result name="inputQuePage">/WEB-INF/jsps/test/queBank/input_question.jsp
+			</result>
+		</action>
+
+		<action name="createByBatch_question" class="cn.edu.fjnu.cdio.controller.test.QueBankAction"
+			method="createByBatch">
+			<result name="listQuestionAction" type="redirectAction">list_question</result>
+			<result name="inputQuePage">/WEB-INF/jsps/test/queBank/input_question.jsp
+			</result>
+		</action>
+
+		<action name="loadpic_question" class="cn.edu.fjnu.cdio.controller.test.QueBankAction"
+			method="loadpic">
+		</action>
+
+		<action name="forUpdate_question" class="cn.edu.fjnu.cdio.controller.test.QueBankAction"
+			method="forUpdate">
+			<result name="updateQuestionPage">/WEB-INF/jsps/test/queBank/update_question.jsp
+			</result>
+		</action>
+
+		<action name="update_question" class="cn.edu.fjnu.cdio.controller.test.QueBankAction"
+			method="update">
+			<result name="updateQuestionPage">/WEB-INF/jsps/test/queBank/update_question.jsp
+			</result>
+			<result name="listQuestionAction" type="redirectAction">list_question</result>
+		</action>
+
+		<action name="remove_question" class="cn.edu.fjnu.cdio.controller.test.QueBankAction"
+			method="remove">
+			<result name="listQuestionAction" type="redirectAction">list_question</result>
+		</action>
+
+	</package>
+
+	<package name="test-queClassify" namespace="/test/queClassify"
+		extends="json-default">
+		<action name="getScopeById_question" class="cn.edu.fjnu.cdio.controller.test.ScopeAction"
+			method="getScopeById">
+			<result name="success" type="json">
+			</result>
+		</action>
+		<action name="getClassifyByScope_question" class="cn.edu.fjnu.cdio.controller.test.ScopeAction"
+			method="getClassifyByScope">
+			<result name="success" type="json">
+			</result>
+		</action>
+
+
+	</package>
+
+</struts>

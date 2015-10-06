@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  
+  
+  <package name="res-mgr"  extends="struts-default" namespace="/resModify">
+    		<action name="loadResDangerous" class="cn.edu.fjnu.cdio.controller.res.ResMgrAction" method="load">
+    			<result name="loadResDangerous">/WEB-INF/jsps/res/resdangerous.jsp</result>
+    		</action>
+    		<action name="removeResDangerous" class="cn.edu.fjnu.cdio.controller.res.ResMgrAction" method="delete">
+    			<result name="loadResDangerous" type="redirectAction">loadResDangerous</result>
+    		</action>
+    		<action name="updateResDangerous" class="cn.edu.fjnu.cdio.controller.res.ResMgrAction" method="update">
+    			<result name="loadResDangerous" type="redirectAction">loadResDangerous</result>
+    		</action>
+    		<action name="query" class="cn.edu.fjnu.cdio.controller.res.ResMgrAction" method="query">
+    			<result name="loadResDangerous">/WEB-INF/jsps/res/resquery.jsp</result>
+    		</action>
+    		<action name="resCatList" class="cn.edu.fjnu.cdio.controller.res.ResMgrAction" method="listResByCat">
+    			<result name="loadResCat">/WEB-INF/jsps/res/resCatCheck.jsp</result>
+    			<result name="loadResCat2">/WEB-INF/jsps/res/resCatCheck.jsp</result>
+    		</action>
+    		<action name="resCatPage" class="cn.edu.fjnu.cdio.controller.res.ResMgrAction" method="PageResByCat">
+    			<result name="loadResCat">/WEB-INF/jsps/res/resCatCheck.jsp</result>
+    			<result name="loadResCat2">/WEB-INF/jsps/res/resCatCheck.jsp</result>
+    		</action>
+    		
+    		
+
+  </package>
+</struts>

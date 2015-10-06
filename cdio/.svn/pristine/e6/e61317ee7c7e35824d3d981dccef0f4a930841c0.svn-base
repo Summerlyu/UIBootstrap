@@ -1,0 +1,125 @@
+﻿.pym_queAlign{
+position: relative;
+text-align:left;
+}
+
+
+.pym_queHead{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.pym_queForm{
+    position:realtive;
+    padding-top:1%;
+}
+
+
+
+.pym_queLine{
+position:relative;
+width:100%;
+height:5px;
+border-bottom:1px #6699FF solid;
+FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#33CCFF,endColorStr=#f6f6f8);/*IE6*/
+background:-moz-linear-gradient(top,#33CCFF,#f6f6f8);/*非IE6的其它*/
+background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#33CCFF), to(#f6f6f8));/*非IE6的其它*/
+}
+
+.pym_quePage
+{
+    position: relative;
+    text-align:right;
+}
+
+.pym_queTbg{
+font-size: 15px;
+font-family: ����;
+background-color: #EFEFEF;
+background-image: -moz-linear-gradient(center top , #FDFDFD 0%, #EAEAEA 100%);
+border-bottom: 1px solid #CDCDCD;
+height:auto;
+}
+
+.pym_queCbg{
+font-size: 14px;
+font-family: ����;
+}
+
+.pym_queContent{
+font-size: 15px;
+font-family: ����;
+background-color: #EFEFEF;
+background-image: -moz-linear-gradient(center top , #FDFDFD 0%, #EAEAEA 100%);
+border-bottom: 1px solid #CDCDCD;
+height:auto;
+}
+.pym_queCcontent{
+font-size: 14px;
+font-family: ����;
+
+
+}
+
+.pym_queFont{
+    font-weight:bold; 
+    font-size:14px;
+}
+
+.pym_queCpan{
+    display:block; 
+    width:100%;
+    <!--overflow:hidden; -->
+    text-align:center;
+}
+
+
+.page-skip {
+    color:#005580;
+    display: inline-block;
+    font-family: Tahoma,SimSun,Arial;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 16px;
+    padding: 0 5px;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.pagination .input-append{
+    margin-top: -12px;
+}
+.pagination .span1{
+    height: 20px;
+}
+
+
+
+
+
+
+.pym_queBorder{
+  position: relative;
+  height:auto;
+  border:#909090 1px solid;
+  background:#fff;
+  color:#333;
+  border-top:none;
+  border-left: none;
+  -moz-box-shadow: 2px 2px 2px #888888; /* 老的 Firefox */
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.pym_donIcro{
+  padding-bottom:5px;
+    margin-right: 1%;
+}
+
+.pym_donSun{
+    padding-bottom:4px;
+    margin-right: 1%;
+
+}

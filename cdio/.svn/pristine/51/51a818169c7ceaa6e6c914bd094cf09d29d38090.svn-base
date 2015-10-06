@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.grp.ReplyReply" table="t_reply_reply">
+
+		<id name="replyReplyId" type="long">
+			<column name="pk_reply_reply_id" />
+			<generator class="increment" />
+		</id>
+		<property name="replyContent" type="java.lang.String">
+			<column name="reply_content" length="100" />
+		</property>
+		
+		<property name="replyTime" type="java.util.Date">
+			<column name="reply_time" />
+		</property>
+		
+		
+
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" lazy="false">
+            <column name="FK_USER_ID"/>
+        </many-to-one><!-- 一个user对应多个回复-->
+		
+		<many-to-one name="replyTopic" class="cn.edu.fjnu.cdio.model.grp.ReplyTopic" lazy="false">
+            <column name="fk_reply_topic_id"/>
+        </many-to-one><!-- 一个replytopic对应多个reply -->
+	
+		
+		<!--
+			这里的column="fk_group_id"是指明了自身(t_group表)表里的fk_group_id属性，指向topic表的外键
+		-->
+	</class>
+</hibernate-mapping>

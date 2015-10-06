@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.bgm.Visitor" table="t_visitor">
+
+		<!--访客信息 -->
+		<id name="visID" type="long">
+			<column name="pk_vis_id" />
+			<generator class="increment" />
+		</id>
+		<property name="ip" type="java.lang.String">
+			<column name="ip" length="20" />
+		</property>
+
+		<property name="time" type="java.util.Date">
+			<column name="time" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

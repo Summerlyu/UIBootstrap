@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="test-stuTest" namespace="/test/stuTest" extends="struts-default">
+		<action name="loadAll_test" class="cn.edu.fjnu.cdio.controller.test.StuTestAction"
+			method="loadAll">
+			<result name="loadTestPage">/WEB-INF/jsps/test/stuTest/list_test.jsp</result>
+		</action>
+
+		<action name="choose_test" class="cn.edu.fjnu.cdio.controller.test.StuTestAction"
+			method="choose">
+			<result name="gotochooseTestPage">/WEB-INF/jsps/test/stuTest/choose_test.jsp
+			</result>
+		</action>
+
+		<action name="toTrainTest_test" class="cn.edu.fjnu.cdio.controller.test.StuTestAction"
+			method="toTrainTest">
+			<result name="gotoExaminePage">/WEB-INF/jsps/test/stuTest/examining_test.jsp
+			</result>
+			<result name="gotochooseTestPage">/WEB-INF/jsps/test/stuTest/choose_test.jsp
+			</result>
+		</action>
+
+		<action name="toScheduledTest_test" class="cn.edu.fjnu.cdio.controller.test.StuTestAction"
+			method="toScheduledTest">
+			<result name="gotoExaminePage">/WEB-INF/jsps/test/stuTest/examining_test.jsp
+			</result>
+			<result name="gotochooseTestPage">/WEB-INF/jsps/test/stuTest/choose_test.jsp
+			</result>
+		</action>
+
+		<action name="toRandTest_test" class="cn.edu.fjnu.cdio.controller.test.StuTestAction"
+			method="toRandTest">
+			<result name="gotoExaminePage">/WEB-INF/jsps/test/stuTest/examining_test.jsp
+			</result>
+			<result name="gotochooseTestPage">/WEB-INF/jsps/test/stuTest/choose_test.jsp
+			</result>
+		</action>
+
+		<action name="submit_test" class="cn.edu.fjnu.cdio.controller.test.StuTestAction"
+			method="submit">
+			<result name="feedBackTestPage">/WEB-INF/jsps/test/stuTest/feedback_test.jsp
+			</result>
+		</action>
+
+		<action name="submitFeedback_test" class="cn.edu.fjnu.cdio.controller.test.StuTestAction"
+			method="submitFeedback">
+			<result name="listResultPage">/WEB-INF/jsps/test/stuTest/examine_result.jsp
+			</result>
+			<result name="loadAllAction" type="redirectAction">loadAll_test
+			</result>
+		</action>
+
+		<action name="loadAll_errQue"
+			class="cn.edu.fjnu.cdio.controller.test.ErrQueBookAction" method="loadAll">
+			<result name="gotoErrBookPage">/WEB-INF/jsps/test/stuTest/stu_errQueBook.jsp
+			</result>
+		</action>
+
+		<action name="addErrQueBook_errQue"
+			class="cn.edu.fjnu.cdio.controller.test.ErrQueBookAction" method="addErrQueBook">
+		</action>
+	</package>
+
+</struts>

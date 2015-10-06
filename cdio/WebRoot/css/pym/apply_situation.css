@@ -1,0 +1,79 @@
+
+.pym_appSitHead{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.pym_appfailSitform{
+padding-top:4%;	
+padding-left: 10%;
+padding-bottom:4%;
+}
+
+.pym_appingSitform{
+padding-top:4%;	
+padding-left: 10%;
+padding-bottom:4%;
+}
+
+
+.help_step_box{
+  background:#f1f7e4;
+  height:55px;
+  overflow:hidden;
+  border-top:1px solid #FFF;
+  width:100%;
+}
+.help_step_item{
+  float:left;
+  height:55px;
+  width:19%;
+  line-height:55px;
+  padding:0 7.3% 0 7%;
+  cursor:pointer;
+  position:relative;
+  font-size:14px;
+  font-weight:bold;
+}
+.help_step_num{
+  width:5%;
+  height:19px;
+  line-height:19px;
+  position:absolute;
+  text-align:center;
+  top:18px;left:10%;
+  font-size:16px;
+  font-weight:bold;
+}
+.help_step_set{
+  background:#5bb75b;color:#FFF;
+}
+.help_step_set .help_step_left{
+  width:30%;
+  height:55px;
+  background:url() left top no-repeat;position:absolute;
+  left:0;
+  top:0;
+}
+.help_step_set .help_step_right{
+  width:6%;
+  height:55px;
+  background:url() left bottom no-repeat; 
+  position:absolute;
+  right:-5%;
+  top:0;
+}
+
+.fa{
+  width:100%;
+}
+
+.pym_appSitcolor{
+  font-weight: bold;
+  font-family: 宋体; 
+  margin-bottom: 10px;
+}

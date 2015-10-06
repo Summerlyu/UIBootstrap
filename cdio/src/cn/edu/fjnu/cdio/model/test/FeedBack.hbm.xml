@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.test">
+	<class name="FeedBack" table="t_feedback">
+		<id name="feebBackId" column="pk_feedback_id" type="java.lang.Long">
+			<generator class="identity" />
+		</id>
+		<property name="content" type="java.lang.String" column="sequence"
+			length="1000" not-null="true" />
+		<property name="level" type="java.lang.Integer" column="level"
+			not-null="true" />
+		<many-to-one name="student" class="cn.edu.fjnu.cdio.model.common.User"
+			column="fk_stu_id" not-null="true" />
+		<many-to-one name="testMain" class="TestMain" column="fk_testM_id"
+			not-null="true"></many-to-one>
+	</class>
+</hibernate-mapping>

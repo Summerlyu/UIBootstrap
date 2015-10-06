@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.grp.GroupRemarks" table="t_group_remarks">
+
+		<!--社群小组标签 -->
+		
+		<id name="groupRemarkId" type="long">
+			<column name="pk_group_remark_id" />
+			<generator class="increment" />
+		</id>
+		
+		<property name="groupRemark" type="java.lang.String">
+			<column name="group_remark" length="30" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

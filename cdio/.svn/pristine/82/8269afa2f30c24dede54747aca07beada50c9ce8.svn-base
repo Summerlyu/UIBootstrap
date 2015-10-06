@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="parameter" namespace="/parameter" extends="struts-default">
+		<action name="load" class="cn.edu.fjnu.cdio.controller.bgm.ParameterAction">
+			<result name="success">/WEB-INF/jsps/bgm/paraMain.jsp</result>
+		</action>
+		
+		<action name="page" class="cn.edu.fjnu.cdio.controller.bgm.ParameterAction" method="loadPaged">
+			<result name="success">/WEB-INF/jsps/bgm/paraMain.jsp</result>
+		</action>
+		
+		<action name="input" class="cn.edu.fjnu.cdio.controller.bgm.ParameterAction" method="input">
+			<result name="inputUI">/WEB-INF/jsps/bgm/addPara.jsp</result>
+		</action>
+		
+		<action name="add" class="cn.edu.fjnu.cdio.controller.bgm.ParameterAction" method="add">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+		
+		<action name="forUpdate" class="cn.edu.fjnu.cdio.controller.bgm.ParameterAction" method="forUpdate">
+			<result>/WEB-INF/jsps/bgm/updatePara.jsp</result>
+		</action>
+		
+		<action name="update" class="cn.edu.fjnu.cdio.controller.bgm.ParameterAction" method="update">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+		
+		<action name="delete" class="cn.edu.fjnu.cdio.controller.bgm.ParameterAction" method="delete">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+	</package>
+</struts>

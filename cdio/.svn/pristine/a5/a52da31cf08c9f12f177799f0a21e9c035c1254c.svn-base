@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class name="cn.edu.fjnu.cdio.model.res.ResDetail" table="t_resdetail" dynamic-insert="true" dynamic-update="true">
+   
+       <id name="resId" type="java.lang.Long" length="10" column="pk_res_id">
+      	<generator class="increment"></generator>
+       </id>
+       <property name="resName" type="java.lang.String" column="res_name" length="50"/>
+       <property name="resDecription" type="java.lang.String" column="res_decription" length="200"/>
+       <property name="resUp" type="java.lang.Long" column="res_up" />
+       <property name="resDown" type="java.lang.Long" column="res_down" />
+       <property name="resBrowser" type="java.lang.Long" column="res_browser"/>
+       <property name="resMark" type="java.lang.Long" column="res_mark" />
+       <property name="resUploaddate" type="java.util.Date" column="res_uploaddate" />
+       <property name="resAuth" type="java.lang.Integer" column="res_auth" />
+       <property name="resSize" type="java.lang.String" column="res_size" length="10" />
+       <property name="resPath" type="java.lang.String" column="res_path" length="200"   />
+       <property name="resHttppath" type="java.lang.String" column="res_httppath" length="200"/>
+       <property name="resType" type="java.lang.String" column="res_type" length="10" />
+       <property name="resUniqueno" type="java.lang.String" column="res_uniqueno" length="40"/>
+       <property name="resPage" type="java.lang.Integer" column="res_page"/>
+       <property name="userID" type="java.lang.Long" column="fk_user_id" />
+       <property name="resStatus" type="java.lang.Integer" column="res_status" />
+       <property name="resCategory" type="java.lang.String" column="res_category" length="70"/>
+       <set name="resTags" table="t_tag" cascade="all" inverse="true" lazy="false" fetch="join">
+          <key column="fk_res_id"></key>   <!-- 外键 -->
+          <one-to-many class="cn.edu.fjnu.cdio.model.res.ResTag"/>  <!-- 封装方式 -->
+       </set> 
+        <set name="perUploads" 	table="t_perupload" cascade="all" inverse="true" lazy="false">
+			 <key column="pk_res_id"/> <!-- 外键 -->
+        	 <one-to-many class="cn.edu.fjnu.cdio.model.res.PerUpload" />
+		</set>
+		<set name="perMark" 	table="t_permark" cascade="all" inverse="true" lazy="false">
+			 <key column="pk_res_id"/> <!-- 外键 -->
+        	 <one-to-many class="cn.edu.fjnu.cdio.model.res.PerMark" />
+		</set>
+		<set name="perDownloads" 	table="t_perdownload" cascade="all" inverse="true" lazy="false">
+			 <key column="pk_res_id"/> <!-- 外键 -->
+        	 <one-to-many class="cn.edu.fjnu.cdio.model.res.PerDownload" />
+		</set>
+   </class>
+</hibernate-mapping>
+

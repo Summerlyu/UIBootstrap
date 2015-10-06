@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+    <struts> 		
+	    
+	    
+    	<package name="resMark"  extends="struts-default" namespace="/resPerMark">
+  			<action name="PerMarkAction" class="cn.edu.fjnu.cdio.controller.res.PerMarkAction" method="create">
+    			<result name="markedResIsExistPage" >/WEB-INF/jsps/res/markedResIsExist.jsp</result>
+          	  	<result name="addMarkedResSuccessPage">/WEB-INF/jsps/res/addMarkedResSuccess.jsp</result>
+          	  	<result name="loadAllMarkResAction" type="redirectAction">PerMarkAction</result>
+    		</action>
+    		<action name="loadAllMarkResAction" class="cn.edu.fjnu.cdio.controller.res.PerMarkAction" method="loadAll">
+    			<result name="loadAllPage">/WEB-INF/jsps/res/listMarkRes.jsp</result>
+    			<result name="NoMarkResPage">/WEB-INF/jsps/res/noMarkResPage.jsp</result>		
+    		</action>
+    		<action name="deleteMarkResAction" class="cn.edu.fjnu.cdio.controller.res.PerMarkAction" method="delete">
+    			<result name="loadAllMarkResAction" type="redirectAction">loadAllMarkResAction</result>
+    		</action>
+
+       	</package>
+</struts>
+ 

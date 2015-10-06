@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    <struts>
+	    <include file="cn/edu/fjnu/cdio/config/res/resuploadStruts.xml"></include>
+	    <include file="cn/edu/fjnu/cdio/config/res/perMarkStruts.xml"></include>
+		<include file="cn/edu/fjnu/cdio/config/res/showStruts.xml"></include>
+	    <include file="cn/edu/fjnu/cdio/config/res/resMgrStruts.xml"></include>
+	    <include file="cn/edu/fjnu/cdio/config/res/searchStruts.xml"></include>
+	    <include file="cn/edu/fjnu/cdio/config/res/downStruts.xml"></include>
+	   
+    </struts>
+	    
+	   
+ 
+    

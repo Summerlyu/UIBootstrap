@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.pym.TradeRecord" table="t_tradeRecord">
+
+		<!--交易表的信息 -->
+		<id name="exID" type="java.lang.Integer">
+			<column name="pk_trade_id" />
+			<generator class="increment" />
+		</id>
+		<property name="exTime" type="java.util.Date">
+			<column name="ex_time" not-null="true"/>
+		</property>
+
+		<property name="exEP" type="java.lang.Double">
+			<column name="ex_ep" not-null="true"/>
+		</property>
+		
+		<property name="exType" type="java.lang.Integer">
+			<column name="ex_type"  not-null="true"></column>
+		</property>
+		
+		<property name="currentEP" type="java.lang.Double">
+			<column name="current_ep" not-null="true"></column>
+		</property>
+		
+		<property name="exDetail" type="java.lang.String">
+			<column name="ex_detail" length="50"></column>
+		</property>
+		
+		<many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" column="fk_user_id"></many-to-one>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+#pym_payImage{
+    max-width:200px;
+    width:e\xpression(this.width>200?"200px":this.width);
+    max-height:200px;
+    height:e\xpression(this.height>200?"200px":this.height);
+}
+
+#pym_paySpan{
+    color:red;
+}
+
+
+.pym_payHead{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.pym_appingSitform{
+padding-top:4%;	
+padding-left: 10%;
+padding-bottom:4%;
+}

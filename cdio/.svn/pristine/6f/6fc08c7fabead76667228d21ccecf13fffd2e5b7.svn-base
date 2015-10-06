@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.res.PerUpload" table="t_perupload">
+		<composite-id name="perRes" class="cn.edu.fjnu.cdio.model.res.PerRes"> 
+			<key-many-to-one name="user" class="cn.edu.fjnu.cdio.model.common.User" lazy="false">
+                 <column name="pk_user_id" />
+             </key-many-to-one> 
+             <key-many-to-one name="resDetail" class="cn.edu.fjnu.cdio.model.res.ResDetail" lazy="false" >
+                 <column name="pk_res_id" />
+             </key-many-to-one> 
+		</composite-id> 
+		<property name="resUploaddate" type="java.util.Date" column="res_uploaddate"  not-null="true"></property>     
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.fjnu.cdio.model.bgm.Activity" table="t_activity">
+
+		<!--用户的账户信息 -->
+		<id name="actID" type="long">
+			<column name="pk_act_id" />
+			<generator class="increment" />
+		</id>
+		<property name="operName" type="java.lang.String">
+			<column name="oper_name" length="50"/>
+		</property>
+
+		<property name="operObj" type="java.lang.String">
+			<column name="operObj" length="20" />
+		</property>
+		
+		<property name="status" type="java.lang.String">
+			<column name="status" length="20" />
+		</property>
+		
+		<property name="time" type="timestamp">
+			<column name="time" />
+		</property>
+		
+		<property name="operID" type="long">
+			<column name="oper_id"/>
+		</property>
+		
+	
+	</class>
+</hibernate-mapping>

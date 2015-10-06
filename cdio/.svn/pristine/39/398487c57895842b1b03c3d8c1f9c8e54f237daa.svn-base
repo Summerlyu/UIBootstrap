@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="user" namespace="/user" extends="struts-default">
+		<action name="load" class="cn.edu.fjnu.cdio.controller.bgm.UserAction">
+			<result name="success">/WEB-INF/jsps/bgm/userMain.jsp</result>
+		</action>
+
+		<action name="input" class="cn.edu.fjnu.cdio.controller.bgm.UserAction"
+			method="input">
+			<result name="inputUI">/WEB-INF/jsps/bgm/addUser.jsp</result>
+		</action>
+
+		<action name="add" class="cn.edu.fjnu.cdio.controller.bgm.UserAction"
+			method="add">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+
+		<action name="get" class="cn.edu.fjnu.cdio.controller.bgm.UserAction"
+			method="get">
+			<result name="success">/WEB-INF/jsps/bgm/updateUser.jsp</result>
+		</action>
+		
+		<action name="welBgm" class="cn.edu.fjnu.cdio.controller.bgm.CommonAction">
+			<result name="success">/WEB-INF/jsps/bgm/welBgm.jsp</result>
+		</action>
+
+		<action name="modify" class="cn.edu.fjnu.cdio.controller.bgm.UserAction"
+			method="modify">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">
+					image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png,
+					image/pjpeg
+				</param>
+				<param name="maximumSize">200000</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="success" type="redirectAction">load</result>
+		</action>
+
+		<action name="delete" class="cn.edu.fjnu.cdio.controller.bgm.UserAction"
+			method="delete">
+			<result name="success" type="redirectAction">load</result>
+		</action>
+		
+		<action name="getpic" class="cn.edu.fjnu.cdio.controller.bgm.UserAction" method="getpic"></action>
+	</package>
+</struts>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<include file="cn/edu/fjnu/cdio/config/stu/struts_stu.xml"></include>
+    <package name="pym" namespace="/pym" extends="struts-default">
+    
+       <action name="moneyAction" class="cn.edu.fjnu.cdio.controller.pym.MoneyAction">
+          <result name="add_ep">/WEB-INF/jsps/pym/recharge.jsp</result>
+          <result name="addEPsuccess">/WEB-INF/jsps/pym/addEPsuccess.jsp</result>
+          <result name="addEPfail">/WEB-INF/jsps/pym/addEPfail.jsp</result>
+       </action>
+       
+       <action name="addshop" class="cn.edu.fjnu.cdio.controller.pym.TradeAction" method="addShop">
+         <result name="success" type="redirectAction">
+         	<param name="actionName">shopcar</param>
+         </result>
+       </action>
+       
+       <action name="shopcar" class="cn.edu.fjnu.cdio.controller.pym.TradeAction" method="getShop">
+       	  <result name="shop">/WEB-INF/jsps/pym/shop/shopCar.jsp</result>
+       </action>
+       
+       <action name="deleteshopcourse" class="cn.edu.fjnu.cdio.controller.pym.TradeAction" method="deleteShopCourse">
+       	  <result name="success" type="redirectAction">
+       	  	<param name="actionName">shopcar</param>
+       	  </result>
+       </action>
+       
+       <action name="buycourse" class="cn.edu.fjnu.cdio.controller.pym.TradeAction" method="buyCourse">
+       	  <result name="buyfail" type="redirectAction">
+       	  	<param name="actionName">moneyAction</param>
+       	  	<param name="method">rechargeEp</param>
+       	  	<param name="ep">${courseEp-userEp}</param>
+       	  </result>
+       	  <result name="buysuccess" type="redirectAction">
+       	  	<param name="namespace">/stu</param>
+       	  	<param name="actionName">toCourseList_courselist</param>
+       	  </result>
+       	  <result name="noLog" type="redirectAction">
+       	  	<param name="actionName">shopcar</param>
+       	  </result>
+       </action>
+       
+       <action name="queryAction" class="cn.edu.fjnu.cdio.controller.pym.QueryAction">
+          <result name="querySuccess">/WEB-INF/jsps/pym/queryTradeRecords.jsp</result>
+       </action>
+       
+       <action name="queryDonateToStu" class="cn.edu.fjnu.cdio.controller.pym.QueryAction" method="queryDonateToStu">
+       	  <result name="querySuccess">/WEB-INF/jsps/pym/query/donateToStu.jsp</result>
+       </action>
+       
+        <action name="queryReceiveFromUser" class="cn.edu.fjnu.cdio.controller.pym.QueryAction" method="queryReceiveFromUser">
+       	  <result name="querySuccess">/WEB-INF/jsps/pym/query/ReceiveFromUser.jsp</result>
+       </action>
+       
+       <action name="getUserPic" class="cn.edu.fjnu.cdio.controller.pym.QueryAction" method="getUserPic">
+       </action>
+       
+       <action name="contributionAction" class="cn.edu.fjnu.cdio.controller.pym.ContributionAction">
+       	  <result name="applyjsp">/WEB-INF/jsps/pym/apply/apply.jsp</result>
+       	  <result name="applysuccess" type="redirectAction">
+       	  	<param name="actionName">contributionAction</param>
+       	  	<param name="method">applyStatue</param>
+       	  </result>
+       	  <result name="monthsuccess">/WEB-INF/jsps/pym/apply/monthSuccess.jsp</result>
+       	  <result name="applying">/WEB-INF/jsps/pym/apply/applyIng.jsp</result>
+       	  <result name="accept">/WEB-INF/jsps/pym/apply/accept.jsp</result>
+       	  <result name="applyaccept" type="redirectAction">
+       	  	<param name="actionName">dynamicMoneyFlow</param>
+       	  </result>
+       	  <result name="applyfail">/WEB-INF/jsps/pym/apply/applyFail.jsp</result>
+       	 
+       </action>
+       
+       <action name="dynamicMoneyFlow" class="cn.edu.fjnu.cdio.controller.pym.DynamicAction" method="moneyFlow">
+       	  <result name="flowsuccess">/WEB-INF/jsps/pym/dynamic/moneyFlow.jsp</result>
+       </action>
+       
+       <action name="dynamicLove" class="cn.edu.fjnu.cdio.controller.pym.DynamicAction" method="loveDynamic">
+       	  <result name="lovedynamic">/WEB-INF/jsps/pym/dynamic/loveDynamic.jsp</result>
+       </action>
+       
+       <action name="donateLove" class="cn.edu.fjnu.cdio.controller.pym.DonateAction" method="donation">
+          <result name="donation">/WEB-INF/jsps/pym/donate/donation.jsp</result>
+       </action>
+       
+       <action name="donationsuc" class="cn.edu.fjnu.cdio.controller.pym.DonateAction" method="donationSuc">
+         <result name="donationsuc" type="redirectAction">
+         	<param name="actionName">dynamicLove</param>
+         </result>
+         <result name="donationfail" type="redirectAction">
+         	<param name="actionName">moneyAction</param>
+         	<param name="method">rechargeEp</param>
+       	  	<param name="ep">${edu}</param>
+         </result>
+       </action>
+       
+       <action name="prooflist" class="cn.edu.fjnu.cdio.controller.pym.ProofAction" method="proofList">
+       	 <result name="prooflist">/WEB-INF/jsps/pym/proof/proofList.jsp</result>
+       </action>
+       
+       <action name="proof" class="cn.edu.fjnu.cdio.controller.pym.ProofAction" method="proof">
+       	 <result name="proof">/WEB-INF/jsps/pym/proof/proof.jsp</result>
+       </action>
+       
+       <action name="getpic" class="cn.edu.fjnu.cdio.controller.pym.ProofAction" method="getpic">
+       </action>
+       
+       <action name="proofsuccess" class="cn.edu.fjnu.cdio.controller.pym.ProofAction" method="proofSuccess">
+       	 <result name="proofsuccess">/WEB-INF/jsps/pym/proof/proofSuccess.jsp</result>
+       </action>
+       
+       <action name="proofend" class="cn.edu.fjnu.cdio.controller.pym.ProofAction" method="proofEnd">
+       	 <result name="proofend" type="redirectAction">
+       	 	<param name="actionName">prooflist</param>
+       	 </result>
+       </action>
+       
+       <action name="prooffail" class="cn.edu.fjnu.cdio.controller.pym.ProofAction" method="proofFail">
+       	 <result name="prooffail">/WEB-INF/jsps/pym/proof/proofFail.jsp</result>
+       </action>
+       
+       <action name="proofover" class="cn.edu.fjnu.cdio.controller.pym.ProofAction" method="proofOver">
+       	 <result name="proofover" type="redirectAction">
+       	 	<param name="actionName">prooflist</param>
+       	 </result>
+       </action>
+       
+       <action name="proofhistory" class="cn.edu.fjnu.cdio.controller.pym.ProofAction" method="proofHistory">
+       	 <result name="proofhistory">/WEB-INF/jsps/pym/proof/proofHistory.jsp</result>
+       </action>
+       
+       <action name="proofonehistory" class="cn.edu.fjnu.cdio.controller.pym.ProofAction" method="proofOneHistory">
+       	 <result name="proofonehistory">/WEB-INF/jsps/pym/proof/proofOneHistory.jsp</result>
+       	 <result name="toproof">/WEB-INF/jsps/pym/proof/proof.jsp</result>
+       </action>
+    </package>
+    
+</struts>

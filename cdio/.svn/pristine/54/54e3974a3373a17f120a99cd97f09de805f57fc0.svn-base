@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="search" namespace="/search" extends="struts-default">
+		<action name="search" class="cn.edu.fjnu.cdio.controller.mat.SearchAction" method="search">
+			<result name="success">/WEB-INF/jsps/mat/matSearchResult.jsp</result>
+			<result name="error">xxxx.jsp</result>
+		</action>
+		
+		<action name="advanceSearch" class="cn.edu.fjnu.cdio.controller.mat.SearchAction" method="advanceSearch">
+			<result name="success">/WEB-INF/jsps/mat/matSearchResult.jsp</result>
+			<result name="error">xxxx.jsp</result>
+		</action>
+		
+		<action name="mainSearch" class="cn.edu.fjnu.cdio.controller.mat.SearchAction" method="mainSearch">
+			<result name="success">/WEB-INF/jsps/mat/matSearch.jsp</result>
+			<result name="error">xxxx.jsp</result>
+		</action>
+		
+		<action name="mainAdvanceSearch" class="cn.edu.fjnu.cdio.controller.mat.SearchAction" method="mainAdvanceSearch">
+			<result name="success">/WEB-INF/jsps/mat/matAdvancedSearchCourse.jsp</result>
+			<result name="error">xxxx.jsp</result>
+		</action>
+
+	</package>
+</struts>

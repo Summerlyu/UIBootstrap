@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.edu.fjnu.cdio.model.test">
+	<class name="StuDoubt" table="t_stu_doubt">
+		<id name="doubtId" column="pk_doubt_id" type="java.lang.Long">
+			<generator class="identity" />
+		</id>
+		<property name="doubt" type="java.lang.String" column="doubt"
+			length="100" not-null="true" />
+		<property name="reply" type="java.lang.String" column="reply"
+			length="100" not-null="false" />
+		<property name="tag" type="java.lang.String" column="tag"
+			length="2" not-null="true" />
+		<property name="createTime" type="java.sql.Timestamp" column="create_time"
+			not-null="true" />
+		<property name="solveTime" type="java.sql.Timestamp" column="solve_time"
+			not-null="false" />
+
+		<many-to-one name="question" class="Question" column="fk_que_id"
+			lazy="false" fetch="join" not-null="true"></many-to-one>
+		<many-to-one name="student" class="cn.edu.fjnu.cdio.model.common.User"
+			column="fk_stu_id" lazy="false" fetch="join" not-null="true"></many-to-one>
+		<many-to-one name="coach" class="cn.edu.fjnu.cdio.model.common.User"
+			column="fk_coach_id" lazy="false" fetch="join" not-null="true"></many-to-one>
+
+	</class>
+</hibernate-mapping>

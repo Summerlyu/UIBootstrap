@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.page-skip {
+color:#005580;
+    display: inline-block;
+    font-family: Tahoma,SimSun,Arial;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 16px;
+    padding: 0 5px;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.pagination .input-append{
+margin-top: -12px;
+margin-bottom: 10px;
+}
+
+.pagination .span1{
+height:30px;
+width:40px;
+}
